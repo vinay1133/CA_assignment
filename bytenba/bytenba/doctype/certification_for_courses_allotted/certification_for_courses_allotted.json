@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-02 11:23:16.562814",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "directions",
+  "section_break_uihc",
+  "professor",
+  "certifications"
+ ],
+ "fields": [
+  {
+   "default": "For multiple certifications:\nProvide data of two best certificates (having maximum marks).\nBest of the two marks shall be considered as final marks",
+   "fieldname": "directions",
+   "fieldtype": "Read Only",
+   "label": "Directions",
+   "length": 200
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Oliver James",
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "certifications",
+   "fieldtype": "Table",
+   "label": "Certifications",
+   "options": "ai1 certifications"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-02 11:52:26.249502",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Certification for courses allotted",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
