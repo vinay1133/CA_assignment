@@ -9,6 +9,7 @@
  "field_order": [
   "first_name",
   "last_name",
+  "full_name",
   "department",
   "email",
   "access_level"
@@ -48,11 +49,17 @@
    "label": "Access Level",
    "options": " ",
    "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-02 10:50:34.728331",
+ "modified": "2023-09-06 19:18:22.289800",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Professors",
@@ -78,7 +85,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Manager",
+   "role": "faculty",
    "share": 1,
    "write": 1
   }

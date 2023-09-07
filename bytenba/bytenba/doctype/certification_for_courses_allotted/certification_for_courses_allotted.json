@@ -10,7 +10,11 @@
   "directions",
   "section_break_uihc",
   "professor",
-  "certifications"
+  "platform",
+  "number_of_hours",
+  "assessment_outcome",
+  "date_of_cerftification",
+  "reviewer"
  ],
  "fields": [
   {
@@ -31,15 +35,40 @@
    "label": "Professor"
   },
   {
-   "fieldname": "certifications",
-   "fieldtype": "Table",
-   "label": "Certifications",
-   "options": "ai1 certifications"
+   "fieldname": "platform",
+   "fieldtype": "Data",
+   "label": "Platform"
+  },
+  {
+   "fieldname": "number_of_hours",
+   "fieldtype": "Select",
+   "label": "Number Of Hours",
+   "options": "30+\n20+\nBelow 20"
+  },
+  {
+   "fieldname": "assessment_outcome",
+   "fieldtype": "Select",
+   "label": "Assessment Outcome",
+   "options": "Grade B or Above (1)\nPass (0.4)\nAudit (0.2)\nFail (0)"
+  },
+  {
+   "fieldname": "date_of_cerftification",
+   "fieldtype": "Select",
+   "label": "Date Of Cerftification",
+   "options": "2 years (1)\n2 to 4 years (0.75)\n4 to 6 years (0.4)\nMore than 6 years (0)"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "options": "Professors",
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-02 11:52:26.249502",
+ "modified": "2023-09-06 20:10:47.308102",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",
@@ -54,6 +83,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "faculty",
    "share": 1,
    "write": 1
   }
