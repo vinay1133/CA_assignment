@@ -29,7 +29,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "Oliver James",
+   "default": "John Doe",
    "fieldname": "professor",
    "fieldtype": "Read Only",
    "label": "Professor"
@@ -62,13 +62,12 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors",
-   "set_only_once": 1
+   "options": "Professors"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-06 20:10:47.308102",
+ "modified": "2023-09-07 17:19:32.017143",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

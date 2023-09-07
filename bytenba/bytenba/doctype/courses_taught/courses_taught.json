@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-07 16:21:01.698631",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "professor",
+  "course__lab_name",
+  "average_target_obtained",
+  "marks_obtained",
+  "average_syllabus_completed",
+  "self_appraisal_score",
+  "link__for_evidence",
+  "reviewer",
+  "reviewer_remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "professor"
+  },
+  {
+   "fieldname": "course__lab_name",
+   "fieldtype": "Table",
+   "label": "Course / Lab Name",
+   "options": "ai2"
+  },
+  {
+   "fieldname": "average_target_obtained",
+   "fieldtype": "Percent",
+   "label": "Average Target Obtained"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Int",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "average_syllabus_completed",
+   "fieldtype": "Percent",
+   "label": "Average Syllabus Completed"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Int",
+   "label": "Self Appraisal Score"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "Professors"
+  },
+  {
+   "fieldname": "reviewer_remark",
+   "fieldtype": "Long Text",
+   "label": "Reviewer Remark"
+  },
+  {
+   "fieldname": "link__for_evidence",
+   "fieldtype": "Data",
+   "label": "Link  for evidence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-07 17:13:57.751556",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Courses taught",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "faculty",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

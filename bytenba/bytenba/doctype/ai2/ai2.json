@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-07 16:25:05.302492",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course_lab_name",
+  "no_sessions",
+  "number_of_sessions_as_per_syllabus",
+  "completion_of_syllabus"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "course_lab_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_sessions",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of session",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_sessions_as_per_syllabus",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. Session per Syllabus",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_of_syllabus",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Completion of syllabus",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-07 17:06:24.806674",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "ai2",
+ "nsm_parent_field": "parent_ai2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

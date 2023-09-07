@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-07 19:19:53.883296",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quality_of_speaker",
+  "attendee_information",
+  "number_of_feedbacks",
+  "number_of_attendee",
+  "total_number_of_students_in_class",
+  "applicable_score_for_attendee_parameter",
+  "mapping",
+  "link_for_evidence",
+  "reviewer",
+  "reviewer_remark",
+  "total_self_appraisal_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "quality_of_speaker",
+   "fieldtype": "Select",
+   "label": "Quality of speaker",
+   "options": "International / National VP and above / Unicorn Startup - CXO (1)\nSME (0.5)\nInternational / National Prof & Above (1)\nState (0.5)"
+  },
+  {
+   "default": "Attendee Information",
+   "fieldname": "attendee_information",
+   "fieldtype": "Read Only",
+   "label": "Attendee Information"
+  },
+  {
+   "fieldname": "number_of_feedbacks",
+   "fieldtype": "Int",
+   "label": "Number of feedbacks"
+  },
+  {
+   "fieldname": "number_of_attendee",
+   "fieldtype": "Int",
+   "label": "Number of attendee"
+  },
+  {
+   "fieldname": "total_number_of_students_in_class",
+   "fieldtype": "Int",
+   "label": "Total number of students in class"
+  },
+  {
+   "fieldname": "applicable_score_for_attendee_parameter",
+   "fieldtype": "Read Only",
+   "label": "Applicable score for attendee parameter"
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to CO or PO (0)"
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "Professors"
+  },
+  {
+   "fieldname": "reviewer_remark",
+   "fieldtype": "Long Text",
+   "label": "Reviewer Remark"
+  },
+  {
+   "fieldname": "total_self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Total self appraisal score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-07 19:21:10.509733",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "BSA guest lecture",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
