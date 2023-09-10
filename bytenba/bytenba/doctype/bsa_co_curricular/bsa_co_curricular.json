@@ -55,7 +55,8 @@
   {
    "default": "Type of event",
    "fieldname": "type_of_event",
-   "fieldtype": "Read Only"
+   "fieldtype": "Read Only",
+   "label": "Type of event"
   },
   {
    "fieldname": "international",
@@ -118,15 +119,15 @@
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
-   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to PO\nNeither PO nor CO"
+   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-09 19:08:53.296350",
+ "modified": "2023-09-11 00:40:09.930345",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "BSA-co-cirricular",
+ "name": "BSA-Co-curricular",
  "owner": "Administrator",
  "permissions": [
   {
