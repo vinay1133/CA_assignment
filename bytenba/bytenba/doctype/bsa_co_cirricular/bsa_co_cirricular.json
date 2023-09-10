@@ -12,14 +12,26 @@
   "feedback_received",
   "no_of_attendees",
   "total_no_of_students_on_roll",
+  "type_of_event",
+  "international",
+  "national",
+  "state_level",
+  "intercollegiate_city_level",
+  "inter_departmental",
+  "within_class",
+  "awards_received",
+  "international_a",
+  "national_a",
+  "state_level_a",
+  "intercollegiate",
   "mapping"
  ],
  "fields": [
   {
-   "default": "if feedback",
+   "default": "If Feedback received",
    "fieldname": "students_feedback_about_the",
    "fieldtype": "Read Only",
-   "label": "Students feedback about the "
+   "label": "Student's Feedback"
   },
   {
    "fieldname": "break_section",
@@ -28,7 +40,7 @@
   {
    "fieldname": "feedback_received",
    "fieldtype": "Int",
-   "label": "feedback received"
+   "label": "Feedback received"
   },
   {
    "fieldname": "no_of_attendees",
@@ -38,18 +50,80 @@
   {
    "fieldname": "total_no_of_students_on_roll",
    "fieldtype": "Int",
-   "label": "Total no of students on roll"
+   "label": "Total no. of students on roll"
   },
   {
+   "default": "Type of event",
+   "fieldname": "type_of_event",
+   "fieldtype": "Read Only"
+  },
+  {
+   "fieldname": "international",
+   "fieldtype": "Int",
+   "label": "International_e"
+  },
+  {
+   "fieldname": "national",
+   "fieldtype": "Int",
+   "label": "National_e"
+  },
+  {
+   "fieldname": "state_level",
+   "fieldtype": "Int",
+   "label": "State level_e"
+  },
+  {
+   "fieldname": "intercollegiate_city_level",
+   "fieldtype": "Int",
+   "label": "Intercollegiate (City level)"
+  },
+  {
+   "fieldname": "inter_departmental",
+   "fieldtype": "Int",
+   "label": "Inter Departmental"
+  },
+  {
+   "fieldname": "within_class",
+   "fieldtype": "Int",
+   "label": "Within Class"
+  },
+  {
+   "default": "Awards received",
+   "fieldname": "awards_received",
+   "fieldtype": "Read Only",
+   "label": "Awards Received"
+  },
+  {
+   "fieldname": "international_a",
+   "fieldtype": "Int",
+   "label": "International_a"
+  },
+  {
+   "fieldname": "national_a",
+   "fieldtype": "Int",
+   "label": "National_a"
+  },
+  {
+   "fieldname": "state_level_a",
+   "fieldtype": "Int",
+   "label": "State level_a"
+  },
+  {
+   "fieldname": "intercollegiate",
+   "fieldtype": "Int",
+   "label": "Intercollegiate"
+  },
+  {
+   "default": "Select",
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
-   "options": "select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to PO\nNeither PO nor CO"
+   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to PO\nNeither PO nor CO"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-09 18:17:44.037202",
+ "modified": "2023-09-09 19:08:53.296350",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-co-cirricular",
