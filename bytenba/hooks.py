@@ -37,6 +37,7 @@ app_license = "MIT"
 doctype_js = {
     "Certification for courses allotted": "public/js/custom_cert_courses.js",
     "Courses taught": "public/js/custom_cert_courses.js",
+    "Course_Lab outcome attainment":"public/js/custom_cert_courses.js"
 }
 
 # Home Pages
