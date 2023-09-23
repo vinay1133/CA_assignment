@@ -8,13 +8,19 @@
  "engine": "InnoDB",
  "field_order": [
   "directions",
+  "column_break_hpsk",
+  "academic_year",
   "section_break_uihc",
   "professor",
   "platform",
+  "platform_type",
   "number_of_hours",
   "assessment_outcome",
   "date_of_cerftification",
-  "reviewer"
+  "column_break_psvr",
+  "link_for_evidence",
+  "reviewer",
+  "marks_obtained"
  ],
  "fields": [
   {
@@ -63,11 +69,41 @@
    "in_list_view": 1,
    "label": "Reviewer",
    "options": "Professors"
+  },
+  {
+   "fieldname": "platform_type",
+   "fieldtype": "Select",
+   "label": "Platform type",
+   "options": "Professor/Industry Expert of National/International repute (1.5)\nProfessor from State college (1)\nAny other (0.4)"
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Float",
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_psvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-07 17:19:32.017143",
+ "modified": "2023-09-23 21:06:24.405609",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

@@ -18,3 +18,13 @@ frappe.ui.form.on("Courses taught", {
 		frm.refresh_field("reviewer");
 	}
 });
+frappe.ui.form.on("BSA industrial visit", {
+	refresh(frm) {
+		frm.set_query('reviewer', function() {
+			return {
+				query: "bytenba.get_professors.get_professor_names"
+			};
+		});
+		frm.refresh_field("reviewer");
+	}
+});
