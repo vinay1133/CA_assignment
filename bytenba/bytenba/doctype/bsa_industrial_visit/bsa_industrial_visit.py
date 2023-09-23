@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class BSAminiproject(Document):
+class BSAindustrialvisit(Document):
 	pass

@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-09 17:31:29.649248",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "professor",
+  "mou_for_placement",
+  "mou_for_internship",
+  "facultys_presence_during_the_visit",
+  "internship_with_organization__industry_including_last_6_month",
+  "section_break_section",
+  "students_feedback_about_quality_and_relevance",
+  "number_feedback_received",
+  "no_of_attendees",
+  "total_number_of_roll",
+  "section_section",
+  "mapping",
+  "reviewer"
+ ],
+ "fields": [
+  {
+   "fieldname": "mou_for_placement",
+   "fieldtype": "Select",
+   "label": "MOU for placement",
+   "options": "\nnew MOU with industry / organization\nnone"
+  },
+  {
+   "fieldname": "mou_for_internship",
+   "fieldtype": "Select",
+   "label": "MOU for internship",
+   "options": "\nnew MOU with industry / organization for internship\nincluding last 6 months\nnone"
+  },
+  {
+   "fieldname": "facultys_presence_during_the_visit",
+   "fieldtype": "Select",
+   "label": "Faculty's presence during the visit",
+   "options": "\nfaculty present\nfaculty absent"
+  },
+  {
+   "fieldname": "internship_with_organization__industry_including_last_6_month",
+   "fieldtype": "Select",
+   "label": "Internship with organization / industry including last 6 month",
+   "options": "Internship: number of internship during the PA evaluation period\nnone"
+  },
+  {
+   "fieldname": "section_break_section",
+   "fieldtype": "Section Break",
+   "label": "section break"
+  },
+  {
+   "default": "(if feedback >= 2.5+: No of attendees/Total no of\nstudents on roll, else 0)",
+   "fieldname": "students_feedback_about_quality_and_relevance",
+   "fieldtype": "Read Only",
+   "label": "Students' feedback about quality and relevance "
+  },
+  {
+   "fieldname": "number_feedback_received",
+   "fieldtype": "Int",
+   "label": "Number feedback received"
+  },
+  {
+   "fieldname": "no_of_attendees",
+   "fieldtype": "Data",
+   "label": "No. of attendees"
+  },
+  {
+   "fieldname": "total_number_of_roll",
+   "fieldtype": "Data",
+   "label": "Total number of roll"
+  },
+  {
+   "fieldname": "section_section",
+   "fieldtype": "Section Break",
+   "label": "section"
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither mapping to CO or PO",
+   "read_only": 1
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "Professors"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-09 17:50:45.794072",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "BSA industrial visit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
