@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-09 18:09:14.044138",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "students_feedback_about_the",
+  "break_section",
+  "feedback_received",
+  "no_of_attendees",
+  "total_no_of_students_on_roll",
+  "type_of_event",
+  "international",
+  "national",
+  "state_level",
+  "intercollegiate_city_level",
+  "inter_departmental",
+  "within_class",
+  "awards_received",
+  "international_a",
+  "national_a",
+  "state_level_a",
+  "intercollegiate",
+  "mapping"
+ ],
+ "fields": [
+  {
+   "default": "If Feedback received",
+   "fieldname": "students_feedback_about_the",
+   "fieldtype": "Read Only",
+   "label": "Student's Feedback"
+  },
+  {
+   "fieldname": "break_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "feedback_received",
+   "fieldtype": "Int",
+   "label": "Feedback received"
+  },
+  {
+   "fieldname": "no_of_attendees",
+   "fieldtype": "Int",
+   "label": "No. of attendees"
+  },
+  {
+   "fieldname": "total_no_of_students_on_roll",
+   "fieldtype": "Int",
+   "label": "Total no. of students on roll"
+  },
+  {
+   "default": "Type of event",
+   "fieldname": "type_of_event",
+   "fieldtype": "Read Only",
+   "label": "Type of event"
+  },
+  {
+   "fieldname": "international",
+   "fieldtype": "Int",
+   "label": "International_e"
+  },
+  {
+   "fieldname": "national",
+   "fieldtype": "Int",
+   "label": "National_e"
+  },
+  {
+   "fieldname": "state_level",
+   "fieldtype": "Int",
+   "label": "State level_e"
+  },
+  {
+   "fieldname": "intercollegiate_city_level",
+   "fieldtype": "Int",
+   "label": "Intercollegiate (City level)"
+  },
+  {
+   "fieldname": "inter_departmental",
+   "fieldtype": "Int",
+   "label": "Inter Departmental"
+  },
+  {
+   "fieldname": "within_class",
+   "fieldtype": "Int",
+   "label": "Within Class"
+  },
+  {
+   "default": "Awards received",
+   "fieldname": "awards_received",
+   "fieldtype": "Read Only",
+   "label": "Awards Received"
+  },
+  {
+   "fieldname": "international_a",
+   "fieldtype": "Int",
+   "label": "International_a"
+  },
+  {
+   "fieldname": "national_a",
+   "fieldtype": "Int",
+   "label": "National_a"
+  },
+  {
+   "fieldname": "state_level_a",
+   "fieldtype": "Int",
+   "label": "State level_a"
+  },
+  {
+   "fieldname": "intercollegiate",
+   "fieldtype": "Int",
+   "label": "Intercollegiate"
+  },
+  {
+   "default": "Select",
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-11 00:40:09.930345",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "BSA-Co-curricular",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-11 21:49:51.634056",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "for_mms",
+  "for_engineering",
+  "quality_score",
+  "mapping"
+ ],
+ "fields": [
+  {
+   "default": "Select",
+   "fieldname": "for_mms",
+   "fieldtype": "Select",
+   "label": "For MMS",
+   "options": "Select\nUploading videos of published case studies\nCase study published including last 6 months"
+  },
+  {
+   "fieldname": "for_engineering",
+   "fieldtype": "Select",
+   "label": "For Engineering",
+   "options": "Uploading videos of new experiments/PBL prepared during the PA evaluation period\nUse of new tools/simulators/virtual lab\nQuality of PB statements\nContinuous assessment"
+  },
+  {
+   "default": "Select",
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "Select\nStrongly to CO\nModerately to CO\nNot mapped to CO"
+  },
+  {
+   "fieldname": "quality_score",
+   "fieldtype": "Float",
+   "label": "Quality score"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-11 22:12:30.665076",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Lab work-Case study",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

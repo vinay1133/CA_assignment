@@ -1,49 +1,53 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-09 18:47:15.833160",
+ "creation": "2023-09-11 00:35:43.239545",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "type_of_guide",
-  "type_of_organization_of_industrial_co_guide",
+  "type_of_organistion_of_industry_coguide",
   "type_of_project",
   "mapping"
  ],
  "fields": [
   {
+   "default": "Select",
    "fieldname": "type_of_guide",
    "fieldtype": "Select",
-   "label": "Type of guide",
-   "options": "select\nIndustry expert co-guide\nFaculty guide only"
+   "label": "Type of Guide",
+   "options": "Select\nIndustry expert as Co-guide\nFaculty guided only"
   },
   {
-   "fieldname": "type_of_organization_of_industrial_co_guide",
+   "default": "Select",
+   "fieldname": "type_of_organistion_of_industry_coguide",
    "fieldtype": "Select",
-   "label": "Type of organization of industrial co guide",
-   "options": "select\nMNC\nNational\nSME's\nNone"
+   "label": "Type of Organistion of Industry Coguide",
+   "options": "Select\nMNC\nNational\nSMEs\nNone"
   },
   {
+   "default": "Select",
    "fieldname": "type_of_project",
    "fieldtype": "Select",
-   "label": "Type of project",
-   "options": "select\nNon functional project\nFunctional project"
+   "label": "Type of Project",
+   "options": "Select\nFunctional Project\nNon-functional Project"
   },
   {
+   "default": "Select",
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
-   "options": "select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither mapping to CO or PO"
+   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-09 18:53:58.446928",
+ "modified": "2023-09-11 00:39:49.758866",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "BSA_mini project",
+ "name": "BSA-Mini Project",
  "owner": "Administrator",
  "permissions": [
   {

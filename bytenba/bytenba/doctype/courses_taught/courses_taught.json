@@ -21,7 +21,7 @@
   {
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "professor"
+   "label": "Professor"
   },
   {
    "fieldname": "course__lab_name",
@@ -68,7 +68,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-07 17:13:57.751556",
+ "modified": "2023-09-11 22:51:26.262764",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",
