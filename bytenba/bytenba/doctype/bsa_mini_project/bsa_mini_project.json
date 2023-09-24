@@ -8,43 +8,96 @@
  "engine": "InnoDB",
  "field_order": [
   "type_of_guide",
+  "column_break_t9igi",
+  "academic_year",
+  "section_break_igjih",
+  "professor",
   "type_of_organistion_of_industry_coguide",
   "type_of_project",
-  "mapping"
+  "mapping",
+  "column_break_zpevz",
+  "link_for_evidence",
+  "reviewer",
+  "marks_obtained"
  ],
  "fields": [
   {
-   "default": "Select",
+   "default": "Industry expert as Co-guide",
    "fieldname": "type_of_guide",
    "fieldtype": "Select",
    "label": "Type of Guide",
-   "options": "Select\nIndustry expert as Co-guide\nFaculty guided only"
+   "options": "Industry expert as Co-guide\nFaculty guided only"
   },
   {
-   "default": "Select",
+   "default": "MNC",
    "fieldname": "type_of_organistion_of_industry_coguide",
    "fieldtype": "Select",
    "label": "Type of Organistion of Industry Coguide",
-   "options": "Select\nMNC\nNational\nSMEs\nNone"
+   "options": "MNC\nNational\nSMEs\nNone"
   },
   {
-   "default": "Select",
+   "default": "Functional Project",
    "fieldname": "type_of_project",
    "fieldtype": "Select",
    "label": "Type of Project",
-   "options": "Select\nFunctional Project\nNon-functional Project"
+   "options": "Functional Project\nNon-functional Project"
   },
   {
-   "default": "Select",
+   "default": "Strongly to PO",
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
-   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
+   "options": "Strongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Link for evidence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "Professors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "column_break_t9igi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zpevz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_igjih",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 00:39:49.758866",
+ "modified": "2023-09-24 21:15:24.523926",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Mini Project",

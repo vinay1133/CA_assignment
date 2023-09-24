@@ -38,7 +38,8 @@ doctype_js = {
     "Certification for courses allotted": "public/js/custom_cert_courses.js",
     "Courses taught": "public/js/custom_cert_courses.js",
     "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
-    "BSA industrial visit":"public/js/custom_cert_courses.js"
+    "BSA industrial visit":"public/js/custom_cert_courses.js",
+    "BSA-Mini Project":"public/js/custom_cert_courses.js"
 }
 
 # Home Pages
