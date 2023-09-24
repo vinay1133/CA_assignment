@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-09 18:09:14.044138",
+ "creation": "2023-09-24 23:27:50.993317",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -124,10 +124,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 00:40:09.930345",
+ "modified": "2023-09-24 23:27:50.993317",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "BSA-Co-curricular",
+ "name": "BSA-Co Curricular",
  "owner": "Administrator",
  "permissions": [
   {

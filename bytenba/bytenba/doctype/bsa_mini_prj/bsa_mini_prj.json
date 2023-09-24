@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-09-11 00:35:43.239545",
+ "creation": "2023-09-24 23:11:41.020026",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -22,7 +22,6 @@
  ],
  "fields": [
   {
-   "default": "Industry expert as Co-guide",
    "fieldname": "type_of_guide",
    "fieldtype": "Select",
    "label": "Type of Guide",
@@ -97,10 +96,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-24 21:15:24.523926",
+ "modified": "2023-09-24 23:23:16.708079",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "BSA-Mini Project",
+ "name": "BSA-Mini Prj",
  "owner": "Administrator",
  "permissions": [
   {

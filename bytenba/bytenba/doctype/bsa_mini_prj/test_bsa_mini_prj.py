@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestBSAminiproject(FrappeTestCase):
+class TestBSAMiniPrj(FrappeTestCase):
 	pass
