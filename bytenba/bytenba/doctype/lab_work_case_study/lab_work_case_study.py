@@ -3,21 +3,26 @@
 
 import frappe
 from frappe.model.document import Document
+import re
+
+Doctype="Lab work-Case study"
+pattern = re.compile(r'^\d{4}-\d{4}$')
+mapping_mapping = {"Strongly to CO":1, "Moderately to CO":0.8, "Not mapped to CO":0}
 
 class LabworkCasestudy(Document):
+
     def before_save(self):
-        # mms_str = self.for_mms
-        # mms_mapping = {"Uploading videos of published case studies":1.5, "Case study published including last 6 months":1}
-        # mms_param = mms_mapping.get(mms_str,0)
-        
-        # engg_str = self.for_engg
-        # engg_mapping = {"Uploading videos of new experiments/PBL prepared during the PA evaluation period":1.5, "Use of new tools/simulators/virtual lab":1.25, "Quality of PB statements":1, "Continuous assessment":1}
-        # engg_param = mms_mapping.get(engg_str,0)
-        
-        mapping_str = self.mapping_opts
-        mapping_mapping = {"Strongly to CO":1, "Moderately to CO":0.8, "Not mapped to CO":0}
-        mapping_param = mapping_mapping.get(mapping_str,0)
-        
+          marks_obtained(self)
+     
+    """method to autoname your document"""
+    def autoname(self):
+     base_name = f'AI4_{self.academic_year}_{self.professor}'
+     data = renameDoc(base_name, self.academic_year)
+     if data['name_value']:
+          self.name = data['name_value']
+     else:
+          frappe.throw("Failed to generate a unique name.")
+       
     def validate(self):
             """validation for MMS"""
             mms_a="Uploading videos of published case studies"
@@ -46,4 +51,62 @@ class LabworkCasestudy(Document):
             engg_d_val = self.engg_d
             if engg_d_val<0 or engg_d_val>1:
                  frappe.throw(f"Value for {engg_d} should be between: 0 to 1")
-            
+          
+            """Validation for academic year"""
+            academic_yr_str = self.academic_year
+            if not re.match(pattern, academic_yr_str):
+                   frappe.throw('Academic year must be of the form like 2022-2023')
+
+
+def marks_obtained(self):
+     """Product of weightages"""
+     mms_a_val=self.mms_a
+     mms_b_val=self.mms_b
+     engg_a_val=self.engg_a
+     engg_b_val=self.engg_b
+     engg_c_val=self.engg_c
+     engg_d_val=self.engg_d
+     mapping_param = mapping_mapping.get(self.mapping_opts,0)
+     prod_of_wts = mms_a_val*mms_b_val*engg_a_val*engg_b_val*engg_c_val*engg_d_val*mapping_param
+
+     """Marks Obtained"""
+     marks_obt = 100*prod_of_wts  
+     self.marks_gained=marks_obt    
+     return marks_obt
+
+def renameDoc(base_name, academic_year):
+	dict = {'name_value': None}
+	filters = {
+		"name": ["like", base_name + "%"]
+	}
+	field = 'name'
+	similar_docs = frappe.get_list("Lab work-Case study", filters= filters, pluck = field)
+	if len(similar_docs) == 0:
+		dict['name_value'] = base_name + '_0'
+		return dict
+	if len(similar_docs) == 1:
+		form_num = int(similar_docs[0][-1])
+		new_num = form_num + 1
+		dict['name_value'] = f"{base_name}_{new_num}"
+	elif len(similar_docs) == 2:
+			frappe.throw(f'Maximum limit of 2 for AI4 forms for the academic year {academic_year} has been reached, kindly delete existing forms to create more')
+	else:
+			frappe.throw(f'Something went wrong')
+	return dict
+
+def avgDocs(current_frm, method):
+	filters = {
+		"name": ["like", current_frm.name[:-2] + "%"]
+	}
+	field = 'name'
+	similar_docs = frappe.get_list("Lab work-Case study", filters= filters, pluck = field)
+	if len(similar_docs) == 2:
+          for doc_name in similar_docs:
+               if doc_name != current_frm.name:
+                     old_doc_name = doc_name # current form
+          e_doc = frappe.get_doc(Doctype, old_doc_name) # purana wala form
+          e_score = e_doc.marks_gained # old score
+          avg_score=(e_score+current_frm.marks_gained)/2 # current_frm is current form, e_score is purana wale ka marks
+          e_doc.db_set('self_appraisal_score', avg_score , commit = True)
+          current_frm.db_set('self_appraisal_score', avg_score , commit = True)
+          

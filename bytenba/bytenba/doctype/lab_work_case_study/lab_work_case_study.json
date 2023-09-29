@@ -7,21 +7,25 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "directions",
+  "academic_year",
   "professor",
   "criteria_1",
   "mms_a",
   "mms_b",
   "mapping",
   "mapping_opts",
-  "reviewer",
-  "link_for_evidence",
   "column_break_rc88y",
   "criteria_2",
   "engg_a",
   "engg_b",
   "engg_c",
   "engg_d",
-  "quality_score"
+  "quality_score",
+  "reviewer",
+  "link_for_evidence",
+  "marks_gained",
+  "self_appraisal_score"
  ],
  "fields": [
   {
@@ -105,11 +109,33 @@
    "fieldname": "mapping_opts",
    "fieldtype": "Select",
    "options": "Strongly to CO\nModerately to CO\nNot mapped to CO"
+  },
+  {
+   "fieldname": "directions",
+   "fieldtype": "HTML",
+   "options": "Take average for multiple courses/activities"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self_Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "marks_gained",
+   "fieldtype": "Float",
+   "label": "Marks obtained",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-25 23:47:04.030191",
+ "modified": "2023-09-29 22:38:25.174681",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Lab work-Case study",

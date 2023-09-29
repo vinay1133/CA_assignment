@@ -9,9 +9,12 @@
  "field_order": [
   "professor",
   "enter_courselab_name",
+  "section_break_bo3hn",
+  "average_attainment",
+  "self_appraisal_score",
+  "column_break_degwr",
   "link_for_evidence",
-  "reviewer",
-  "average_attainment"
+  "reviewer"
  ],
  "fields": [
   {
@@ -28,24 +31,41 @@
   {
    "fieldname": "reviewer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors"
+   "options": "Professors",
+   "reqd": 1
   },
   {
    "fieldname": "link_for_evidence",
    "fieldtype": "Data",
-   "label": "Link for evidence"
+   "in_list_view": 1,
+   "label": "Link for evidence",
+   "reqd": 1
   },
   {
    "fieldname": "average_attainment",
-   "fieldtype": "Float",
+   "fieldtype": "Read Only",
    "label": "Average Attainment",
    "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Read Only",
+   "label": "Self_Appraisal Score"
+  },
+  {
+   "fieldname": "column_break_degwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bo3hn",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-25 21:11:18.733404",
+ "modified": "2023-09-29 21:11:10.059482",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Course_Lab outcome attainment",
