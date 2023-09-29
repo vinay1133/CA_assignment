@@ -7,7 +7,7 @@ ERP for Clg
 MIT
 
 AI1: ishaan (done)
-AI2: ishaan (done)
+AI2: vinay (done)
 AI-3.1: ishaan
 AI-3.2: ishaan 
 AI-3.3: pallavi 
