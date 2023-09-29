@@ -6,12 +6,12 @@ ERP for Clg
 
 MIT
 
-AI1: ishaan
-AI2: ishaan
-BSA guest lecture: pallavi
-BSA industrial visit: pallavi 
-BSA co-curricular: vinay 
-BSA mini-project: vinay
-lab-work case study: vinay
-course lab outcome: vinay
-innovation in tlp: pallavi 
+AI1: ishaan (done)
+AI2: ishaan (done)
+AI-3.1: ishaan
+AI-3.2: ishaan 
+AI-3.3: pallavi 
+AI-3.4: vinay (done)
+AI-4: vinay
+AI-5: vinay
+AI-6: pallavi (done)
