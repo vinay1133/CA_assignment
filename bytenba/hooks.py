@@ -39,6 +39,8 @@ doctype_js = {
     "Courses taught": "public/js/custom_cert_courses.js",
     "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
+    "BSA industrial visit":"public/js/custom_cert_courses.js",
+    "BSA guest lecture": "public/js/custom_cert_courses.js",
     "BSA-Mini Prj":"public/js/custom_cert_courses.js",
     "Lab work-Case study":"public/js/custom_cert_courses.js"
 }
@@ -119,9 +121,14 @@ doc_events = {
 	# }
     "Lab work-Case study": {
         "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
+    },
+    "Certification for courses allotted": {
+      "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
+    },
+    "BSA guest lecture":{
+      "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
     }
 }
-
 # Scheduled Tasks
 # ---------------
 
