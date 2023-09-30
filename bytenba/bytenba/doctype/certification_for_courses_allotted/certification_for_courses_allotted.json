@@ -7,7 +7,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "directions",
+  "dir",
   "column_break_hpsk",
   "academic_year",
   "section_break_uihc",
@@ -20,16 +20,10 @@
   "column_break_psvr",
   "link_for_evidence",
   "reviewer",
-  "marks_obtained"
+  "marks_obtained",
+  "max_val"
  ],
  "fields": [
-  {
-   "default": "For multiple certifications:\nProvide data of two best certificates (having maximum marks).\nBest of the two marks shall be considered as final marks",
-   "fieldname": "directions",
-   "fieldtype": "Read Only",
-   "label": "Directions",
-   "length": 200
-  },
   {
    "fieldname": "section_break_uihc",
    "fieldtype": "Section Break"
@@ -96,14 +90,26 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "2022-2023",
    "fieldname": "academic_year",
    "fieldtype": "Data",
    "label": "Academic Year"
+  },
+  {
+   "fieldname": "dir",
+   "fieldtype": "HTML",
+   "label": "dir",
+   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>For multiple certifications:\nProvide data of two best certificates (having maximum marks).\nBest of the two marks shall be considered as final marks</p>\n<p>\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 150\n</p>"
+  },
+  {
+   "fieldname": "max_val",
+   "fieldtype": "Read Only",
+   "label": "Max Scoring From"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-23 21:06:24.405609",
+ "modified": "2023-09-27 00:14:52.822789",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

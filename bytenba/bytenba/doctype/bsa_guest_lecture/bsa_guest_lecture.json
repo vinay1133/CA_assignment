@@ -7,82 +7,121 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "quality_of_speaker",
-  "attendee_information",
+  "directions",
+  "cbrk1_column",
+  "academic_year",
+  "sbrk1_section",
+  "professor",
+  "total_students",
+  "number_of_attendees",
   "number_of_feedbacks",
-  "number_of_attendee",
-  "total_number_of_students_in_class",
-  "applicable_score_for_attendee_parameter",
+  "quality_relevance",
+  "quality_of_speaker",
+  "column_break_uxbe",
   "mapping",
   "link_for_evidence",
   "reviewer",
-  "reviewer_remark",
-  "total_self_appraisal_score"
+  "marks_obtained",
+  "self_appraisal_score"
  ],
  "fields": [
   {
    "fieldname": "quality_of_speaker",
    "fieldtype": "Select",
    "label": "Quality of speaker",
-   "options": "International / National VP and above / Unicorn Startup - CXO (1)\nSME (0.5)\nInternational / National Prof & Above (1)\nState (0.5)"
-  },
-  {
-   "default": "Attendee Information",
-   "fieldname": "attendee_information",
-   "fieldtype": "Read Only",
-   "label": "Attendee Information"
+   "options": "International / National VP and above / Unicorn Startup - CXO (1)\nSME (0.5)\nInternational / National Prof & Above (1)\nState (0.5)",
+   "reqd": 1
   },
   {
    "fieldname": "number_of_feedbacks",
    "fieldtype": "Int",
-   "label": "Number of feedbacks"
-  },
-  {
-   "fieldname": "number_of_attendee",
-   "fieldtype": "Int",
-   "label": "Number of attendee"
-  },
-  {
-   "fieldname": "total_number_of_students_in_class",
-   "fieldtype": "Int",
-   "label": "Total number of students in class"
-  },
-  {
-   "fieldname": "applicable_score_for_attendee_parameter",
-   "fieldtype": "Read Only",
-   "label": "Applicable score for attendee parameter"
+   "label": "Number of feedbacks",
+   "reqd": 1
   },
   {
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
-   "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to CO or PO (0)"
+   "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to CO or PO (0)",
+   "reqd": 1
   },
   {
    "fieldname": "link_for_evidence",
    "fieldtype": "Data",
-   "label": "Link for evidence"
+   "label": "Link for evidence",
+   "reqd": 1
   },
   {
    "fieldname": "reviewer",
    "fieldtype": "Link",
    "label": "Reviewer",
-   "options": "Professors"
+   "options": "Professors",
+   "reqd": 1
   },
   {
-   "fieldname": "reviewer_remark",
-   "fieldtype": "Long Text",
-   "label": "Reviewer Remark"
+   "fieldname": "directions",
+   "fieldtype": "HTML",
+   "label": "Directions",
+   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
   },
   {
-   "fieldname": "total_self_appraisal_score",
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cbrk1_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sbrk1_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "number_of_attendees",
+   "fieldtype": "Int",
+   "label": "Number of attendees",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marks_obtained",
    "fieldtype": "Float",
-   "label": "Total self appraisal score"
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uxbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "label": "Total number of enrolled students",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_relevance",
+   "fieldtype": "Float",
+   "label": "Students feedback about quality and relevance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Read Only",
+   "label": "Self Appraisal Score"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-07 19:21:10.509733",
+ "modified": "2023-09-30 10:46:51.321250",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA guest lecture",

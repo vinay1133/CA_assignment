@@ -38,3 +38,13 @@ frappe.ui.form.on("BSA industrial visit", {
 		frm.refresh_field("reviewer");
 	}
 });
+frappe.ui.form.on("BSA guest lecture", {
+	refresh(frm) {
+		frm.set_query('reviewer', function() {
+			return {
+				query: "bytenba.get_professors.get_professor_names"
+			};
+		});
+		frm.refresh_field("reviewer");
+	}
+});
