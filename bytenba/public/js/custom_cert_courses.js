@@ -59,12 +59,12 @@ frappe.ui.form.on("Lab work-Case study", {
   },
 });
 frappe.ui.form.on("BSA guest lecture", {
-	refresh(frm) {
-		frm.set_query('reviewer', function() {
-			return {
-				query: "bytenba.get_professors.get_professor_names"
-			};
-		});
-		frm.refresh_field("reviewer");
-	}
+  refresh(frm) {
+    frm.set_query("reviewer", function () {
+      return {
+        query: "bytenba.get_professors.get_professor_names",
+      };
+    });
+    frm.refresh_field("reviewer");
+  },
 });
