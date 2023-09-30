@@ -8,6 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "professor",
+  "column_break_lxjel",
+  "academic_year",
+  "section_break_quix2",
   "course__lab_name",
   "section_break_mspkh",
   "average_target_obtained",
@@ -72,11 +75,25 @@
   {
    "fieldname": "column_break_khhsp",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lxjel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_quix2",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 21:15:53.770485",
+ "modified": "2023-09-30 21:25:04.121989",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",

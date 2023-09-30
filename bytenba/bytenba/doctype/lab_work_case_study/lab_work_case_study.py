@@ -24,7 +24,17 @@ class LabworkCasestudy(Document):
           frappe.throw("Failed to generate a unique name.")
        
     def validate(self):
-            """validation for MMS"""
+            """Validation for academic year"""
+            academic_yr_str = self.academic_year
+            if not re.match(pattern, academic_yr_str):
+                   frappe.throw('Academic year must be of the form like 2022-2023')
+            else:
+               yr_end_1 = int(academic_yr_str[2:4])
+               yr_end_2 = int(academic_yr_str[7:9])
+               if yr_end_2 != yr_end_1 + 1:
+                      frappe.throw('Academic Date entered improperly')
+                      
+            """Validation for MMS"""
             mms_a="Uploading videos of published case studies"
             mms_b="Case study published including last 6 months"
             mms_a_val = self.mms_a
@@ -34,7 +44,7 @@ class LabworkCasestudy(Document):
             if mms_b_val!=1:
                  frappe.throw(f"Value for {mms_b} should be: 1")
             
-            """validation for Engineering"""
+            """Validation for Engineering"""
             engg_a="Uploading videos of new experiments/PBL prepared during the PA evaluation period"
             engg_b="Use of new tools/simulators/virtual lab"
             engg_c="Quality of PB statements"
@@ -51,13 +61,7 @@ class LabworkCasestudy(Document):
             engg_d_val = self.engg_d
             if engg_d_val<0 or engg_d_val>1:
                  frappe.throw(f"Value for {engg_d} should be between: 0 to 1")
-          
-            """Validation for academic year"""
-            academic_yr_str = self.academic_year
-            if not re.match(pattern, academic_yr_str):
-                   frappe.throw('Academic year must be of the form like 2022-2023')
-
-
+                            
 def marks_obtained(self):
      """Product of weightages"""
      mms_a_val=self.mms_a

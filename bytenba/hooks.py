@@ -39,7 +39,7 @@ doctype_js = {
     "Courses taught": "public/js/custom_cert_courses.js",
     "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
-    "BSA-Mini Project":"public/js/custom_cert_courses.js",
+    "BSA-Mini Prj":"public/js/custom_cert_courses.js",
     "Lab work-Case study":"public/js/custom_cert_courses.js"
 }
 

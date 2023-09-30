@@ -8,13 +8,16 @@
  "engine": "InnoDB",
  "field_order": [
   "professor",
+  "column_break_pr4d3",
+  "academic_year",
+  "section_break_x7xb1",
   "enter_courselab_name",
   "section_break_bo3hn",
-  "average_attainment",
-  "self_appraisal_score",
-  "column_break_degwr",
+  "reviewer",
   "link_for_evidence",
-  "reviewer"
+  "column_break_degwr",
+  "average_attainment",
+  "self_appraisal_score"
  ],
  "fields": [
   {
@@ -61,11 +64,25 @@
   {
    "fieldname": "section_break_bo3hn",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pr4d3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_x7xb1",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 21:11:10.059482",
+ "modified": "2023-09-30 20:53:19.278784",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Course_Lab outcome attainment",
