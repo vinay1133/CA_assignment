@@ -8,10 +8,16 @@
  "engine": "InnoDB",
  "field_order": [
   "professor",
+  "column_break_pr4d3",
+  "academic_year",
+  "section_break_x7xb1",
   "enter_courselab_name",
-  "link_for_evidence",
+  "section_break_bo3hn",
   "reviewer",
-  "reviewer_remark"
+  "link_for_evidence",
+  "column_break_degwr",
+  "average_attainment",
+  "self_appraisal_score"
  ],
  "fields": [
   {
@@ -28,23 +34,55 @@
   {
    "fieldname": "reviewer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors"
+   "options": "Professors",
+   "reqd": 1
   },
   {
    "fieldname": "link_for_evidence",
    "fieldtype": "Data",
-   "label": "Link for evidence"
+   "in_list_view": 1,
+   "label": "Link for evidence",
+   "reqd": 1
   },
   {
-   "fieldname": "reviewer_remark",
-   "fieldtype": "Long Text",
-   "label": "Reviewer remark"
+   "fieldname": "average_attainment",
+   "fieldtype": "Read Only",
+   "label": "Average Attainment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Read Only",
+   "label": "Self_Appraisal Score"
+  },
+  {
+   "fieldname": "column_break_degwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bo3hn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pr4d3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_x7xb1",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 22:53:44.338582",
+ "modified": "2023-09-30 20:53:19.278784",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Course_Lab outcome attainment",
@@ -59,6 +97,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "faculty",
    "share": 1,
    "write": 1
   }

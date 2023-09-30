@@ -8,14 +8,18 @@
  "engine": "InnoDB",
  "field_order": [
   "professor",
+  "column_break_lxjel",
+  "academic_year",
+  "section_break_quix2",
   "course__lab_name",
+  "section_break_mspkh",
   "average_target_obtained",
   "marks_obtained",
   "average_syllabus_completed",
+  "column_break_khhsp",
   "self_appraisal_score",
   "link__for_evidence",
-  "reviewer",
-  "reviewer_remark"
+  "reviewer"
  ],
  "fields": [
   {
@@ -46,29 +50,50 @@
   },
   {
    "fieldname": "self_appraisal_score",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Self Appraisal Score"
   },
   {
    "fieldname": "reviewer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors"
-  },
-  {
-   "fieldname": "reviewer_remark",
-   "fieldtype": "Long Text",
-   "label": "Reviewer Remark"
+   "options": "Professors",
+   "reqd": 1
   },
   {
    "fieldname": "link__for_evidence",
    "fieldtype": "Data",
-   "label": "Link  for evidence"
+   "in_list_view": 1,
+   "label": "Link  for evidence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_mspkh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_khhsp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lxjel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_quix2",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 22:51:26.262764",
+ "modified": "2023-09-30 21:25:04.121989",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",

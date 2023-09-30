@@ -40,7 +40,9 @@ doctype_js = {
     "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
-    "BSA guest lecture": "public/js/custom_cert_courses.js"
+    "BSA guest lecture": "public/js/custom_cert_courses.js",
+    "BSA-Mini Prj":"public/js/custom_cert_courses.js",
+    "Lab work-Case study":"public/js/custom_cert_courses.js"
 }
 
 # Home Pages
@@ -117,6 +119,9 @@ doc_events = {
 	# 	"on_cancel": "method",
 	# 	"on_trash": "method"
 	# }
+    "Lab work-Case study": {
+        "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
+    },
     "Certification for courses allotted": {
       "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
     },
