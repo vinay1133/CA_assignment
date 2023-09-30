@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestBSACocurricular(FrappeTestCase):
+class TestInnovationinTLP(FrappeTestCase):
 	pass
