@@ -2,6 +2,24 @@ import random
 import string
 import frappe
 
+def maxlogic():
+    """select documents with similar names"""
+    name = 'AI1_2022-2023_Administrator'
+    similar_docs = frappe.get_list("Certification for courses allotted", filters={"name": ["like", name + "%"]},pluck = 'name')
+    print(similar_docs)
+    if len(similar_docs) == 0:
+        print('o length')
+    if len(similar_docs) == 2:
+        frappe.throw(f'Maximum limit of 2 for AI1 forms for the academic year {self.academic_year} has been reached, kindly delete existing forms to create more')
+    else:
+        old_doc = frappe.get_doc('Certification for courses allotted', similar_docs[0])
+        marks_old_doc = old_doc.marks_obtained
+        print(marks_old_doc)
+    
+
+
+
+
 def executeNOW():
     
     frappe.db.begin()

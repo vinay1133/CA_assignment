@@ -39,7 +39,14 @@ doctype_js = {
     "Courses taught": "public/js/custom_cert_courses.js",
     "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
+<<<<<<< HEAD
     "Innovation in TLP":"public/js/custom_cert_courses.js"
+=======
+    "BSA industrial visit":"public/js/custom_cert_courses.js",
+    "BSA guest lecture": "public/js/custom_cert_courses.js",
+    "BSA-Mini Prj":"public/js/custom_cert_courses.js",
+    "Lab work-Case study":"public/js/custom_cert_courses.js"
+>>>>>>> vinay
 }
 
 # Home Pages
@@ -111,6 +118,7 @@ home_page = "index"
 # Hook on document methods and events
 
 doc_events = {
+<<<<<<< HEAD
 #	"*": {
 #		"on_update": "method",
 #		"on_cancel": "method",
@@ -121,6 +129,23 @@ doc_events = {
     }
 }
 
+=======
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+    "Lab work-Case study": {
+        "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
+    },
+    "Certification for courses allotted": {
+      "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
+    },
+    "BSA guest lecture":{
+      "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
+    }
+}
+>>>>>>> vinay
 # Scheduled Tasks
 # ---------------
 
