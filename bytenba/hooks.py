@@ -43,7 +43,8 @@ doctype_js = {
     "BSA industrial visit":"public/js/custom_cert_courses.js",
     "BSA guest lecture": "public/js/custom_cert_courses.js",
     "BSA-Mini Prj":"public/js/custom_cert_courses.js",
-    "Lab work-Case study":"public/js/custom_cert_courses.js"
+    "Lab work-Case study":"public/js/custom_cert_courses.js",
+    "BSA-Co-curricular":"public/js/custom_cert_courses.js"
 }
 
 # Home Pages
