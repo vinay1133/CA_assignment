@@ -30,19 +30,19 @@
  "fields": [
   {
    "fieldname": "quality_of_assignments",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Quality of assignments",
    "reqd": 1
   },
   {
    "fieldname": "quality_of_tests",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Quality of tests",
    "reqd": 1
   },
   {
    "fieldname": "activities_done_outside_the_classroom",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Activities done outside the classroom",
    "reqd": 1
   },
@@ -124,26 +124,26 @@
   },
   {
    "fieldname": "quality_of_experiment",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Quality of experiment conducted in a practical",
    "reqd": 1
   },
   {
    "fieldname": "activities_for_slow_learners",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Activities done for slow learners",
    "reqd": 1
   },
   {
    "fieldname": "activities_for_advance_learners",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Activities done for advance learners",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-29 21:16:55.674231",
+ "modified": "2023-10-03 14:32:29.362104",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Innovation in TLP",
