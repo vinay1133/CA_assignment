@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-24 21:09:01.944805",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "professor",
+  "academic_year",
+  "no_of_enrollments",
+  "no_of_participants",
+  "no_of_activities",
+  "mappinng",
+  "column_break_wzois",
+  "cluster_mentor_section",
+  "quality_of_assignments",
+  "quality_of_tests",
+  "quality_of_experiment",
+  "activities_done_outside_the_classroom",
+  "activities_for_slow_learners",
+  "activities_for_advance_learners",
+  "obtained_marks",
+  "section_break_nzk0r",
+  "link_for_evidence",
+  "column_break_9mtx9",
+  "reviewer"
+ ],
+ "fields": [
+  {
+   "fieldname": "quality_of_assignments",
+   "fieldtype": "Int",
+   "label": "Quality of assignments",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_of_tests",
+   "fieldtype": "Int",
+   "label": "Quality of tests",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activities_done_outside_the_classroom",
+   "fieldtype": "Int",
+   "label": "Activities done outside the classroom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mappinng",
+   "fieldtype": "Select",
+   "label": "Mappinng",
+   "options": "Strongly to PO(1.5)\nStrongly to CO(1)\nModerately to PO(1)\nModerately to CO(0.8)\nNeither mapping to PO or CO(0)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "Professors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": "Obtained marks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wzois",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cluster_mentor_section",
+   "fieldtype": "HTML",
+   "label": "Dir2",
+   "options": "<p>Cluster mentor to give quality score between 0 and 1</p>",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nzk0r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "label": "Link for evidence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9mtx9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_enrollments",
+   "fieldtype": "Int",
+   "label": "No. of students enrolled for the course",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_participants",
+   "fieldtype": "Int",
+   "label": "No. of students participating in all innovative TLP activities",
+   "reqd": 1
+  },
+  {
+   "default": "Assessment metric for internal marks",
+   "fieldname": "no_of_activities",
+   "fieldtype": "Int",
+   "label": "No. of activities considered for the term work",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_of_experiment",
+   "fieldtype": "Int",
+   "label": "Quality of experiment conducted in a practical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activities_for_slow_learners",
+   "fieldtype": "Int",
+   "label": "Activities done for slow learners",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activities_for_advance_learners",
+   "fieldtype": "Data",
+   "label": "Activities done for advance learners",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-29 21:16:55.674231",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Innovation in TLP",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
