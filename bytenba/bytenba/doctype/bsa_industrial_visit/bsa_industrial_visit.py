@@ -43,11 +43,11 @@ class BSAindustrialvisit(Document):
 			frappe.throw('Number of feedbacks cannot be greater than number of attendees')
 		
 		if (self.number_of_projects):
-			if self.number_of_projects < 0:
+			if int(self.number_of_projects) < 0:
 				frappe.throw('number of projects cannot be less than 0')
 
 		if (self.number_of_internships):
-			if self.number_of_internships < 0:
+			if int(self.number_of_internships) < 0:
 				frappe.throw('number of projects cannot be less than 0')
 
 		if (self.projects_status == 'None (1)'):

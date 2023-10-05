@@ -39,10 +39,12 @@ doctype_js = {
     "Courses taught": "public/js/custom_cert_courses.js",
     "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
+    "Innovation in TLP":"public/js/custom_cert_courses.js",
     "BSA industrial visit":"public/js/custom_cert_courses.js",
     "BSA guest lecture": "public/js/custom_cert_courses.js",
     "BSA-Mini Prj":"public/js/custom_cert_courses.js",
-    "Lab work-Case study":"public/js/custom_cert_courses.js"
+    "Lab work-Case study":"public/js/custom_cert_courses.js",
+    "BSA-Co-curricular":"public/js/custom_cert_courses.js"
 }
 
 # Home Pages
@@ -114,11 +116,9 @@ home_page = "index"
 # Hook on document methods and events
 
 doc_events = {
-	# "*": {
-	# 	"on_update": "method",
-	# 	"on_cancel": "method",
-	# 	"on_trash": "method"
-	# }
+    "BSA-Co-curricular": {
+        "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
+    },
     "Lab work-Case study": {
         "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
     },
