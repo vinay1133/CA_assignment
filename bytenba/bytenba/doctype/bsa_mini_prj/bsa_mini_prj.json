@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-09-24 23:11:41.020026",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_of_guide",
+  "column_break_t9igi",
+  "academic_year",
+  "section_break_igjih",
+  "professor",
+  "type_of_organistion_of_industry_coguide",
+  "type_of_project",
+  "mapping",
+  "column_break_zpevz",
+  "link_for_evidence",
+  "reviewer",
+  "marks_obtained"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_guide",
+   "fieldtype": "Select",
+   "label": "Type of Guide",
+   "options": "Industry expert as Co-guide\nFaculty guided only"
+  },
+  {
+   "default": "MNC",
+   "fieldname": "type_of_organistion_of_industry_coguide",
+   "fieldtype": "Select",
+   "label": "Type of Organistion of Industry Coguide",
+   "options": "MNC\nNational\nSMEs\nNone"
+  },
+  {
+   "default": "Functional Project",
+   "fieldname": "type_of_project",
+   "fieldtype": "Select",
+   "label": "Type of Project",
+   "options": "Functional Project\nNon-functional Project"
+  },
+  {
+   "default": "Strongly to PO",
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "Strongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Link for evidence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Link",
+   "label": "Reviewer",
+   "options": "Professors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "column_break_t9igi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zpevz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_igjih",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-05 22:00:37.773946",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "BSA-Mini Prj",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

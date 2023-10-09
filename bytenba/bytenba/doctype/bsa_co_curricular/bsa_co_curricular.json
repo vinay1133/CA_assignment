@@ -7,8 +7,12 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "students_feedback_about_the",
+  "dir1",
+  "column_break_2pvzb",
+  "academic_year",
   "break_section",
+  "professor",
+  "students_feedback_about_the",
   "feedback_received",
   "no_of_attendees",
   "total_no_of_students_on_roll",
@@ -19,19 +23,25 @@
   "intercollegiate_city_level",
   "inter_departmental",
   "within_class",
+  "column_break_emxxj",
   "awards_received",
   "international_a",
   "national_a",
   "state_level_a",
   "intercollegiate",
-  "mapping"
+  "mapping",
+  "link_for_evidence",
+  "reveiwer",
+  "obtained_marks",
+  "self_appraisal_score"
  ],
  "fields": [
   {
    "default": "If Feedback received",
    "fieldname": "students_feedback_about_the",
-   "fieldtype": "Read Only",
-   "label": "Student's Feedback"
+   "fieldtype": "HTML",
+   "label": "Sdir",
+   "options": "<p><b>Students feedback about quality and relevance</b></p>"
   },
   {
    "fieldname": "break_section",
@@ -40,91 +50,158 @@
   {
    "fieldname": "feedback_received",
    "fieldtype": "Int",
-   "label": "Feedback received"
+   "in_list_view": 1,
+   "label": "Feedback received",
+   "reqd": 1
   },
   {
    "fieldname": "no_of_attendees",
    "fieldtype": "Int",
-   "label": "No. of attendees"
+   "in_list_view": 1,
+   "label": "No. of attendees",
+   "reqd": 1
   },
   {
    "fieldname": "total_no_of_students_on_roll",
    "fieldtype": "Int",
-   "label": "Total no. of students on roll"
+   "in_list_view": 1,
+   "label": "Total no. of students on roll",
+   "reqd": 1
   },
   {
    "default": "Type of event",
    "fieldname": "type_of_event",
-   "fieldtype": "Read Only",
-   "label": "Type of event"
+   "fieldtype": "HTML",
+   "label": "Tdir",
+   "options": "<p><b>Type of event (Enter the number of event. If not any then enter 0)</b></p>"
   },
   {
    "fieldname": "international",
    "fieldtype": "Int",
-   "label": "International_e"
+   "label": "International_e",
+   "reqd": 1
   },
   {
    "fieldname": "national",
    "fieldtype": "Int",
-   "label": "National_e"
+   "label": "National_e",
+   "reqd": 1
   },
   {
    "fieldname": "state_level",
    "fieldtype": "Int",
-   "label": "State level_e"
+   "label": "State level_e",
+   "reqd": 1
   },
   {
    "fieldname": "intercollegiate_city_level",
    "fieldtype": "Int",
-   "label": "Intercollegiate (City level)"
+   "label": "Intercollegiate (City level)",
+   "reqd": 1
   },
   {
    "fieldname": "inter_departmental",
    "fieldtype": "Int",
-   "label": "Inter Departmental"
+   "label": "Inter Departmental",
+   "reqd": 1
   },
   {
    "fieldname": "within_class",
    "fieldtype": "Int",
-   "label": "Within Class"
+   "label": "Within Class",
+   "reqd": 1
   },
   {
    "default": "Awards received",
    "fieldname": "awards_received",
-   "fieldtype": "Read Only",
-   "label": "Awards Received"
+   "fieldtype": "HTML",
+   "label": "Adir",
+   "options": "<p> <b>Awards received (Enter the number of awards. If not any then enter 0)</b></p>"
   },
   {
    "fieldname": "international_a",
    "fieldtype": "Int",
-   "label": "International_a"
+   "label": "International_a",
+   "reqd": 1
   },
   {
    "fieldname": "national_a",
    "fieldtype": "Int",
-   "label": "National_a"
+   "label": "National_a",
+   "reqd": 1
   },
   {
    "fieldname": "state_level_a",
    "fieldtype": "Int",
-   "label": "State level_a"
+   "label": "State level_a",
+   "reqd": 1
   },
   {
    "fieldname": "intercollegiate",
    "fieldtype": "Int",
-   "label": "Intercollegiate"
+   "label": "Intercollegiate (city level)",
+   "reqd": 1
   },
   {
-   "default": "Select",
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
-   "options": "Select\nStrongly to PO\nStrongly to CO\nModerately to PO\nModerately to CO\nNeither PO nor CO"
+   "options": "Strongly to PO(1.5)\nStrongly to CO(1)\nModerately to PO(1)\nModerately to CO(0.8)\nNeither PO nor CO(0)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dir1",
+   "fieldtype": "HTML",
+   "label": "dir1",
+   "options": "<p> Faculty has to identify competitions and guide the students' group to participate in the competitions during the semester. (eg. technical paper, project, etc. )</p>"
+  },
+  {
+   "fieldname": "column_break_2pvzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professors"
+  },
+  {
+   "fieldname": "column_break_emxxj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reveiwer",
+   "fieldtype": "Link",
+   "label": "Reveiwer",
+   "options": "Professors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Data",
+   "label": "Link for evidence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": "Obtained marks"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Read Only",
+   "label": "Self appraisal score"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 00:40:09.930345",
+ "modified": "2023-10-05 22:02:13.011769",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Co-curricular",
@@ -139,6 +216,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
    "share": 1,
    "write": 1
   }
