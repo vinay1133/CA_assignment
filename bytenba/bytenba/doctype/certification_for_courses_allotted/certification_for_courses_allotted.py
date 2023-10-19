@@ -25,19 +25,18 @@ class Certificationforcoursesallotted(Document):
 			frappe.throw("Failed to generate a unique name.")
 	
 	def before_save(self):
-		# frappe.msgprint('inside before save')
 		marks = compute_marks(self)
 		self.marks_obtained = marks
 
 	def validate(self):
 		academic_yr_str = self.academic_year
-		if not re.match(pattern, academic_yr_str):
-			frappe.throw('Academic year must be of the form like 2022-2023')
+		if re.match(pattern, academic_yr_str):
+			years = academic_yr_str.split("-")
+			if int(years[1]) != int(years[0]) + 1:
+				frappe.throw('Academic year entered incorrectly')
 		else:
-			yr_end_1 = academic_yr_str[3]
-			yr_end_2 = academic_yr_str[-1]
+			frappe.throw('Academic year must be of the form like 2022-2023')
 
-			# if yr_end_1 == 
 
 def compute_marks(self):
   

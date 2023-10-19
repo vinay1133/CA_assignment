@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "autoname": "field:abbreviation",
+ "creation": "2023-10-17 00:40:15.229926",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dept_name",
+  "abbreviation",
+  "hod"
+ ],
+ "fields": [
+  {
+   "fieldname": "dept_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "abbreviation",
+   "fieldtype": "Data",
+   "label": "Abbreviation",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "hod",
+   "fieldtype": "Link",
+   "label": "Head Of Department",
+   "options": "User",
+   "reqd": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "links": [],
+ "modified": "2023-10-19 18:56:49.018961",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Department",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,4 +1,4 @@
-frappe.listview_settings['Certification for courses allotted'] = {
+frappe.listview_settings['ME Projects'] = {
   hide_name_column: true,
   refresh: function(listview) {
     $(".comment-count").hide();

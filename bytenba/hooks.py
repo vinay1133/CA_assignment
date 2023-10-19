@@ -11,7 +11,7 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/bytenba/css/bytenba.css"
+app_include_css = "/assets/bytenba/css/bytenba.css"
 # app_include_js = "/assets/bytenba/js/bytenba.js"
 
 # include js, css files in header of web template
@@ -30,7 +30,12 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+
+doctype_list_js = {
+  "Certification for courses allotted": "bytenba/bytenba/doctype/certification_for_courses_allotted/certification_for_courses_allotted_list.js",
+  "ME Projects": "bytenba/bytenba/doctype/me_projects/me_projects_list.js"
+}
+
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 

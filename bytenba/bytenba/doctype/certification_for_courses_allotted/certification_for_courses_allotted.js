@@ -1,20 +1,15 @@
 // Copyright (c) 2023, byte_team and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Certification for courses allotted", {
-// 	refresh(frm) {
-
-// 	},
-// });
 frappe.ui.form.on('Certification for courses allotted', {
   refresh: function(frm) {
-      // Get the current user's username
+    if (frm.doc.__islocal) {
       var currentUser = frappe.session.user;
-
-      // Set the value of the "Professor" field
       frm.set_value('professor', currentUser);
-
-      // Make the "Professor" field read-only (optional)
-      // frm.set_df_property('professor', 'read_only', 1);
+    }
+    if (!frm.doc.owner) {
+      var currentUser = frappe.session.user;
+      frm.set_value('professor', currentUser);
+    }
   }
 });

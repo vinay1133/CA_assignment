@@ -10,6 +10,7 @@
   "dir",
   "column_break_hpsk",
   "academic_year",
+  "semester",
   "section_break_uihc",
   "professor",
   "platform",
@@ -21,95 +22,125 @@
   "link_for_evidence",
   "reviewer",
   "marks_obtained",
-  "max_val"
+  "max_val",
+  "approved"
  ],
  "fields": [
   {
    "fieldname": "section_break_uihc",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "permlevel": 1
   },
   {
    "default": "John Doe",
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "Professor"
+   "label": "Professor",
+   "permlevel": 1
   },
   {
    "fieldname": "platform",
    "fieldtype": "Data",
-   "label": "Platform"
+   "label": "Platform",
+   "permlevel": 1
   },
   {
    "fieldname": "number_of_hours",
    "fieldtype": "Select",
    "label": "Number Of Hours",
-   "options": "30+\n20+\nBelow 20"
+   "options": "30+\n20+\nBelow 20",
+   "permlevel": 1
   },
   {
    "fieldname": "assessment_outcome",
    "fieldtype": "Select",
    "label": "Assessment Outcome",
-   "options": "Grade B or Above (1)\nPass (0.4)\nAudit (0.2)\nFail (0)"
+   "options": "Grade B or Above (1)\nPass (0.4)\nAudit (0.2)\nFail (0)",
+   "permlevel": 1
   },
   {
    "fieldname": "date_of_cerftification",
    "fieldtype": "Select",
    "label": "Date Of Cerftification",
-   "options": "2 years (1)\n2 to 4 years (0.75)\n4 to 6 years (0.4)\nMore than 6 years (0)"
+   "options": "2 years (1)\n2 to 4 years (0.75)\n4 to 6 years (0.4)\nMore than 6 years (0)",
+   "permlevel": 1
   },
   {
    "fieldname": "reviewer",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors"
+   "options": "Professors",
+   "permlevel": 1
   },
   {
    "fieldname": "platform_type",
    "fieldtype": "Select",
    "label": "Platform type",
-   "options": "Professor/Industry Expert of National/International repute (1.5)\nProfessor from State college (1)\nAny other (0.4)"
+   "options": "Professor/Industry Expert of National/International repute (1.5)\nProfessor from State college (1)\nAny other (0.4)",
+   "permlevel": 1
   },
   {
    "fieldname": "link_for_evidence",
    "fieldtype": "Data",
-   "label": "Link for evidence"
+   "label": "Link for evidence",
+   "permlevel": 1
   },
   {
    "fieldname": "marks_obtained",
    "fieldtype": "Float",
    "label": "Marks Obtained",
+   "permlevel": 1,
    "read_only": 1
   },
   {
    "fieldname": "column_break_psvr",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "permlevel": 1
   },
   {
    "fieldname": "column_break_hpsk",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "permlevel": 1
   },
   {
    "default": "2022-2023",
    "fieldname": "academic_year",
    "fieldtype": "Data",
-   "label": "Academic Year"
+   "label": "Academic Year",
+   "permlevel": 1
   },
   {
    "fieldname": "dir",
    "fieldtype": "HTML",
    "label": "dir",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>For multiple certifications:\nProvide data of two best certificates (having maximum marks).\nBest of the two marks shall be considered as final marks</p>\n<p>\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 150\n</p>"
+   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>For multiple certifications:\nProvide data of two best certificates (having maximum marks).\nBest of the two marks shall be considered as final marks</p>\n<p>\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 150\n</p>",
+   "permlevel": 1
   },
   {
    "fieldname": "max_val",
    "fieldtype": "Read Only",
-   "label": "Max Scoring From"
+   "label": "Max Scoring From",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 2
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 11:49:18.923160",
+ "modified": "2023-10-19 16:59:27.226385",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",
@@ -135,7 +166,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "faculty",
+   "role": "vit_emp",
    "share": 1,
    "write": 1
   },
@@ -144,15 +175,17 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "vit_emp",
+   "role": "reviewer",
    "share": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }
