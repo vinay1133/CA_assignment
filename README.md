@@ -55,7 +55,14 @@ Next week target will be
 2> Minor changes
 3> Report Making (Opt)
 
-
+Changes to be made to all forms
+>> Clearer Instruction
+>> Validation/Calculation testing
+>> Updating Professor field
+>> Updating reviewer field
+>> Adding Approved field
+>> Changing permission level
+>> Updating list views
 
 
 
