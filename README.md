@@ -55,8 +55,17 @@ Next week target will be
 2> Minor changes
 3> Report Making (Opt)
 
-
-
-
+Changes to be made to all forms 
+>> Clearer Instruction
+>> Validation/Calculation testing
+>> Updating Professor field
+>> Updating reviewer field
+>> Adding Approved field
+>> Changing permission level
+>> Updating list views
+>> Write function for acadeic year for Academic Year
+>> Change Marks obtained to self appraisal score
+>> Update List JS for each doctype
+>> Update permission level to 1 for all level except approved field, set it 2 for approved field
 
 
