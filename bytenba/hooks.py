@@ -33,7 +33,8 @@ app_include_css = "/assets/bytenba/css/bytenba.css"
 
 doctype_list_js = {
   "Certification for courses allotted": "bytenba/bytenba/doctype/certification_for_courses_allotted/certification_for_courses_allotted_list.js",
-  "ME Projects": "bytenba/bytenba/doctype/me_projects/me_projects_list.js"
+  "ME Projects": "bytenba/bytenba/doctype/me_projects/me_projects_list.js",
+  "MMS FY Projects": "bytenba/bytenba/doctype/mms_fy_projects/mms_fy_projects_list.js"
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
