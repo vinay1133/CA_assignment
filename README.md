@@ -67,5 +67,6 @@ Changes to be made to all forms
 >> Change Marks obtained to self appraisal score
 >> Update List JS for each doctype
 >> Update permission level to 1 for all level except approved field, set it 2 for approved field
+>> make sure to update hook.py and custom_cert for all document types
 
 
