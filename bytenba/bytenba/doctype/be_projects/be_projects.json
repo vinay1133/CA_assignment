@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-21 22:24:36.273735",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ht1",
+  "section_break_onyxd",
+  "professor",
+  "column_break_rh24n",
+  "academic_year",
+  "column_break_5zydd",
+  "semester",
+  "section_break_abwck",
+  "number_of_projects_guided",
+  "number_of_industry_projects",
+  "number_of_live_projects",
+  "participation_in_competitions",
+  "number_of_groups_participated",
+  "publications",
+  "column_break_9adka",
+  "funding_required",
+  "quality_of_university",
+  "awards",
+  "number_of_awards",
+  "obtained_marks",
+  "section_break_rdhlx",
+  "reviewer",
+  "approved"
+ ],
+ "fields": [
+  {
+   "fieldname": "ht1",
+   "fieldtype": "HTML",
+   "label": "Ht1",
+   "options": "<p> Maximum Possible Marks : 1323 . Marks in the bracket represents weightages for the given option</p>"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "column_break_rh24n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_abwck",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "number_of_projects_guided",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Number of projects guided",
+   "options": "Two or more(1.2)\nOne(1)\nNone(0.5)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_industry_projects",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Number of industry projects",
+   "options": "Two or more(1.2)\nOne(1)\nNone(0.5)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_live_projects",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Number of live projects",
+   "options": "Two or more(1.2)\nOne(1)\nNone(0.5)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participation_in_competitions",
+   "fieldtype": "Select",
+   "label": "Participation in competitions",
+   "options": "International (1.5)\nNational (1.3)\nState college (1.2)\nIntercollege (1.1)\nNone (1)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_groups_participated",
+   "fieldtype": "Int",
+   "label": "Number of groups participated"
+  },
+  {
+   "fieldname": "column_break_9adka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "publications",
+   "fieldtype": "Select",
+   "label": "Publications",
+   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUGC Approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_of_university",
+   "fieldtype": "Select",
+   "label": "Quality of University",
+   "options": "Accredited (1.0)\nNon-Accredited (0.8)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "awards",
+   "fieldtype": "Select",
+   "label": "Awards",
+   "options": "International (2.0)\nNational (1.8)\nState Level (1.6)\nIntercollege (1.4)\nNone (1.0)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_awards",
+   "fieldtype": "Int",
+   "label": "Number of awards"
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": "Obtained marks"
+  },
+  {
+   "fieldname": "funding_required",
+   "fieldtype": "Select",
+   "label": "Funding required",
+   "options": "Yes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5zydd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_rdhlx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "label": "Reviewer "
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved"
+  },
+  {
+   "fieldname": "section_break_onyxd",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-22 16:30:01.440606",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "BE Projects",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

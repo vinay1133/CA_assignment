@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-21 14:00:46.949579",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ht1",
+  "professor",
+  "column_break_1mfr4",
+  "academic_year",
+  "section_break_ty3pn",
+  "type_of_guide",
+  "type_of_organization",
+  "type_of_project",
+  "column_break_oinvu",
+  "publication",
+  "mapping",
+  "obtained_marks",
+  "ht2"
+ ],
+ "fields": [
+  {
+   "fieldname": "ht1",
+   "fieldtype": "HTML",
+   "label": "Ht1",
+   "options": "<p>Maximum marks : 295</p>"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "column_break_1mfr4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ty3pn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_of_guide",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of guide ",
+   "options": "1. Industry expert as Co-guide(1.5)\n2.Faculty guided only(1)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_organization",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of organization ",
+   "options": "1.MNC(1.5)\n2.National(1.3)\n3.SMEs(1.1)\n4.None(1)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_project",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of project",
+   "options": "1.Functional Project(1.0)\n2.Non-functional project(0.5)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "publication",
+   "fieldtype": "Select",
+   "label": "Publication",
+   "options": "1. Peer Reviewed Journal(1.75)\n2.Internationnal Conference(1.5)\n3.UCG approved Journal(1.5)\n4.National Conference(1.25)\n5.None(1)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "1. Strongly to PO(1.5)\n2.Strongly to CO(1)\n3.Moderatly to PO(1)\n4.Moderatly to CO(0.8)\n5.Neither mapping to PO or CO(0)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": "Obtained marks"
+  },
+  {
+   "fieldname": "ht2",
+   "fieldtype": "HTML",
+   "label": "Ht2",
+   "options": "<p>Self-Appraisal score(50)*product of weightage</p>"
+  },
+  {
+   "fieldname": "column_break_oinvu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-21 14:01:58.028983",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Mini project as a subject head",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

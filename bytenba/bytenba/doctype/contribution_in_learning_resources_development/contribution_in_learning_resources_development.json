@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-18 18:16:18.300485",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "professor",
+  "column_break_azomb",
+  "academic_year",
+  "section_break_c2agv",
+  "maximum_marks",
+  "section_break_okx7r",
+  "criteria_1",
+  "as_section",
+  "criteria_2",
+  "as2",
+  "b2_column",
+  "criteria_3",
+  "as3",
+  "criteria_4",
+  "as4",
+  "obtained_marks",
+  "marks"
+ ],
+ "fields": [
+  {
+   "fieldname": "maximum_marks",
+   "fieldtype": "HTML",
+   "label": "Maximum marks",
+   "options": "<p> <b> Maximum marks 100 </b> </p>"
+  },
+  {
+   "fieldname": "criteria_1",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Criteria 1",
+   "options": "<p> Between 0 to 1</p>",
+   "reqd": 1
+  },
+  {
+   "fieldname": "as_section",
+   "fieldtype": "HTML",
+   "label": "As",
+   "options": "<p>Theory notes /Questions for  each chapter of the syllabus &amp; upload on V-Refer <br> ( Min 10% enhancement in the existing learning resources) <br> <b> 40 marks</b></p>"
+  },
+  {
+   "fieldname": "criteria_2",
+   "fieldtype": "Float",
+   "label": "Criteria 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "as2",
+   "fieldtype": "HTML",
+   "label": "As2",
+   "options": "<p> E-book/ including digital content<br> (Cluster mentor to give quality factor) <br><b> 30 marks</b> </p>"
+  },
+  {
+   "fieldname": "criteria_3",
+   "fieldtype": "Float",
+   "label": "Criteria 3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "as3",
+   "fieldtype": "HTML",
+   "label": "As3.",
+   "options": "<p> Resource book/ Lab manual<br> (Cluster mentor to give quality factor)<br> <b> 20 marks</b> <br> </p>"
+  },
+  {
+   "fieldname": "criteria_4",
+   "fieldtype": "Float",
+   "label": "Criteria 4",
+   "reqd": 1
+  },
+  {
+   "fieldname": "as4",
+   "fieldtype": "HTML",
+   "label": "As4",
+   "options": "<p> Preparation of AAP validated by cluster mentor <br>(Cluster mentor to give quality factor) <br><b> 10 marks </b> </p> "
+  },
+  {
+   "bold": 1,
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": "Obtained marks "
+  },
+  {
+   "fieldname": "column_break_azomb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic year ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_c2agv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "b2_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_okx7r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "marks",
+   "fieldtype": "HTML",
+   "label": "Marks",
+   "options": "<p> (Criteria 1 * 40 + Criteria 2 * 30 + Criteria 3 * 20 + Criteria 4 * 10 )</p>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-18 19:27:25.136931",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Contribution in learning resources development",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
