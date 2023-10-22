@@ -121,20 +121,20 @@ home_page = "index"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-    "BSA-Co-curricular": {
-        "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
-    },
-    "Lab work-Case study": {
-        "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
-    },
+# doc_events = {
+    # "BSA-Co-curricular": {
+    #     "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
+    # },
+    # "Lab work-Case study": {
+    #     "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
+    # },
     # "Certification for courses allotted": {
     #   "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
     # },
-    "BSA guest lecture":{
-      "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
-    }
-}
+    # "BSA guest lecture":{
+    #   "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
+    # }
+# }
 # Scheduled Tasks
 # ---------------
 

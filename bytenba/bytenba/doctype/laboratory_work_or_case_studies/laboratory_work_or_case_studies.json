@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-22 23:24:39.503957",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dirs",
+  "approved",
+  "section_break_zhto",
+  "professor",
+  "column_break_nptz",
+  "academic_year",
+  "column_break_skh9",
+  "semester",
+  "section_break_hcgo",
+  "lab_work_case_study_ct",
+  "section_break_vqji",
+  "self_appraisal_score",
+  "section_break_pjix",
+  "reviewer",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "dirs",
+   "fieldtype": "HTML",
+   "label": "Dirs",
+   "options": "<p>For MMS and Engg categories enter applicable weightages in the range mentioned.</p>\n<p>Average Will be taken for multiple courses</p>"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_zhto",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nptz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
+  },
+  {
+   "fieldname": "column_break_skh9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_hcgo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Click Edit to expand row and add data",
+   "fieldname": "lab_work_case_study_ct",
+   "fieldtype": "Table",
+   "label": "Enter Details of Course / Activities",
+   "options": "Lab work-Case study"
+  },
+  {
+   "fieldname": "section_break_vqji",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Represents Average of marks obtained of both courses",
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "label": "Reviewer"
+  },
+  {
+   "fieldname": "section_break_pjix",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link For Evidence"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-23 00:16:34.162313",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Laboratory Work Or Case Studies",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
