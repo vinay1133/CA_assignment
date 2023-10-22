@@ -298,7 +298,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Academic Involvement 13 (Preview)",
+   "label": "Academic Involvement 14 (Preview)",
    "link_count": 0,
    "link_to": "Grades in preceding semester AI14",
    "link_type": "DocType",
@@ -306,7 +306,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-10-22 20:48:41.150989",
+ "modified": "2023-10-22 20:51:44.216261",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Academic Involvement Bucket",
