@@ -63,9 +63,9 @@ Changes to be made to all forms
 >> Adding Approved field
 >> Changing permission level
 >> Updating list views
->> Write function for acadeic year for Academic Year
+>> Academic year appropriate functiosn
 >> Change Marks obtained to self appraisal score
 >> Update List JS for each doctype
->> Update permission level to 1 for all level except approved field, set it 2 for approved field
+>> View evidence addition 
 
 
