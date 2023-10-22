@@ -122,7 +122,11 @@ home_page = "index"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
+
+
+
+# doc_events = {
+
     # "BSA-Co-curricular": {
     #     "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
     # },
@@ -135,7 +139,8 @@ doc_events = {
     # "BSA guest lecture":{
     #   "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
     # }
-}
+# }
+
 # Scheduled Tasks
 # ---------------
 
