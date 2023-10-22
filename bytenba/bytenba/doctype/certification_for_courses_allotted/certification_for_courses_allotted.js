@@ -20,16 +20,16 @@ frappe.ui.form.on(DocType, {
       frm.set_value('professor', currentUser);
     }
 		
-		if (frappe.user.has_role('vit_emp') == 1){
-			frm.add_custom_button(__("New Form"), () => {			
-				frappe.confirm('Create new form?',
-				() => {
-					frappe.new_doc(DocType, {})
-				}, () => {
-					frm.refresh()
-				})
-			}).css({'color':'white','font-weight': 'normal', background: '#2490ef'});
-		}
+		
+		frm.add_custom_button(__("New Form"), () => {			
+			frappe.confirm('Create new form?',
+			() => {
+				frappe.new_doc(DocType, {})
+			}, () => {
+				frm.refresh()
+			})
+		}).css({'color':'white','font-weight': 'normal', background: '#2490ef'});
+		
 
 		frappe.call({
 			method: 'bytenba.get_reviewer.get_reviewer',
