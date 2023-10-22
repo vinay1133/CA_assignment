@@ -34,7 +34,8 @@ app_license = "MIT"
 doctype_list_js = {
   "Certification for courses allotted": "bytenba/bytenba/doctype/certification_for_courses_allotted/certification_for_courses_allotted_list.js",
   "ME Projects": "bytenba/bytenba/doctype/me_projects/me_projects_list.js",
-  "MMS FY Projects": "bytenba/bytenba/doctype/mms_fy_projects/mms_fy_projects_list.js"
+  "MMS FY Projects": "bytenba/bytenba/doctype/mms_fy_projects/mms_fy_projects_list.js",
+  "BSA guest lecture":"bytenba/bytenba/doctype/bsa_guest_lecture/bsa_guest_lecture_list.js"
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -122,18 +123,18 @@ home_page = "index"
 # Hook on document methods and events
 
 doc_events = {
-    "BSA-Co-curricular": {
-        "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
-    },
-    "Lab work-Case study": {
-        "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
-    },
+    # "BSA-Co-curricular": {
+    #     "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
+    # },
+    # "Lab work-Case study": {
+    #     "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
+    # },
     # "Certification for courses allotted": {
     #   "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
     # },
-    "BSA guest lecture":{
-      "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
-    }
+    # "BSA guest lecture":{
+    #   "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
+    # }
 }
 # Scheduled Tasks
 # ---------------

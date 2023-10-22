@@ -8,19 +8,25 @@
  "engine": "InnoDB",
  "field_order": [
   "directions",
+  "section_break_vif7",
+  "approved",
   "cbrk1_column",
-  "academic_year",
-  "sbrk1_section",
   "professor",
+  "column_break_tcn9",
+  "academic_year",
+  "column_break_uxbe",
+  "semester",
+  "sbrk1_section",
   "total_students",
   "number_of_attendees",
   "number_of_feedbacks",
-  "quality_relevance",
   "quality_of_speaker",
-  "column_break_uxbe",
   "mapping",
+  "column_break_f6jr",
   "link_for_evidence",
+  "view_evidence",
   "reviewer",
+  "quality_relevance",
   "marks_obtained",
   "self_appraisal_score"
  ],
@@ -47,16 +53,14 @@
   },
   {
    "fieldname": "link_for_evidence",
-   "fieldtype": "Data",
-   "label": "Link for evidence",
-   "reqd": 1
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
   },
   {
    "fieldname": "reviewer",
-   "fieldtype": "Link",
+   "fieldtype": "Read Only",
    "label": "Reviewer",
-   "options": "Professors",
-   "reqd": 1
+   "options": "Professors"
   },
   {
    "fieldname": "directions",
@@ -73,7 +77,7 @@
   },
   {
    "fieldname": "cbrk1_column",
-   "fieldtype": "Column Break"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "sbrk1_section",
@@ -117,11 +121,42 @@
    "fieldname": "self_appraisal_score",
    "fieldtype": "Read Only",
    "label": "Self Appraisal Score"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "default": "Even",
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Even\nOdd"
+  },
+  {
+   "fieldname": "column_break_tcn9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_f6jr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vif7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View evidence"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 22:02:33.191413",
+ "modified": "2023-10-22 23:28:38.159229",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA guest lecture",
@@ -154,5 +189,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

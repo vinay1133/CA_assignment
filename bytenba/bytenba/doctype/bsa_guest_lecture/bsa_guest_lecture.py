@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+import bytenba.custom_utilities as uf
 import re
 
 Doctype = 'BSA guest lecture'
@@ -13,7 +14,7 @@ class BSAguestlecture(Document):
 
 	"""method to autoname your document"""
 	def autoname(self):
-		base_name = f'AI3a_{self.academic_year}_{self.professor}'
+		base_name = f'AI3a_{self.professor}_{self.academic_year}_{self.semester}'
 		data = renameDoc(base_name, self.academic_year)
 		if data['name_value']:
 			self.name = data['name_value']
@@ -28,14 +29,10 @@ class BSAguestlecture(Document):
 
 	def validate(self):
 		"""Academic year validations"""
-		academic_yr_str = self.academic_year
-		if not re.match(pattern, academic_yr_str):
-			frappe.throw('Academic year must be of the form like 2022-2023')
-		else:
-			yr_end_1 = int(academic_yr_str[2:4])
-			yr_end_2 = int(academic_yr_str[7:9])
-			if yr_end_2 != yr_end_1 + 1:
-				frappe.throw('Academic Date entered improperly')
+		uf.validateAY(self.academic_year)
+		existing_record = frappe.db.exists(Doctype, {'name': self.name})
+		if existing_record and existing_record != self.name:
+			frappe.throw('There already exists such a record in the database') 
 
 		if self.number_of_attendees > self.total_students:
 			frappe.throw('Number of attendees cannot be greater than the number of students enrolled')		
