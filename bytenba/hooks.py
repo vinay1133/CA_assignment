@@ -11,7 +11,7 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/bytenba/css/bytenba.css"
+#app_include_css = "/assets/bytenba/css/bytenba.css"
 # app_include_js = "/assets/bytenba/js/bytenba.js"
 
 # include js, css files in header of web template
@@ -128,9 +128,9 @@ doc_events = {
     "Lab work-Case study": {
         "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
     },
-    "Certification for courses allotted": {
-      "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
-    },
+    # "Certification for courses allotted": {
+    #   "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",
+    # },
     "BSA guest lecture":{
       "on_update":"bytenba.bytenba.doctype.bsa_guest_lecture.bsa_guest_lecture.addDocs"
     }

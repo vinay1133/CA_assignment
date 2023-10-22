@@ -26,28 +26,27 @@
    "fieldname": "no_sessions",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Number of session",
+   "label": "No. of lectures engaged",
    "reqd": 1
   },
   {
    "fieldname": "number_of_sessions_as_per_syllabus",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "No. Session per Syllabus",
+   "label": "No. lectures per Syllabus",
    "reqd": 1
   },
   {
    "fieldname": "completion_of_syllabus",
    "fieldtype": "Percent",
    "in_list_view": 1,
-   "label": "Completion of syllabus",
-   "reqd": 1
+   "label": "Completion of syllabus"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-09-07 17:06:24.806674",
+ "modified": "2023-10-22 15:26:41.287369",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "ai2",

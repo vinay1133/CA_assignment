@@ -7,19 +7,25 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "dir",
+  "approved",
+  "section_break_quix2",
   "professor",
   "column_break_lxjel",
   "academic_year",
-  "section_break_quix2",
+  "column_break_ow4f",
+  "semester",
+  "section_break_hsx1",
   "course__lab_name",
   "section_break_mspkh",
   "average_target_obtained",
   "marks_obtained",
   "average_syllabus_completed",
-  "column_break_khhsp",
   "self_appraisal_score",
+  "column_break_khhsp",
+  "reviewer",
   "link__for_evidence",
-  "reviewer"
+  "view_evidence"
  ],
  "fields": [
   {
@@ -34,39 +40,44 @@
    "options": "ai2"
   },
   {
+   "default": "0",
    "fieldname": "average_target_obtained",
    "fieldtype": "Percent",
-   "label": "Average Target Obtained"
+   "label": "Average Target Obtained",
+   "read_only": 1
   },
   {
    "fieldname": "marks_obtained",
    "fieldtype": "Int",
-   "label": "Marks Obtained"
+   "label": "Marks Obtained",
+   "read_only": 1
   },
   {
+   "default": "0",
    "fieldname": "average_syllabus_completed",
    "fieldtype": "Percent",
-   "label": "Average Syllabus Completed"
+   "label": "Average Syllabus Completed",
+   "read_only": 1
   },
   {
+   "default": "0",
    "fieldname": "self_appraisal_score",
    "fieldtype": "Float",
-   "label": "Self Appraisal Score"
+   "label": "Self Appraisal Score",
+   "read_only": 1
   },
   {
    "fieldname": "reviewer",
-   "fieldtype": "Link",
+   "fieldtype": "Read Only",
    "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors",
-   "reqd": 1
+   "options": "Professors"
   },
   {
    "fieldname": "link__for_evidence",
-   "fieldtype": "Data",
+   "fieldtype": "Attach",
    "in_list_view": 1,
-   "label": "Link  for evidence",
-   "reqd": 1
+   "label": "Link  for evidence"
   },
   {
    "fieldname": "section_break_mspkh",
@@ -89,11 +100,44 @@
   {
    "fieldname": "section_break_quix2",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dir",
+   "fieldtype": "HTML",
+   "label": "dir",
+   "options": "<p>Enter the courses taught during PA evaluation period</p>"
+  },
+  {
+   "fieldname": "column_break_ow4f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_hsx1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-19 00:38:08.328514",
+ "modified": "2023-10-22 17:16:19.414988",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",

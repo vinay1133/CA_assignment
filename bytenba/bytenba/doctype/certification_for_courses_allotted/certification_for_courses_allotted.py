@@ -3,104 +3,54 @@
 
 import frappe
 from frappe.model.document import Document
+import bytenba.custom_utilities as uf
 import re
 
 Doctype = 'Certification for courses allotted'
-pattern = re.compile(r'^\d{4}-\d{4}$')
-
-platform_mapping = {'Professor/Industry Expert of National/International repute (1.5)': 1.5, 'Professor from State college (1)' :1, 'Any other (0.4)': 0.4}
-hours_mapping = {'30+': 1, '20+': 0.5, 'Below 20': 0}
-assessment_mapping = {'Grade B or Above (1)': 1, 'Pass (0.4)': 0.4, 'Audit (0.2)': 0.2, 'Fail (0)': 0}
-doc_mapping = {'2 years (1)': 1, '2 to 4 years (0.75)': 0.75, '4 to 6 years (0.4)': 0.4, 'More than 6 years (0)': 0}
+pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
 class Certificationforcoursesallotted(Document):
 	
 	"""method to autoname your document"""
 	def autoname(self):
-		base_name = f'AI1_{self.academic_year}_{self.professor}'
-		data = renameDoc(base_name, self.academic_year)
-		if data['name_value']:
-			self.name = data['name_value']
-		else:
-			frappe.throw("Failed to generate a unique name.")
+		self.name = f'AI1_{self.professor}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
-		marks = compute_marks(self)
-		self.marks_obtained = marks
+		self_appraisal_score = compute_marks(self)
+		self.self_appraisal_score = self_appraisal_score
 
 	def validate(self):
-		academic_yr_str = self.academic_year
-		if re.match(pattern, academic_yr_str):
-			years = academic_yr_str.split("-")
-			if int(years[1]) != int(years[0]) + 1:
-				frappe.throw('Academic year entered incorrectly')
-		else:
-			frappe.throw('Academic year must be of the form like 2022-2023')
+		uf.validateAY(self.academic_year)
+		existing_record = frappe.db.exists(Doctype, {'name': self.name})
+		if existing_record and existing_record != self.name:
+			frappe.throw('There already exists such a record in the database')  
 
 
 def compute_marks(self):
-  
-    """get platform type"""
-    platform_type_str = self.platform_type
-    platform_param = platform_mapping.get(platform_type_str, 0)
-
-    """get values for number of hours"""
-    no_hrs_str = self.number_of_hours
-    hours_param = hours_mapping.get(no_hrs_str, 0)
-
-    """get assessment outcome"""
-    assessment_outcome_str = self.assessment_outcome
-    assessment_param = assessment_mapping.get(assessment_outcome_str, 0)
-
-    """get date of certification parameter"""
-    doc_str = self.date_of_cerftification
-    doc_param = doc_mapping.get(doc_str, 0)
-
-    product_of_wts = platform_param*hours_param*assessment_param*doc_param
-    marks = product_of_wts*100
-
-    return marks
-
-def renameDoc(base_name, academic_year):
-	dict = {'name_value': None}
-	filters = {
-		"name": ["like", base_name + "%"]
-	}
-	field = 'name'
-	similar_docs = frappe.get_list(Doctype, filters= filters, pluck = field)
-	if len(similar_docs) == 0:
-		dict['name_value'] = base_name + '_0'
-		return dict
-	if len(similar_docs) == 1:
-		form_num = int(similar_docs[0][-1])
-		new_num = form_num + 1
-		dict['name_value'] = f"{base_name}_{new_num}"
-	elif len(similar_docs) == 2:
-			frappe.throw(f'Maximum limit of 2 for AI1 forms for the academic year {academic_year} has been reached, kindly delete existing forms to create more')
+	
+	match = re.search(pattern_for_wtg, self.platform_type)
+	if match:
+		val1 = float(match.group(1).strip())
 	else:
-			frappe.throw(f'Something went wrong')
-	return dict
+		frappe.throw('Error Fetching Field Weightages')
+
+	match = re.search(pattern_for_wtg, self.assessment_outcome)
+	if match:
+		val2 = float(match.group(1).strip())
+	else:
+		frappe.throw('Error Fetching Field Weightages')
+
+	match = re.search(pattern_for_wtg, self.date_of_cerftification)
+	if match:
+		val3 = float(match.group(1).strip())
+	else:
+		frappe.throw('Error Fetching Field Weightages')
+
+	match = re.search(pattern_for_wtg, self.number_of_hours)
+	if match:
+		val4 = float(match.group(1).strip())
+	else:
+		frappe.throw('Error Fetching Field Weightages')
 		
-def rankDocs(doc, method):
-	filters = {
-		"name": ["like", doc.name[:-2] + "%"]
-	}
-	field = 'name'
-	similar_docs = frappe.get_list("Certification for courses allotted", filters= filters, pluck = field)
-	if len(similar_docs) == 2:
-		for doc_name in similar_docs:
-			if doc_name != doc.name:
-				old_doc_name = doc_name
-		e_doc = frappe.get_doc(Doctype, old_doc_name)
-		e_marks = e_doc.marks_obtained
-		if e_marks > doc.marks_obtained:
-			e_doc.db_set('max_val', 'True', commit = True)
-			doc.db_set('max_val', 'False', commit = True)
-		elif doc.marks_obtained > e_marks:
-			e_doc.db_set('max_val', 'False', commit = True)
-			doc.db_set('max_val', 'True', commit = True)
-		else:
-			e_doc.db_set('max_val', 'Equal Score', commit = True)
-			doc.db_set('max_val', 'Equal Score', commit = True)
-	else:
-		pass
+	product_of_wts = val1*val2*val3*val4
+	return product_of_wts*100

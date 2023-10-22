@@ -1,0 +1,21 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "AI1 Chart 1",
+   "width": "Full"
+  }
+ ],
+ "creation": "2023-10-20 16:23:36.898640",
+ "dashboard_name": "Academic involvement overview",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2023-10-20 16:23:36.898640",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "Academic involvement overview",
+ "owner": "Administrator"
+}

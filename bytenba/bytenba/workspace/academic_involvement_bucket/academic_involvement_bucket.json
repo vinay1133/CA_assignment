@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"SCxumYWT75\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Academic Involvement Bucket</span>\",\"col\":12}},{\"id\":\"sul4etEwzb\",\"type\":\"card\",\"data\":{\"card_name\":\"Certification for courses allotted\",\"col\":4}},{\"id\":\"NLDDMzohU9\",\"type\":\"card\",\"data\":{\"card_name\":\"Courses Taught\",\"col\":4}},{\"id\":\"s-rH3rFC9B\",\"type\":\"card\",\"data\":{\"card_name\":\"Beyond Syllabus Activites\",\"col\":4}},{\"id\":\"aA5h8s25CM\",\"type\":\"card\",\"data\":{\"card_name\":\"Lab work / Case Study\",\"col\":4}},{\"id\":\"INVXqEAqId\",\"type\":\"card\",\"data\":{\"card_name\":\"Course / Lab outcome attainment\",\"col\":4}},{\"id\":\"GCAj5czbqA\",\"type\":\"card\",\"data\":{\"card_name\":\"Innovations in TLP\",\"col\":4}},{\"id\":\"Rw0V1G1SwN\",\"type\":\"card\",\"data\":{\"card_name\":\"M.E. Projects\",\"col\":4}}]",
+ "content": "[{\"id\":\"SCxumYWT75\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Academic Involvement Bucket</span>\",\"col\":12}},{\"id\":\"sul4etEwzb\",\"type\":\"card\",\"data\":{\"card_name\":\"Certification for courses allotted\",\"col\":4}},{\"id\":\"NLDDMzohU9\",\"type\":\"card\",\"data\":{\"card_name\":\"Courses Taught\",\"col\":4}},{\"id\":\"s-rH3rFC9B\",\"type\":\"card\",\"data\":{\"card_name\":\"Beyond Syllabus Activites\",\"col\":4}},{\"id\":\"aA5h8s25CM\",\"type\":\"card\",\"data\":{\"card_name\":\"Lab work / Case Study\",\"col\":4}},{\"id\":\"INVXqEAqId\",\"type\":\"card\",\"data\":{\"card_name\":\"Course / Lab outcome attainment\",\"col\":4}},{\"id\":\"GCAj5czbqA\",\"type\":\"card\",\"data\":{\"card_name\":\"Innovations in TLP\",\"col\":4}},{\"id\":\"Rw0V1G1SwN\",\"type\":\"card\",\"data\":{\"card_name\":\"Projects\",\"col\":4}}]",
  "creation": "2023-10-18 19:40:36.212312",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -152,8 +152,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "M.E. Projects",
-   "link_count": 1,
+   "label": "Projects",
+   "link_count": 2,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -166,9 +166,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Academic Involvement 10 MMS",
+   "link_count": 0,
+   "link_to": "MMS FY Projects",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-10-20 01:17:12.547251",
+ "modified": "2023-10-20 13:54:17.518839",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Academic Involvement Bucket",
