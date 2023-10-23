@@ -8,7 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "dir",
+  "section_break_qe0e",
   "approved",
+  "reviewer_score",
   "column_break_hpsk",
   "professor",
   "section_break_uihc",
@@ -131,11 +133,21 @@
    "fieldtype": "Button",
    "label": "View Evidence",
    "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 17:22:07.267538",
+ "modified": "2023-10-23 12:57:23.077945",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

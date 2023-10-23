@@ -8,7 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "dirs",
+  "section_break_gnpe",
   "approved",
+  "reviewer_score",
   "section_break_zhto",
   "professor",
   "column_break_nptz",
@@ -16,8 +18,12 @@
   "column_break_skh9",
   "semester",
   "section_break_hcgo",
-  "lab_work_case_study_ct",
+  "engg_table",
   "section_break_vqji",
+  "mms_table",
+  "section_break_avsf",
+  "mapping",
+  "section_break_azbq",
   "self_appraisal_score",
   "section_break_pjix",
   "reviewer",
@@ -71,20 +77,13 @@
    "fieldtype": "Section Break"
   },
   {
-   "description": "Click Edit to expand row and add data",
-   "fieldname": "lab_work_case_study_ct",
-   "fieldtype": "Table",
-   "label": "Enter Details of Course / Activities",
-   "options": "Lab work-Case study"
-  },
-  {
    "fieldname": "section_break_vqji",
    "fieldtype": "Section Break"
   },
   {
    "description": "Represents Average of marks obtained of both courses",
    "fieldname": "self_appraisal_score",
-   "fieldtype": "Float",
+   "fieldtype": "Read Only",
    "label": "Self Appraisal Score"
   },
   {
@@ -105,11 +104,47 @@
    "fieldname": "view_evidence",
    "fieldtype": "Button",
    "label": "View Evidence"
+  },
+  {
+   "fieldname": "engg_table",
+   "fieldtype": "Table",
+   "label": "Enter Quality Benchmarks for Engineering Category",
+   "options": "engg_labWork"
+  },
+  {
+   "fieldname": "mms_table",
+   "fieldtype": "Table",
+   "label": "Enter Quality Benchmarks for MMS Category",
+   "options": "mms_labWork"
+  },
+  {
+   "fieldname": "section_break_avsf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gnpe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "label": "Mapping",
+   "options": "Strongly to CO (1)\nModerately to CO (0.8)\nNot mapped to CO (0)"
+  },
+  {
+   "fieldname": "section_break_azbq",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-23 00:16:34.162313",
+ "modified": "2023-10-23 13:12:59.971188",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Laboratory Work Or Case Studies",
