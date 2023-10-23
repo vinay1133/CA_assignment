@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-23 11:39:38.481052",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "engg_a",
+  "engg_b",
+  "engg_c",
+  "engg_d",
+  "app_engg_wt"
+ ],
+ "fields": [
+  {
+   "description": "Weightage: 1.5",
+   "fieldname": "engg_a",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Uploading Videos of new experiments  / PBL prepared during  the PA evaluation period",
+   "reqd": 1
+  },
+  {
+   "description": "Weightage 0 to 1",
+   "fieldname": "engg_c",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quality of PB statements ",
+   "reqd": 1
+  },
+  {
+   "description": "Weightage 0 to 1.25",
+   "fieldname": "engg_b",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Use of new tools / simulators / virtual labs",
+   "reqd": 1
+  },
+  {
+   "description": "Weightage 0 to 1",
+   "fieldname": "engg_d",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Continuous Assessment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "app_engg_wt",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Applicable Engg Weightage"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-23 11:42:52.022029",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "engg_labWork",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
