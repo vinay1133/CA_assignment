@@ -7,18 +7,26 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "type_of_guide",
-  "column_break_t9igi",
-  "academic_year",
-  "section_break_igjih",
   "professor",
+  "column_break_sf4l",
+  "academic_year",
+  "column_break_adqa",
+  "semester",
+  "section_break_igjih",
+  "approved",
+  "column_break_gz8j",
+  "reviewer_score",
+  "section_break_mbvi",
+  "type_of_guide",
   "type_of_organistion_of_industry_coguide",
   "type_of_project",
   "mapping",
   "column_break_zpevz",
-  "link_for_evidence",
+  "marks_obtained",
+  "self_appraisal_score",
   "reviewer",
-  "marks_obtained"
+  "link_for_evidence",
+  "view_evidence"
  ],
  "fields": [
   {
@@ -57,17 +65,14 @@
   },
   {
    "fieldname": "link_for_evidence",
-   "fieldtype": "Data",
+   "fieldtype": "Attach",
    "in_list_view": 1,
-   "label": "Link for evidence",
-   "reqd": 1
+   "label": "Link for evidence"
   },
   {
    "fieldname": "reviewer",
-   "fieldtype": "Link",
-   "label": "Reviewer",
-   "options": "Professors",
-   "reqd": 1
+   "fieldtype": "Read Only",
+   "label": "Reviewer"
   },
   {
    "fieldname": "marks_obtained",
@@ -82,21 +87,64 @@
    "label": "Professor"
   },
   {
-   "fieldname": "column_break_t9igi",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_zpevz",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "section_break_igjih",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_gz8j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_mbvi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_sf4l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_adqa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 22:00:37.773946",
+ "modified": "2023-10-29 14:13:55.064479",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Mini Prj",
@@ -129,5 +177,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

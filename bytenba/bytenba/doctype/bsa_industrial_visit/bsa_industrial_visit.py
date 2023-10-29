@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+import bytenba.custom_utilities as uf
 import re
 
 Doctype = 'BSA industrial visit'
@@ -11,27 +12,16 @@ pattern = re.compile(r'^\d{4}-\d{4}$')
 class BSAindustrialvisit(Document):
 
 	def autoname(self):
-		self.name = f'AI3b_{self.academic_year}_{self.professor}'
+		self.name = f'AI3b_{self.professor}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
 		marks_dict = compute_marks(self)
 		self.quality_relevance = marks_dict['quality_relevance']
 		self.marks_obtained = marks_dict['total_marks']
+		self.self_appraisal_score = marks_dict['total_marks']
 
 	def validate(self):
-		"""Academic year validations"""
-		academic_yr_str = self.academic_year
-		if not re.match(pattern, academic_yr_str):
-			frappe.throw('Academic year must be of the form like 2022-2023')
-		else:
-			yr_end_1 = academic_yr_str[3]
-			yr_end_2 = academic_yr_str[-1]
-			if yr_end_1 == '9':
-				if yr_end_2 != '0':
-					frappe.throw('Academic Date entered imroperly')
-			else:
-				if int(yr_end_2) != int(yr_end_1) + 1:
-					frappe.throw('Academic Date entered imroperly')
+		uf.validateAY(self.academic_year)
 
 		if self.number_of_attendees > self.total_students:
 			frappe.throw('Number of attendees cannot be greater than the number of students enrolled')		

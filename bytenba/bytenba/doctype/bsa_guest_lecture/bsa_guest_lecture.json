@@ -10,6 +10,8 @@
   "directions",
   "section_break_vif7",
   "approved",
+  "column_break_xk0g",
+  "reviewer_score",
   "cbrk1_column",
   "professor",
   "column_break_tcn9",
@@ -59,8 +61,7 @@
   {
    "fieldname": "reviewer",
    "fieldtype": "Read Only",
-   "label": "Reviewer",
-   "options": "Professors"
+   "label": "Reviewer"
   },
   {
    "fieldname": "directions",
@@ -151,12 +152,23 @@
   {
    "fieldname": "view_evidence",
    "fieldtype": "Button",
-   "label": "View evidence"
+   "label": "View evidence",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_xk0g",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 23:28:38.159229",
+ "modified": "2023-10-29 15:04:58.952007",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA guest lecture",
