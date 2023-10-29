@@ -9,15 +9,14 @@
  "field_order": [
   "dir1",
   "section_break_upi1",
+  "approved",
+  "reviewer_score",
+  "section_break_xawo",
   "professor",
   "column_break_tdsm",
   "academic_year",
   "column_break_2jyy",
   "semester",
-  "break_section",
-  "approved",
-  "column_break_4si4",
-  "reviewer_score",
   "section_break_q3o9",
   "students_feedback_about_the",
   "feedback_received",
@@ -50,10 +49,6 @@
    "fieldtype": "HTML",
    "label": "Sdir",
    "options": "<p><b>Students feedback about quality and relevance</b></p>"
-  },
-  {
-   "fieldname": "break_section",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "feedback_received",
@@ -187,6 +182,7 @@
   {
    "fieldname": "obtained_marks",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Obtained marks"
   },
   {
@@ -223,10 +219,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_4si4",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_tdsm",
    "fieldtype": "Column Break"
   },
@@ -242,11 +234,15 @@
    "fieldname": "reviewer",
    "fieldtype": "Read Only",
    "label": "Reveiwer"
+  },
+  {
+   "fieldname": "section_break_xawo",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 13:52:36.256489",
+ "modified": "2023-10-30 00:49:03.847585",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Co-curricular",

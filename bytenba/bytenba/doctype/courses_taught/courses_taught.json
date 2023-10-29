@@ -144,7 +144,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 10:22:52.244759",
+ "modified": "2023-10-30 00:17:53.084217",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",
@@ -201,5 +201,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

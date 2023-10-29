@@ -14,18 +14,14 @@ class BSAguestlecture(Document):
 
 	"""method to autoname your document"""
 	def autoname(self):
-		base_name = f'AI3a_{self.professor}_{self.academic_year}_{self.semester}'
-		data = renameDoc(base_name, self.academic_year)
-		if data['name_value']:
-			self.name = data['name_value']
-		else:
-			frappe.throw("Failed to generate a unique name.")
+		self.name = f'AI3a_{self.professor}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
-		
+
 		marks_dict = compute_marks(self)
 		self.quality_relevance = marks_dict['quality_relevance']
 		self.marks_obtained = marks_dict['total_marks']
+		self.self_appraisal_score = marks_dict['total_marks']
 
 	def validate(self):
 		"""Academic year validations"""
@@ -80,39 +76,39 @@ def compute_marks(self):
 
 	return marksDict
 
-def renameDoc(base_name, academic_year):
-	dict = {'name_value': None}
-	filters = {
-		"name": ["like", base_name + "%"]
-	}
-	field = 'name'
-	similar_docs = frappe.get_list(Doctype, filters= filters, pluck = field)
-	if len(similar_docs) == 0:
-		dict['name_value'] = base_name + '_0'
-		return dict
-	if len(similar_docs) == 1:
-		form_num = int(similar_docs[0][-1])
-		new_num = form_num + 1
-		dict['name_value'] = f"{base_name}_{new_num}"
-	elif len(similar_docs) == 2:
-			frappe.throw(f'Maximum limit of 2 for AI13a forms for the academic year {academic_year} has been reached, kindly delete existing forms to create more')
-	else:
-			frappe.throw(f'Something went wrong')
-	return dict
+# def renameDoc(base_name, academic_year):
+# 	dict = {'name_value': None}
+# 	filters = {
+# 		"name": ["like", base_name + "%"]
+# 	}
+# 	field = 'name'
+# 	similar_docs = frappe.get_list(Doctype, filters= filters, pluck = field)
+# 	if len(similar_docs) == 0:
+# 		dict['name_value'] = base_name + '_0'
+# 		return dict
+# 	if len(similar_docs) == 1:
+# 		form_num = int(similar_docs[0][-1])
+# 		new_num = form_num + 1
+# 		dict['name_value'] = f"{base_name}_{new_num}"
+# 	elif len(similar_docs) == 2:
+# 			frappe.throw(f'Maximum limit of 2 for AI13a forms for the academic year {academic_year} has been reached, kindly delete existing forms to create more')
+# 	else:
+# 			frappe.throw(f'Something went wrong')
+# 	return dict
 		
-def addDocs(doc, method):
-	filters = {
-		"name": ["like", doc.name[:-2] + "%"]
-	}
-	field = 'name'
-	similar_docs = frappe.get_list(Doctype, filters= filters, pluck = field)
-	if len(similar_docs) == 2:
-		for doc_name in similar_docs:
-			if doc_name != doc.name:
-				old_doc_name = doc_name
-		e_doc = frappe.get_doc(Doctype, old_doc_name)
-		e_marks = e_doc.marks_obtained		
-		e_doc.db_set('self_appraisal_score', doc.marks_obtained + e_marks, commit = True)
-		doc.db_set('self_appraisal_score', doc.marks_obtained + e_marks, commit = True)
-	else:
-		pass
+# def addDocs(doc, method):
+# 	filters = {
+# 		"name": ["like", doc.name[:-2] + "%"]
+# 	}
+# 	field = 'name'
+# 	similar_docs = frappe.get_list(Doctype, filters= filters, pluck = field)
+# 	if len(similar_docs) == 2:
+# 		for doc_name in similar_docs:
+# 			if doc_name != doc.name:
+# 				old_doc_name = doc_name
+# 		e_doc = frappe.get_doc(Doctype, old_doc_name)
+# 		e_marks = e_doc.marks_obtained		
+# 		e_doc.db_set('self_appraisal_score', doc.marks_obtained + e_marks, commit = True)
+# 		doc.db_set('self_appraisal_score', doc.marks_obtained + e_marks, commit = True)
+# 	else:
+# 		pass

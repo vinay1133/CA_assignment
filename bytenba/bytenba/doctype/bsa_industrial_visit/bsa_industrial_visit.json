@@ -9,15 +9,15 @@
  "field_order": [
   "directions",
   "column_break_a1br",
+  "approved",
+  "reviewer_score",
+  "section_break_gxve",
   "professor",
   "column_break_rxvu",
   "academic_year",
   "column_break_xbkp",
   "semester",
   "section_break_dnfd",
-  "approved",
-  "column_break_3nnb",
-  "reviewer_score",
   "section_break_ilf9",
   "mou_for_placement",
   "mou_for_internship",
@@ -36,9 +36,9 @@
   "marks_obtained",
   "self_appraisal_score",
   "section_section",
-  "link_for_evidence",
-  "column_break_gjeo",
   "reviewer",
+  "column_break_izxn",
+  "link_for_evidence",
   "view_evidence"
  ],
  "fields": [
@@ -172,10 +172,6 @@
    "label": "Link for evidence"
   },
   {
-   "fieldname": "column_break_gjeo",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "marks_obtained",
    "fieldtype": "Float",
    "label": "Marks Obtained",
@@ -205,10 +201,6 @@
    "permlevel": 1
   },
   {
-   "fieldname": "column_break_3nnb",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "self_appraisal_score",
    "fieldtype": "Float",
    "label": "Self Appraisal Score",
@@ -227,11 +219,19 @@
    "fieldtype": "Select",
    "label": "Semester",
    "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_gxve",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_izxn",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 14:40:58.937858",
+ "modified": "2023-10-30 00:34:42.373365",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA industrial visit",

@@ -38,7 +38,8 @@ doctype_list_js = {
   "BSA guest lecture":"bytenba/bytenba/doctype/bsa_guest_lecture/bsa_guest_lecture_list.js",
   "BSA-Co-curricular":"bytenba/bytenba/doctype/bsa_co_curricular/bsa_co_curricular_list.js",
   "BSA-Mini Prj":"bytenba/bytenba/doctype/bsa_mini_prj/bsa_mini_prj_list.js",
-  "BSA industrial visit":"bytenba/bytenba/doctype/bsa_industrial_visit/bsa_industrial_visit_list.js"
+  "BSA industrial visit":"bytenba/bytenba/doctype/bsa_industrial_visit/bsa_industrial_visit_list.js",
+  "Course_Lab outcome attainment" : "bytenba/bytenba/doctype/course_lab_outcome_attainment/course_lab_outcome_attainment_list.js"
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -53,7 +54,6 @@ doctype_js = {
     "BSA industrial visit":"public/js/custom_cert_courses.js",
     "BSA guest lecture": "public/js/custom_cert_courses.js",
     "BSA-Mini Prj":"public/js/custom_cert_courses.js",
-    "Lab work-Case study":"public/js/custom_cert_courses.js",
     "BSA-Co-curricular":"public/js/custom_cert_courses.js"
 }
 
@@ -132,9 +132,6 @@ home_page = "index"
 
     # "BSA-Co-curricular": {
     #     "on_update":"bytenba.bytenba.doctype.bsa_co_curricular.bsa_co_curricular.sumDocs"
-    # },
-    # "Lab work-Case study": {
-    #     "on_update":"bytenba.bytenba.doctype.lab_work_case_study.lab_work_case_study.avgDocs"
     # },
     # "Certification for courses allotted": {
     #   "on_update": "bytenba.bytenba.doctype.certification_for_courses_allotted.certification_for_courses_allotted.rankDocs",

@@ -10,7 +10,6 @@
   "directions",
   "section_break_vif7",
   "approved",
-  "column_break_xk0g",
   "reviewer_score",
   "cbrk1_column",
   "professor",
@@ -93,6 +92,7 @@
   {
    "fieldname": "marks_obtained",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Marks Obtained",
    "read_only": 1
   },
@@ -160,15 +160,11 @@
    "fieldtype": "Data",
    "label": "Reviewer Score",
    "permlevel": 1
-  },
-  {
-   "fieldname": "column_break_xk0g",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 15:04:58.952007",
+ "modified": "2023-10-30 00:11:38.470720",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA guest lecture",
