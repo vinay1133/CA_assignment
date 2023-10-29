@@ -50,6 +50,9 @@ frappe.ui.form.on(DocType, {
   },
 	
 	onload: function(frm){
+		if(frm.doc.self_appraisal_score && frm.doc.approved == 0){
+			frm.set_value('reviewer_score', frm.doc.self_appraisal_score)
+		}
 		if (frm.doc.owner != frappe.session.user && frappe.user.has_role('reviewer') == 1){
 			$.each(frm.fields_dict, function(fieldname, field) {
 				if(fieldname === 'approved'){
@@ -59,8 +62,18 @@ frappe.ui.form.on(DocType, {
 	      frm.set_df_property(fieldname, "read_only", 1)	
 	      }
 	    });
+			frm.set_df_property("reviewer_score", "read_only", 0)
 		}
-	}
+	},
+	approved: function(frm){
+		if(frm.doc.approved == 1){
+			frm.set_df_property("reviewer_score", "read_only", 1)
+		}
+		if(frm.doc.approved == 0){
+			frm.set_df_property("reviewer_score", "read_only", 0)
+		}
+	},
+
 });
 
 function getAY(){
