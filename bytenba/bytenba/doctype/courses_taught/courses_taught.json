@@ -9,6 +9,7 @@
  "field_order": [
   "dir",
   "approved",
+  "reviewer_score",
   "section_break_quix2",
   "professor",
   "column_break_lxjel",
@@ -133,11 +134,17 @@
    "fieldtype": "Check",
    "label": "Approved",
    "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 17:16:19.414988",
+ "modified": "2023-10-29 10:22:52.244759",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",
