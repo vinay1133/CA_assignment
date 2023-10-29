@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+import bytenba.custom_utilities as uf
 import re
 
 Doctype = 'BSA-Co-curricular'
@@ -10,12 +11,7 @@ pattern = re.compile(r'^\d{4}-\d{4}$')
 
 class BSACocurricular(Document):
 	def autoname(self):
-		base_name = f'AI3c_{self.academic_year}_{self.professor}'
-		data = renameDoc(base_name, self.academic_year)
-		if data['name_value']:
-			self.name = data['name_value']
-		else:
-			frappe.throw("Failed to generate a unique name.")
+		self.name = f'AI3c_{self.professor}_{self.academic_year}_{self.semester}'
 
 	def before_save(self):
 		marks_dict = compute_marks(self)
@@ -23,9 +19,10 @@ class BSACocurricular(Document):
 		self.obtained_marks = marks_dict['total_marks']
 
 	def validate(self):
-		academic_yr_str = self.academic_year
-		if not re.match(pattern, academic_yr_str):
-			frappe.throw('Academic year must be of the form like 2022-2023')
+		uf.validateAY(self.academic_year)
+		existing_record = frappe.db.exists(Doctype, {'name': self.name})
+		if existing_record and existing_record != self.name:
+			frappe.throw('There already exists such a record in the database')
 
 		feedback = self.feedback_received
 		attendees = self.no_of_attendees

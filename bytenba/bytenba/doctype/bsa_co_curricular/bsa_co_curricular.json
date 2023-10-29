@@ -8,10 +8,17 @@
  "engine": "InnoDB",
  "field_order": [
   "dir1",
-  "column_break_2pvzb",
-  "academic_year",
-  "break_section",
+  "section_break_upi1",
   "professor",
+  "column_break_tdsm",
+  "academic_year",
+  "column_break_2jyy",
+  "semester",
+  "break_section",
+  "approved",
+  "column_break_4si4",
+  "reviewer_score",
+  "section_break_q3o9",
   "students_feedback_about_the",
   "feedback_received",
   "no_of_attendees",
@@ -30,10 +37,11 @@
   "state_level_a",
   "intercollegiate",
   "mapping",
-  "link_for_evidence",
-  "reveiwer",
   "obtained_marks",
-  "self_appraisal_score"
+  "self_appraisal_score",
+  "reviewer",
+  "link_for_evidence",
+  "view_evidence"
  ],
  "fields": [
   {
@@ -156,10 +164,6 @@
    "options": "<p> Faculty has to identify competitions and guide the students' group to participate in the competitions during the semester. (eg. technical paper, project, etc. )</p>"
   },
   {
-   "fieldname": "column_break_2pvzb",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "academic_year",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -176,17 +180,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "reveiwer",
-   "fieldtype": "Link",
-   "label": "Reveiwer",
-   "options": "Professors",
-   "reqd": 1
-  },
-  {
    "fieldname": "link_for_evidence",
-   "fieldtype": "Data",
-   "label": "Link for evidence",
-   "reqd": 1
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
   },
   {
    "fieldname": "obtained_marks",
@@ -197,11 +193,60 @@
    "fieldname": "self_appraisal_score",
    "fieldtype": "Read Only",
    "label": "Self appraisal score"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_q3o9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_4si4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tdsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_2jyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_upi1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "label": "Reveiwer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 22:02:13.011769",
+ "modified": "2023-10-29 13:52:36.256489",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Co-curricular",
@@ -234,5 +279,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

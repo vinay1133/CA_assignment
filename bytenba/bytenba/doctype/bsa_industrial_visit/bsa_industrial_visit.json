@@ -9,9 +9,16 @@
  "field_order": [
   "directions",
   "column_break_a1br",
-  "academic_year",
-  "section_break_dnfd",
   "professor",
+  "column_break_rxvu",
+  "academic_year",
+  "column_break_xbkp",
+  "semester",
+  "section_break_dnfd",
+  "approved",
+  "column_break_3nnb",
+  "reviewer_score",
+  "section_break_ilf9",
   "mou_for_placement",
   "mou_for_internship",
   "faculty_presence",
@@ -27,10 +34,12 @@
   "quality_relevance",
   "mapping",
   "marks_obtained",
+  "self_appraisal_score",
   "section_section",
   "link_for_evidence",
   "column_break_gjeo",
-  "reviewer"
+  "reviewer",
+  "view_evidence"
  ],
  "fields": [
   {
@@ -68,10 +77,8 @@
   },
   {
    "fieldname": "reviewer",
-   "fieldtype": "Link",
-   "label": "Reviewer",
-   "options": "Professors",
-   "reqd": 1
+   "fieldtype": "Read Only",
+   "label": "Reviewer"
   },
   {
    "fieldname": "directions",
@@ -81,7 +88,7 @@
   },
   {
    "fieldname": "column_break_a1br",
-   "fieldtype": "Column Break"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "academic_year",
@@ -161,9 +168,8 @@
   },
   {
    "fieldname": "link_for_evidence",
-   "fieldtype": "Data",
-   "label": "Link for evidence",
-   "reqd": 1
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
   },
   {
    "fieldname": "column_break_gjeo",
@@ -174,11 +180,58 @@
    "fieldtype": "Float",
    "label": "Marks Obtained",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ilf9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "column_break_3nnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rxvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xbkp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-05 22:02:23.070147",
+ "modified": "2023-10-29 14:40:58.937858",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA industrial visit",
@@ -211,5 +264,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

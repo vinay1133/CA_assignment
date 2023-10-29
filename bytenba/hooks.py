@@ -35,7 +35,10 @@ doctype_list_js = {
   "Certification for courses allotted": "bytenba/bytenba/doctype/certification_for_courses_allotted/certification_for_courses_allotted_list.js",
   "ME Projects": "bytenba/bytenba/doctype/me_projects/me_projects_list.js",
   "MMS FY Projects": "bytenba/bytenba/doctype/mms_fy_projects/mms_fy_projects_list.js",
-  "BSA guest lecture":"bytenba/bytenba/doctype/bsa_guest_lecture/bsa_guest_lecture_list.js"
+  "BSA guest lecture":"bytenba/bytenba/doctype/bsa_guest_lecture/bsa_guest_lecture_list.js",
+  "BSA-Co-curricular":"bytenba/bytenba/doctype/bsa_co_curricular/bsa_co_curricular_list.js",
+  "BSA-Mini Prj":"bytenba/bytenba/doctype/bsa_mini_prj/bsa_mini_prj_list.js",
+  "BSA industrial visit":"bytenba/bytenba/doctype/bsa_industrial_visit/bsa_industrial_visit_list.js"
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
