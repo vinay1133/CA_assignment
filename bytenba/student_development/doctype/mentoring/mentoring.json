@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "creation": "2023-11-04 19:01:34.906354",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fill_form_tab",
+  "html_unqt",
+  "section_break_gfin",
+  "approved",
+  "reviewer_score",
+  "section_break_oxnp",
+  "professor",
+  "column_break_cnjb",
+  "academic_year",
+  "column_break_wgzn",
+  "semester",
+  "section_break_pifa",
+  "number_of_meetings",
+  "prof_pers_dev",
+  "column_break_maet",
+  "awards_won",
+  "fys_feedback",
+  "section_break_axdu",
+  "reviewer",
+  "column_break_gcin",
+  "self_appraisal_score",
+  "section_break_rcmj",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "fill_form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fill Form"
+  },
+  {
+   "fieldname": "section_break_gfin",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_oxnp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Data",
+   "label": "Professor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cnjb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wgzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_pifa",
+   "fieldtype": "Section Break",
+   "label": "Criteria for analysis"
+  },
+  {
+   "fieldname": "section_break_axdu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gcin",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Data",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rcmj",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  },
+  {
+   "fieldname": "html_unqt",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Student-Development 5</b><br>\n  <br>Maximum marks possible are <b>1000</b>.<br>\n  <br>Self appraisal score is <b>200*(Product of weightages)</b><br>\n  <br>Weightage for a option is indicated by the value in the parenthesis of the option selected<br>\n</p>"
+  },
+  {
+   "fieldname": "number_of_meetings",
+   "fieldtype": "Select",
+   "label": "Number of meetings",
+   "options": "Three of more (1)\nExactly 2 meetings (0.5)\nLess than two meetings (0)"
+  },
+  {
+   "fieldname": "column_break_maet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "awards_won",
+   "fieldtype": "Select",
+   "label": "Award won by mentee under guide",
+   "options": "Yes (1.25)\nNo (1)"
+  },
+  {
+   "fieldname": "prof_pers_dev",
+   "fieldtype": "Select",
+   "label": "Professional and personal development of mentee",
+   "options": "SWOC analysis and monitoring (2)\nDefining student specific goals and tracking if the student sticks to these goals or the goals are changed (1.5)\nRelevant VAC chosen by mentee on advice of Mentor (1)\nRapport with Family i.e., Home Visit or Engaging with Parent/s etc. (0)"
+  },
+  {
+   "fieldname": "fys_feedback",
+   "fieldtype": "Select",
+   "label": "Feedback from final year student",
+   "options": "More than 3.5 (2)\n3 to 2.5 (1.5)\n2 to 3 (1)\nBelow 2.5 (0)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-04 19:24:08.670944",
+ "modified_by": "Administrator",
+ "module": "Student Development",
+ "name": "Mentoring",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

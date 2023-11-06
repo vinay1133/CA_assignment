@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-03 20:10:14.920576",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "directions_tab",
+  "directions_section",
+  "dirs",
+  "form_tab",
+  "section_break_hcfb",
+  "approved",
+  "reviewer_score",
+  "section_break_kzbq",
+  "professor",
+  "column_break_ckvn",
+  "academic_year",
+  "column_break_toma",
+  "semester",
+  "section_break_trfa",
+  "course_attendance_table",
+  "section_break_ssgy",
+  "self_appraisal_score",
+  "reviewer",
+  "section_break_ftfz",
+  "column_break_bcux",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "directions_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "dirs",
+   "fieldtype": "HTML",
+   "label": "Dirs",
+   "options": "<br>\n  <b>Student-Development 1</b>\n  <br>Maximum marks possible are <b>300</b>.<br>\n  <br>Marks Criteria:<br>\n  <br>If avg attendance 80% and above: <b>300</b><br>\n  <br>If avg attendance 80% to 70%: <b>225</b><br>\n  <br>If avg attendnace 70% to 60%: <b>150</b><br>\n  <br>If avg attendance 60% to 50%: <b>150</b><br>\n  <br>If avg attendace 40% to 50%:  <b>70</b><br>\n  <br>If avg attendace below 50%:   <b>0</b><br>\n  <br>Self appraisal score is the <b>average</b> of the marks obtained<br>\n<p></p>"
+  },
+  {
+   "fieldname": "section_break_hcfb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_kzbq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "column_break_ckvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_toma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Form"
+  },
+  {
+   "fieldname": "section_break_trfa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "course_attendance_table",
+   "fieldtype": "Table",
+   "label": "Course Attendance Table",
+   "options": "sd1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ssgy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ftfz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_bcux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  },
+  {
+   "fieldname": "directions_tab",
+   "fieldtype": "Tab Break",
+   "label": "Directions"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-03 22:31:01.415263",
+ "modified_by": "Administrator",
+ "module": "Student Development",
+ "name": "Average Student Attendance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "professor"
+}

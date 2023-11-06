@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-04 13:02:07.240306",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course_name",
+  "bucket_100",
+  "bucket_90",
+  "bucket_80",
+  "bucket_70",
+  "bucket_60",
+  "bucket_60_below",
+  "marks_obtained"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "bucket_100",
+   "fieldtype": "Int",
+   "label": "No. Of Students that obtained 100% marks"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bucket_90",
+   "fieldtype": "Int",
+   "label": "No. Of Students that obtained marks between 90 to 99%"
+  },
+  {
+   "fieldname": "bucket_80",
+   "fieldtype": "Int",
+   "label": "No. Of Students that obtained marks between 80 to 89%"
+  },
+  {
+   "fieldname": "bucket_70",
+   "fieldtype": "Int",
+   "label": "No. Of Students that obtained marks between 70 to 79%"
+  },
+  {
+   "fieldname": "bucket_60",
+   "fieldtype": "Int",
+   "label": "No. Of Students that obtained marks between 60 to 69%"
+  },
+  {
+   "fieldname": "bucket_60_below",
+   "fieldtype": "Int",
+   "label": "No. Of Students that obtained marks below 60%"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-04 18:51:55.611249",
+ "modified_by": "Administrator",
+ "module": "Student Development",
+ "name": "sd3",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

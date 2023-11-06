@@ -39,7 +39,7 @@ doctype_list_js = {
   "BSA-Co-curricular":"bytenba/bytenba/doctype/bsa_co_curricular/bsa_co_curricular_list.js",
   "BSA-Mini Prj":"bytenba/bytenba/doctype/bsa_mini_prj/bsa_mini_prj_list.js",
   "BSA industrial visit":"bytenba/bytenba/doctype/bsa_industrial_visit/bsa_industrial_visit_list.js",
-  "Course_Lab outcome attainment" : "bytenba/bytenba/doctype/course_lab_outcome_attainment/course_lab_outcome_attainment_list.js"
+  "Course_Lab outcome attainment" : "bytenba/bytenba/doctype/course_lab_outcome_attainment/course_lab_outcome_attainment_list.js",
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}

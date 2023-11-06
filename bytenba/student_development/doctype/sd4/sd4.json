@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-04 18:20:26.692534",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course_name",
+  "feedback",
+  "attendance",
+  "marks_obtained"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Feedback (0 to 4)"
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Attendance (without % symbol)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-04 18:45:03.222532",
+ "modified_by": "Administrator",
+ "module": "Student Development",
+ "name": "sd4",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

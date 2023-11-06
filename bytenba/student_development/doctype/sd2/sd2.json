@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-04 11:25:35.021000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "course_name",
+  "section_break_rorg",
+  "course_result",
+  "section_break_suim",
+  "column_break_lcky",
+  "marks_obtained"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Course Name"
+  },
+  {
+   "fieldname": "course_result",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Course Result (without % symbol)"
+  },
+  {
+   "fieldname": "column_break_lcky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rorg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_suim",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-04 18:51:43.625464",
+ "modified_by": "Administrator",
+ "module": "Student Development",
+ "name": "sd2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-06 19:06:52.309241",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "form_tab",
+  "html_ujow",
+  "section_break_hcfb",
+  "approved",
+  "reviewer_score",
+  "section_break_kzbq",
+  "professor",
+  "column_break_ckvn",
+  "academic_year",
+  "column_break_toma",
+  "semester",
+  "section_break_trfa",
+  "criteria_along_with_quality__benchmarks",
+  "section_break_ssgy",
+  "self_appraisal_score",
+  "reviewer",
+  "section_break_ftfz",
+  "column_break_bcux",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Form"
+  },
+  {
+   "fieldname": "html_ujow",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Administrative Bucket 1</b><br>\n  <br>Maximum marks possible are <b>234</b>.<br>\n  <br>\n  Institute Level Academic Activities organised should include (Institute level):\n   </p><ul>\n    <li>Technical Paper contest, Project competitions</li>\n    <li>International/National State Conference, symposium etc</li>\n   </ul>\n  <br>\n  <br>Self appraisal score is <b>100*(Product of applicable weightages)</b><br>\n  <br>Weightage for a option is indicated by the value in the parenthesis of the option selected<br>\n<p></p>"
+  },
+  {
+   "fieldname": "section_break_hcfb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_kzbq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Professor"
+  },
+  {
+   "fieldname": "column_break_ckvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_toma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_trfa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "criteria_along_with_quality__benchmarks",
+   "fieldtype": "Table",
+   "label": "Criteria along with quality  benchmarks",
+   "options": "ab1"
+  },
+  {
+   "fieldname": "section_break_ssgy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ftfz",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_bcux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-06 19:15:22.832963",
+ "modified_by": "Administrator",
+ "module": "Administrative Bucket",
+ "name": "Institute Level Academic Activities Organized",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "professor"
+}
