@@ -3,17 +3,17 @@ from frappe.model.document import Document
 import bytenba.custom_utilities as uf
 import re
 
-Doctype = 'Institute Level Academic Activities Organized'
+Doctype = 'Administrative Co-Curricular Activities'
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
-class InstituteLevelAcademicActivitiesOrganized(Document):
+class AdministrativeCoCurricularActivities(Document):
 	
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'AB1_{self.professor}_{self.academic_year}_{self.semester}'
+		self.name = f'AB2_{self.professor}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
-		self.self_appraisal_score = compute_marks(self)
+		self.self_appraisal_score = round(compute_marks(self))
 
 	def validate(self):
 		uf.validateAY(self.academic_year)
@@ -33,31 +33,25 @@ def compute_marks(self):
 		else:
 			counter +=1
 
-			match = re.search(pattern_for_wtg, item.quality_of_conduct_of_activity)
+			match = re.search(pattern_for_wtg, item.no_of_registered_students)
 			if match:
 				val1 = float(match.group(1).strip())
 			else:
 				frappe.throw('Error Fetching Field Weightages')
 			
-			match = re.search(pattern_for_wtg, item.associations_in_the_activity)
+			match = re.search(pattern_for_wtg, item.activity_duration_in_hrs)
 			if match:
 				val2 = float(match.group(1).strip())
 			else:
 				frappe.throw('Error Fetching Field Weightages')			
 
-			match = re.search(pattern_for_wtg, item.paper_selection_ratio_after_review)
+			match = re.search(pattern_for_wtg, item.student_feedback)
 			if match:
 				val3 = float(match.group(1).strip())
 			else:
 				frappe.throw('Error Fetching Field Weightages')
-
-			match = re.search(pattern_for_wtg, item.designation)
-			if match:
-				val4 = float(match.group(1).strip())
-			else:
-				frappe.throw('Error Fetching Field Weightages')			
 			
-			pow = val1*val2*val3*val4*100
-			pas.append(pow)
+			pow = val1*val2*val3*100
+			pas.append(round(pow))
 	
-	return round(sum(pas))
+	return sum(pas)

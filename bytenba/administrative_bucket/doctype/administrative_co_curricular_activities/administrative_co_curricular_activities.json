@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-11-06 23:11:06.451293",
+ "creation": "2023-11-07 10:37:16.673622",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -31,7 +31,7 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Administrative Bucket 1</b><br>\n\n  <br>Maximum marks possible are <b>234</b>.<br>\n\n  <br>\n  Institute Level Academic Activities organised should include (Institute level):\n   </p><ul>\n    <li>Technical Paper contest, Project competitions</li>\n    <li>International/National State Conference, symposium etc</li>\n   </ul>\n  <br>\n  <p>Self appraisal score is <b>100*(Product of applicable weightages)</b></p>\n  <p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n<p></p>"
+   "options": "<p>\n  <br><b>Administrative Bucket 2</b><br>\n\n  <br>Maximum marks possible are <b>376</b>.<br>\n\n  <br>Participation of Students (Department and institute level): Finishing schools/ Value added courses/Certificate Courses/ Bridge courses/ Student Development Program.<br>\n\n  <br>Self appraisal score is <b>SUM(100*(Product of applicable weightages))</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
   },
   {
    "fieldname": "fill_form_tab",
@@ -84,7 +84,17 @@
    "fieldname": "semester",
    "fieldtype": "Select",
    "label": "Semester",
-   "options": "Both\nOdd\nEven"
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_kcet",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria table",
+   "options": "ab2"
   },
   {
    "fieldname": "section_break_axdu",
@@ -121,24 +131,14 @@
    "fieldname": "view_evidence",
    "fieldtype": "Button",
    "label": "View Evidence"
-  },
-  {
-   "fieldname": "section_break_kcet",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "criteria_table",
-   "fieldtype": "Table",
-   "label": "Criteria table",
-   "options": "testab1"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 10:46:16.757481",
+ "modified": "2023-11-07 10:37:16.673622",
  "modified_by": "Administrator",
  "module": "Administrative Bucket",
- "name": "Institute Level Academic Activities Organized",
+ "name": "Administrative Co-Curricular Activities",
  "owner": "Administrator",
  "permissions": [
   {
