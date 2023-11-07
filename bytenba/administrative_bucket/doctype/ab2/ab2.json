@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-07 10:25:26.437000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "no_of_registered_students",
+  "activity_duration_in_hrs",
+  "student_feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "no_of_registered_students",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "No. of registered students",
+   "options": "50 + (1.25)\nBeteween 25 to 50 (1.0)\nBetween 16 to 24 (0.9)\nBetweeen 10 to 16 (0.8"
+  },
+  {
+   "fieldname": "activity_duration_in_hrs",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity Duration in Hours",
+   "options": "30+ (1.5)\n20+ (1.25)\n10+ (1)\nBelow 10 (0)"
+  },
+  {
+   "fieldname": "student_feedback",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Students' Feedback about Quality of content delivery",
+   "options": "3.0+ (1)\nBetween 2.5 to 3.0 (0.8)\nBetween 2 to 2.5 (0.6)\nBelow 2 (0)"
+  }  
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-07 10:25:26.437000",
+ "modified_by": "Administrator",
+ "module": "Administrative Bucket",
+ "name": "ab2",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
