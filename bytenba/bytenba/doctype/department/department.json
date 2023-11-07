@@ -8,8 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "dept_name",
-  "abbreviation",
-  "hod"
+  "abbreviation"
  ],
  "fields": [
   {
@@ -26,18 +25,11 @@
    "label": "Abbreviation",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "hod",
-   "fieldtype": "Link",
-   "label": "Head Of Department",
-   "options": "User",
-   "reqd": 1
   }
  ],
  "hide_toolbar": 1,
  "links": [],
- "modified": "2023-10-19 18:56:49.018961",
+ "modified": "2023-11-07 13:00:56.636743",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Department",
