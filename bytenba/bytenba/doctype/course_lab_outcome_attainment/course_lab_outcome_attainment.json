@@ -130,7 +130,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 01:23:51.669632",
+ "modified": "2023-11-07 11:47:51.726183",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Course_Lab outcome attainment",
@@ -156,7 +156,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "faculty",
+   "role": "reviewer",
    "share": 1,
    "write": 1
   },
