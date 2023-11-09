@@ -1,16 +1,18 @@
 {
  "actions": [],
- "creation": "2023-11-07 10:37:16.673622",
+ "creation": "2023-11-09 09:42:32.547953",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "html_xdfi",
-  "fill_form_tab",
-  "section_break_gfin",
-  "approved",
+  "column_break_nqnz",
+  "reviewer",
+  "self_appraisal_score",
   "reviewer_score",
+  "approved",
+  "fill_form_tab",
   "section_break_oxnp",
   "professor",
   "column_break_cnjb",
@@ -18,11 +20,12 @@
   "column_break_wgzn",
   "semester",
   "section_break_kcet",
-  "criteria_table",
-  "section_break_axdu",
-  "reviewer",
-  "column_break_gcin",
-  "self_appraisal_score",
+  "col1",
+  "col2",
+  "col3",
+  "column_break_lamu",
+  "col4",
+  "col5",
   "section_break_rcmj",
   "link_for_evidence",
   "view_evidence"
@@ -31,16 +34,12 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Administrative Bucket 2</b><br>\n\n  <br>Maximum marks possible are <b>376</b>.<br>\n\n  <br>Participation of Students (Department and institute level): Finishing schools/ Value added courses/Certificate Courses/ Bridge courses/ Student Development Program.<br>\n\n  <br>Self appraisal score is <b>SUM(100*(Product of applicable weightages))</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
+   "options": "<p>\n  \n  <br><b>Administrative Bucket 4</b><br>\n\n  <br>Maximum marks possible are <b>689</b>.<br>\n\n  <br>Activities include organization of STTPs/ FDPs/ Workshops/ Seminars/ Refresher course/ Orientation courses/ Methodology Workshops, Training, Teaching-Learning Evaluation Technology Programmes.<br>\n\n  <br>Self appraisal score is <b>100*(Product of applicable weightages)</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
   },
   {
    "fieldname": "fill_form_tab",
    "fieldtype": "Tab Break",
    "label": "Fill Form"
-  },
-  {
-   "fieldname": "section_break_gfin",
-   "fieldtype": "Section Break"
   },
   {
    "default": "0",
@@ -91,24 +90,38 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "criteria_table",
-   "fieldtype": "Table",
-   "label": "Criteria table",
-   "options": "ab2"
+   "description": "1.1\u00a0\u00a0 Industry Expert: International/National VP and above / Unicorn Startup \u2013 CXO\n1.2\u00a0\u00a0 Top University: (National / International)",
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "label": "Industry Expert or Top university professor and above",
+   "options": "100% speakers from 1.1 and 1.2 (1.75)\n75% (1.5)\n50 % (1.25)\nBelow 50% (1)"
   },
   {
-   "fieldname": "section_break_axdu",
-   "fieldtype": "Section Break"
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "label": "Level of event",
+   "options": "International (1.5)\nNational (1.25)\nState Level (1.0)\nIntercollegiate (City level) (0.8)\nIntra-collegiate (0.6)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "label": "Position in organizing committee",
+   "options": "Convenor (1)\nCo-convenor (0.8)\nOrganizing secretary (0.6)\nMember (0.4)"
+  },
+  {
+   "fieldname": "column_break_lamu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Select",
+   "label": "Duration of event",
+   "options": "2 weeks (1.75)\n1 week (1.5)\n3 days (1)\n2 days (0.8)\n1 day (0.6)"
   },
   {
    "fieldname": "reviewer",
    "fieldtype": "Data",
    "label": "Reviewer",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_gcin",
-   "fieldtype": "Column Break",
    "read_only": 1
   },
   {
@@ -131,14 +144,24 @@
    "fieldname": "view_evidence",
    "fieldtype": "Button",
    "label": "View Evidence"
+  },
+  {
+   "fieldname": "col5",
+   "fieldtype": "Select",
+   "label": "Participation from different levels",
+   "options": "National level & more than 50% (1.5)\nNational level & more than 25% (1.3)\nState level & more than 50% (1.25)\nState level & more than 25% (1.1)\nIntercollegiate University level & more than 50 (1)\nIntra-collegiate (0.8)"
+  },
+  {
+   "fieldname": "column_break_nqnz",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 17:09:55.229140",
+ "modified": "2023-11-09 10:04:45.877989",
  "modified_by": "Administrator",
  "module": "Administrative Bucket",
- "name": "Administrative Co-Curricular Activities",
+ "name": "Organization of activities",
  "owner": "Administrator",
  "permissions": [
   {

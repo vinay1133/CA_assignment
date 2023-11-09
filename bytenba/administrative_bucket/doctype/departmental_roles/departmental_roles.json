@@ -1,62 +1,46 @@
 {
  "actions": [],
- "creation": "2023-11-07 10:37:16.673622",
+ "creation": "2023-11-09 11:57:38.315908",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "html_xdfi",
   "fill_form_tab",
-  "section_break_gfin",
+  "html_xdfi",
+  "section_break_eptr",
   "approved",
   "reviewer_score",
-  "section_break_oxnp",
+  "section_break_tgdx",
   "professor",
-  "column_break_cnjb",
+  "column_break_jmdl",
   "academic_year",
-  "column_break_wgzn",
+  "column_break_femo",
   "semester",
   "section_break_kcet",
-  "criteria_table",
-  "section_break_axdu",
-  "reviewer",
-  "column_break_gcin",
+  "column_break_lamu",
+  "roles",
+  "column_break_rhzv",
   "self_appraisal_score",
+  "section_break_rcsv",
+  "reviewer",
   "section_break_rcmj",
   "link_for_evidence",
   "view_evidence"
  ],
  "fields": [
   {
-   "fieldname": "html_xdfi",
-   "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Administrative Bucket 2</b><br>\n\n  <br>Maximum marks possible are <b>376</b>.<br>\n\n  <br>Participation of Students (Department and institute level): Finishing schools/ Value added courses/Certificate Courses/ Bridge courses/ Student Development Program.<br>\n\n  <br>Self appraisal score is <b>SUM(100*(Product of applicable weightages))</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
-  },
-  {
    "fieldname": "fill_form_tab",
    "fieldtype": "Tab Break",
    "label": "Fill Form"
   },
   {
-   "fieldname": "section_break_gfin",
-   "fieldtype": "Section Break"
+   "fieldname": "html_xdfi",
+   "fieldtype": "HTML",
+   "options": "<p>\n  \n  <br><b>Administrative Bucket 5</b><br>\n\n  <br>Maximum marks possible are <b>150</b>.<br>\n\n  <br>Please select the number of departmental roles you have been assigned with.<br>\n\n  <br>Self appraisal score is <b>50*(Weightage associated with selected number of roles)</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
   },
   {
-   "default": "0",
-   "fieldname": "approved",
-   "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "section_break_oxnp",
+   "fieldname": "section_break_tgdx",
    "fieldtype": "Section Break"
   },
   {
@@ -66,19 +50,11 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_cnjb",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "academic_year",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Academic Year",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_wgzn",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "semester",
@@ -87,18 +63,15 @@
    "options": "Odd\nEven"
   },
   {
-   "fieldname": "section_break_kcet",
-   "fieldtype": "Section Break"
+   "fieldname": "column_break_jmdl",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "criteria_table",
-   "fieldtype": "Table",
-   "label": "Criteria table",
-   "options": "ab2"
-  },
-  {
-   "fieldname": "section_break_axdu",
-   "fieldtype": "Section Break"
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
   },
   {
    "fieldname": "reviewer",
@@ -107,9 +80,28 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_gcin",
-   "fieldtype": "Column Break",
-   "read_only": 1
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_kcet",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lamu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "roles",
+   "fieldtype": "Select",
+   "label": "Number of roles",
+   "options": "Three or more roles(3)\nTwo roles (2)\nOne role (1)"
+  },
+  {
+   "fieldname": "column_break_rhzv",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "self_appraisal_score",
@@ -131,14 +123,26 @@
    "fieldname": "view_evidence",
    "fieldtype": "Button",
    "label": "View Evidence"
+  },
+  {
+   "fieldname": "section_break_eptr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_femo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rcsv",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 17:09:55.229140",
+ "modified": "2023-11-09 12:07:06.553788",
  "modified_by": "Administrator",
  "module": "Administrative Bucket",
- "name": "Administrative Co-Curricular Activities",
+ "name": "Departmental Roles",
  "owner": "Administrator",
  "permissions": [
   {

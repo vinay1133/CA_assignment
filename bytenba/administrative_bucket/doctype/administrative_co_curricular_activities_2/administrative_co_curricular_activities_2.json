@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-11-07 10:37:16.673622",
+ "creation": "2023-11-08 17:15:14.835235",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -31,7 +31,7 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Administrative Bucket 2</b><br>\n\n  <br>Maximum marks possible are <b>376</b>.<br>\n\n  <br>Participation of Students (Department and institute level): Finishing schools/ Value added courses/Certificate Courses/ Bridge courses/ Student Development Program.<br>\n\n  <br>Self appraisal score is <b>SUM(100*(Product of applicable weightages))</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
+   "options": "<p>\n  <br><b>Administrative Bucket 3</b><br>\n\n  <br>Maximum marks possible are <b>438</b>.<br>\n\n  <br>Participation of Students (Department and institute level): Extension and field-based activities such as external work with NCC/NSS and through another channel.<br>\n\n  <br>Self appraisal score is <b>SUM(100*(Product of applicable weightages))</b><br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n  \n<p></p>"
   },
   {
    "fieldname": "fill_form_tab",
@@ -94,7 +94,7 @@
    "fieldname": "criteria_table",
    "fieldtype": "Table",
    "label": "Criteria table",
-   "options": "ab2"
+   "options": "ab3"
   },
   {
    "fieldname": "section_break_axdu",
@@ -135,10 +135,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 17:09:55.229140",
+ "modified": "2023-11-08 17:15:28.555557",
  "modified_by": "Administrator",
  "module": "Administrative Bucket",
- "name": "Administrative Co-Curricular Activities",
+ "name": "Administrative Co-Curricular Activities 2",
  "owner": "Administrator",
  "permissions": [
   {
