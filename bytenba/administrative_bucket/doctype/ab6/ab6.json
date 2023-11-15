@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-15 10:15:38.705713",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "col1",
+  "col2",
+  "col3"
+ ],
+ "fields": [
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Committee Convener (1)\nMember (0.6)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Planning certification from RO of committee convener",
+   "options": "Certified (1)\nNot Certified (0)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Execution of activities / events planned ",
+   "options": "100% Activities / Events conducted (2)\n75% Activities / Events conducted (1)\n50% Activities / Events conducted (0.5)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-11-15 10:25:39.453692",
+ "modified_by": "Administrator",
+ "module": "Administrative Bucket",
+ "name": "ab6",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
