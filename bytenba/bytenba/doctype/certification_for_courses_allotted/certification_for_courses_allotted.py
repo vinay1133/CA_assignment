@@ -16,14 +16,14 @@ class Certificationforcoursesallotted(Document):
 		self.name = f'AI1_{self.professor}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
-		self_appraisal_score = compute_marks(self)
-		self.self_appraisal_score = self_appraisal_score
+		self.self_appraisal_score = compute_marks(self)
+		# uf.uploadToBlob(self.link_for_evidence)
 
 	def validate(self):
 		uf.validateAY(self.academic_year)
 		existing_record = frappe.db.exists(Doctype, {'name': self.name})
 		if existing_record and existing_record != self.name:
-			frappe.throw('There already exists such a record in the database')  
+			frappe.throw('There already exists such a record in the database')
 
 
 def compute_marks(self):

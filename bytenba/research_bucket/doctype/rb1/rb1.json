@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-06 12:46:14.891968",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "col1",
+  "col2",
+  "col3",
+  "col4",
+  "col5",
+  "col6"
+ ],
+ "fields": [
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quality of the Conference ",
+   "options": "Conference by IEEE/Springer/ACM or Equivalent/INDAM/ IIMs/IITs (1.5)\nState college + AICTE / IEEE /ISTE sponsored or equivalent etc. (0.9)\nUniversity sponsored or equivalent (0.5)\nAny Other (0)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "International (1.25)\nNational (1)\nState Level (0.8)\nAny other (0)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Author",
+   "options": "Author(1)\nCo-author(0.8)"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of review",
+   "options": "Referred or Peer Review (1)\nNon-Referred (0.8)"
+  },
+  {
+   "fieldname": "col5",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of presentation",
+   "options": "Oral (1)\nPoster(0.5)"
+  },
+  {
+   "fieldname": "col6",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Marks Obtained"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-06 12:56:15.739643",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "rb1",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

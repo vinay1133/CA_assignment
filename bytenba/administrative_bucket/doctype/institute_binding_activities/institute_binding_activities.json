@@ -1,0 +1,349 @@
+{
+ "actions": [],
+ "creation": "2023-12-06 11:02:34.699164",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fill_form_tab",
+  "html_xdfi",
+  "section_break_gfin",
+  "approved",
+  "reviewer_score",
+  "section_break_oxnp",
+  "professor",
+  "column_break_cnjb",
+  "academic_year",
+  "column_break_wgzn",
+  "semester",
+  "section_break_okng",
+  "c1",
+  "column_break_vawp",
+  "m1",
+  "section_break_mlvi",
+  "c2",
+  "column_break_rtfs",
+  "m2",
+  "section_break_gums",
+  "c3",
+  "column_break_fxww",
+  "m3",
+  "section_break_ehjb",
+  "c4",
+  "column_break_iygk",
+  "m4",
+  "section_break_wutc",
+  "c5",
+  "column_break_lefu",
+  "m5",
+  "section_break_pmtz",
+  "c6",
+  "column_break_oiic",
+  "m6",
+  "section_break_ebct",
+  "c7",
+  "column_break_gppd",
+  "m7",
+  "section_break_xoro",
+  "please_provide_brief_description_of_the_work",
+  "section_break_axdu",
+  "reviewer",
+  "column_break_gcin",
+  "self_appraisal_score",
+  "section_break_rcmj",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "fill_form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fill Form"
+  },
+  {
+   "fieldname": "html_xdfi",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Administrative Bucket 9</b><br>\n\n  <br>Maximum marks possible are <b>200</b>.<br>\n\n  <br>Marks obtained for a criterion is calculated as <b>Weightage*(Input Value)</b> <br>\n  \n  </p><p>Self appraisal score is calculated as <b>SUM(Marks Obtained)</b></p>\n\n<p></p>"
+  },
+  {
+   "fieldname": "section_break_gfin",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_oxnp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Data",
+   "label": "Professor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cnjb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wgzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "c1",
+   "fieldtype": "Select",
+   "label": "Awards for the Institute (wt 75)",
+   "options": "Yes (1)\nNo (0)"
+  },
+  {
+   "fieldname": "c3",
+   "fieldtype": "Int",
+   "label": "Number of Individual Awards (wt 25)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "c5",
+   "fieldtype": "Int",
+   "label": "Number of career counselling program for admissions (wt 10)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "c2",
+   "fieldtype": "Int",
+   "label": "Number of programs on TV / Radio (wt 25)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "c4",
+   "fieldtype": "Int",
+   "label": "Number of expert talks delivered to other group of institutes regarding NBA/NAAC accreditation (wt 25)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "c6",
+   "fieldtype": "Int",
+   "label": "The number of distinguished guests who were called Padmashree, Padmabhushan, or Padmavibhushan (wt 50)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ebct",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "please_provide_brief_description_of_the_work",
+   "fieldtype": "Small Text",
+   "label": "Please provide brief description of the work"
+  },
+  {
+   "fieldname": "section_break_axdu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gcin",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Data",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rcmj",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  },
+  {
+   "fieldname": "section_break_okng",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vawp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m1",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "section_break_mlvi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rtfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m2",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "section_break_gums",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fxww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m3",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "section_break_ehjb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iygk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m4",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "section_break_wutc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lefu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m5",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "section_break_pmtz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_oiic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m6",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "m7",
+   "fieldtype": "Read Only",
+   "label": "Marks Obtained"
+  },
+  {
+   "fieldname": "c7",
+   "fieldtype": "Int",
+   "label": "Number of any other significant works done"
+  },
+  {
+   "fieldname": "column_break_gppd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xoro",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-06 11:20:52.378528",
+ "modified_by": "Administrator",
+ "module": "Administrative Bucket",
+ "name": "Institute Binding Activities",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
