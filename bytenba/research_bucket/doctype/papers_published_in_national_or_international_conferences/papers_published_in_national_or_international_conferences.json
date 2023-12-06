@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-11-15 17:00:04.906027",
+ "creation": "2023-12-06 12:47:36.186133",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -11,19 +11,14 @@
   "section_break_gfin",
   "approved",
   "reviewer_score",
-  "section_break_oxnp",
+  "section_break_qdde",
   "professor",
-  "column_break_cnjb",
+  "column_break_ytvd",
   "academic_year",
-  "column_break_wgzn",
+  "column_break_eymd",
   "semester",
-  "section_break_kcet",
-  "html_qnni",
-  "col1",
-  "col2",
-  "column_break_ogsq",
-  "col3",
-  "col4",
+  "section_break_xoro",
+  "criteria_table",
   "section_break_axdu",
   "reviewer",
   "column_break_gcin",
@@ -34,14 +29,14 @@
  ],
  "fields": [
   {
-   "fieldname": "html_xdfi",
-   "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Administrative Bucket 7</b><br>\n\n  <br>Maximum marks possible are <b>370</b>.<br>\n\n  <br>Self appraisal score is <b>100*(Sum of applicable weightages)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>"
-  },
-  {
    "fieldname": "fill_form_tab",
    "fieldtype": "Tab Break",
    "label": "Fill Form"
+  },
+  {
+   "fieldname": "html_xdfi",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Research Bucket 1</b><br>\n\n  <br>Maximum marks possible are <b>188</b>.<br>\n\n  <br>Marks Obtained For each publication is <b>50*(Product of applicable weightages)</b> <br>\n\n  <br>Self appraisal score is <b>SUM(Marks obtained for each publication)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
   },
   {
    "fieldname": "section_break_gfin",
@@ -61,45 +56,15 @@
    "permlevel": 1
   },
   {
-   "fieldname": "section_break_oxnp",
+   "fieldname": "section_break_xoro",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "professor",
-   "fieldtype": "Data",
-   "label": "Professor",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_cnjb",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic Year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_wgzn",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "semester",
-   "fieldtype": "Select",
-   "label": "Semester",
-   "options": "Odd\nEven"
-  },
-  {
-   "fieldname": "section_break_kcet",
-   "fieldtype": "Section Break",
-   "label": "Type of role"
-  },
-  {
-   "fieldname": "html_qnni",
-   "fieldtype": "HTML",
-   "options": "Select number of roles if you have performed in any of the following roles: Principal / CEO / VP / CAO/ COO /Tech Advisor / Director IQAC / NAAC or NBA institute level convener\n"
+   "description": "Edit button allows you to edit rows in expanded format",
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "rb1"
   },
   {
    "fieldname": "section_break_axdu",
@@ -124,7 +89,8 @@
   },
   {
    "fieldname": "section_break_rcmj",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "link_for_evidence",
@@ -138,39 +104,41 @@
    "label": "View Evidence"
   },
   {
-   "fieldname": "column_break_ogsq",
+   "fieldname": "section_break_qdde",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Data",
+   "label": "Professor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ytvd",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "col1",
-   "fieldtype": "Select",
-   "options": "Three roles (3)\nTwo roles (2)\nOne role  (1)\nNone (0)"
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
   },
   {
-   "fieldname": "col2",
-   "fieldtype": "Select",
-   "label": "HOD",
-   "options": "Yes (0.5)\nNo (0)"
+   "fieldname": "column_break_eymd",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "col3",
+   "fieldname": "semester",
    "fieldtype": "Select",
-   "label": "DAO",
-   "options": "Yes (0.3)\nNo (0)"
-  },
-  {
-   "fieldname": "col4",
-   "fieldtype": "Select",
-   "label": "Cluster Mentor",
-   "options": "Yes (0.2)\nNo (0)"
+   "label": "Semester",
+   "options": "Odd\nEven"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 00:06:25.492277",
+ "modified": "2023-12-06 12:53:28.076004",
  "modified_by": "Administrator",
- "module": "Administrative Bucket",
- "name": "Institutional Governance Responsibilities",
+ "module": "Research Bucket",
+ "name": "Papers published in national or international conferences",
  "owner": "Administrator",
  "permissions": [
   {

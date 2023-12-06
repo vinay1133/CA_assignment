@@ -1,4 +1,12 @@
-const DocType = "Certification for courses allotted"
+// Copyright (c) 2023, byte_team and contributors
+// For license information, please see license.txt
+
+// frappe.ui.form.on("Institute Binding Activities", {
+// 	refresh(frm) {
+
+// 	},
+// });
+const DocType = "Institute Binding Activities"
 
 frappe.ui.form.on(DocType, {
 
@@ -11,25 +19,23 @@ frappe.ui.form.on(DocType, {
 		}
 	},
 
-	view_evidence: function(frm){
-		var evi_link = frm.doc.link_for_evidence
-		if (evi_link){
-			url = "http://localhost:8000" + evi_link
-			window.open(url, "_blank");
-		}
-		else{
-			frappe.msgprint('No evidence provided')
-		}
-	},
-
+	// view_evidence: function(frm){
+	// 	var evi_link = frm.doc.link_for_evidence
+	// 	if (evi_link){
+	// 		url = "http://localhost:8000" + evi_link
+	// 		window.open(url, "_blank");
+	// 	}
+	// 	else{
+	// 		frappe.msgprint('No evidence provided')
+	// 	}
+	// },
   refresh: function(frm) {
 
     if (frm.doc.__islocal) {
       var currentUser = frappe.session.user;
       frm.set_value('professor', currentUser);
     }
-		
-		
+				
 		frm.add_custom_button(__("New Form"), () => {			
 			frappe.confirm('Create new form?',
 			() => {
@@ -38,7 +44,6 @@ frappe.ui.form.on(DocType, {
 				frm.refresh()
 			})
 		}).css({'color':'white','font-weight': 'normal', background: '#2490ef'});
-		
 
 		frappe.call({
 			method: 'bytenba.get_reviewer.get_reviewer',
@@ -68,11 +73,6 @@ frappe.ui.form.on(DocType, {
 	      }
 	    });
 			frm.set_df_property("reviewer_score", "read_only", 0)
-		}
-		if(frm.doc.approved == 1 && frappe.user.has_role('vit_emp') == 1){
-			$.each(frm.fields_dict, function(fieldname, field) {
-	      frm.set_df_property(fieldname, "read_only", 1)
-	    });
 		}
 	},
 

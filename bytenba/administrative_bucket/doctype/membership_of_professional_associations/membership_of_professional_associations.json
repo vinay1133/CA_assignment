@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-11-15 17:00:04.906027",
+ "creation": "2023-11-17 09:20:56.874294",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -17,13 +17,8 @@
   "academic_year",
   "column_break_wgzn",
   "semester",
-  "section_break_kcet",
-  "html_qnni",
-  "col1",
-  "col2",
-  "column_break_ogsq",
-  "col3",
-  "col4",
+  "section_break_ovcl",
+  "criteria_table",
   "section_break_axdu",
   "reviewer",
   "column_break_gcin",
@@ -34,14 +29,14 @@
  ],
  "fields": [
   {
-   "fieldname": "html_xdfi",
-   "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Administrative Bucket 7</b><br>\n\n  <br>Maximum marks possible are <b>370</b>.<br>\n\n  <br>Self appraisal score is <b>100*(Sum of applicable weightages)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>"
-  },
-  {
    "fieldname": "fill_form_tab",
    "fieldtype": "Tab Break",
    "label": "Fill Form"
+  },
+  {
+   "fieldname": "html_xdfi",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Administrative Bucket 8</b><br>\n\n  <br>Maximum marks possible are <b>150</b>.<br>\n\n  <br>Self appraisal score is <b>SUM(50*(Product of applicable weightages))</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>"
   },
   {
    "fieldname": "section_break_gfin",
@@ -92,16 +87,6 @@
    "options": "Odd\nEven"
   },
   {
-   "fieldname": "section_break_kcet",
-   "fieldtype": "Section Break",
-   "label": "Type of role"
-  },
-  {
-   "fieldname": "html_qnni",
-   "fieldtype": "HTML",
-   "options": "Select number of roles if you have performed in any of the following roles: Principal / CEO / VP / CAO/ COO /Tech Advisor / Director IQAC / NAAC or NBA institute level convener\n"
-  },
-  {
    "fieldname": "section_break_axdu",
    "fieldtype": "Section Break"
   },
@@ -124,7 +109,8 @@
   },
   {
    "fieldname": "section_break_rcmj",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "link_for_evidence",
@@ -138,39 +124,22 @@
    "label": "View Evidence"
   },
   {
-   "fieldname": "column_break_ogsq",
-   "fieldtype": "Column Break"
+   "fieldname": "section_break_ovcl",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "col1",
-   "fieldtype": "Select",
-   "options": "Three roles (3)\nTwo roles (2)\nOne role  (1)\nNone (0)"
-  },
-  {
-   "fieldname": "col2",
-   "fieldtype": "Select",
-   "label": "HOD",
-   "options": "Yes (0.5)\nNo (0)"
-  },
-  {
-   "fieldname": "col3",
-   "fieldtype": "Select",
-   "label": "DAO",
-   "options": "Yes (0.3)\nNo (0)"
-  },
-  {
-   "fieldname": "col4",
-   "fieldtype": "Select",
-   "label": "Cluster Mentor",
-   "options": "Yes (0.2)\nNo (0)"
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "ab8"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 00:06:25.492277",
+ "modified": "2023-11-17 09:27:20.771239",
  "modified_by": "Administrator",
  "module": "Administrative Bucket",
- "name": "Institutional Governance Responsibilities",
+ "name": "Membership of Professional Associations",
  "owner": "Administrator",
  "permissions": [
   {

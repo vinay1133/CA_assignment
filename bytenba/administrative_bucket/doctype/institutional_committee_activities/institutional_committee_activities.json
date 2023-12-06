@@ -6,8 +6,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "html_xdfi",
   "fill_form_tab",
+  "html_xdfi",
   "section_break_gfin",
   "approved",
   "reviewer_score",
@@ -119,8 +119,7 @@
   },
   {
    "fieldname": "section_break_rcmj",
-   "fieldtype": "Section Break",
-   "hidden": 1
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "link_for_evidence",
@@ -135,7 +134,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-15 10:17:30.985706",
+ "modified": "2023-11-15 22:31:37.085694",
  "modified_by": "Administrator",
  "module": "Administrative Bucket",
  "name": "Institutional Committee Activities",
