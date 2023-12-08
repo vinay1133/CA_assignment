@@ -1,0 +1,183 @@
+{
+ "actions": [],
+ "creation": "2023-12-08 19:39:28.411671",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fill_form_tab",
+  "html_xdfi",
+  "section_break_gfin",
+  "approved",
+  "reviewer_score",
+  "section_break_qdde",
+  "professor",
+  "column_break_ytvd",
+  "academic_year",
+  "column_break_eymd",
+  "semester",
+  "section_break_xoro",
+  "status_of_the_patent",
+  "section_break_axdu",
+  "reviewer",
+  "column_break_gcin",
+  "self_appraisal_score",
+  "section_break_rcmj",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "fill_form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fill Form"
+  },
+  {
+   "fieldname": "html_xdfi",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Research Bucket 4</b><br>\n\n  <br>Maximum marks possible are <b>250</b>.<br>\n\n  <br>Self appraisal score is <b>200*(Marks obtained for selected criterion)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+  },
+  {
+   "fieldname": "section_break_gfin",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_qdde",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Data",
+   "label": "Professor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ytvd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
+  },
+  {
+   "fieldname": "column_break_eymd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_xoro",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status_of_the_patent",
+   "fieldtype": "Select",
+   "label": "Status of the patent",
+   "options": "Received Indian patent(1.25)\nReceived internationally (1.25)\nCopyrights(0.8)\nFiled (0.2)\nNA (0)"
+  },
+  {
+   "fieldname": "section_break_axdu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gcin",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Data",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rcmj",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-08 19:45:15.170174",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "Patents-designs-copyrights-technologies developed",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
