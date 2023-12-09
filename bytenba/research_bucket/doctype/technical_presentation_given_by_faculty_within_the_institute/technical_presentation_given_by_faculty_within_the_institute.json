@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "creation": "2023-12-09 20:24:01.009232",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fill_form_tab",
+  "html_xdfi",
+  "section_break_gfin",
+  "approved",
+  "reviewer_score",
+  "section_break_qdde",
+  "professor",
+  "column_break_ytvd",
+  "academic_year",
+  "column_break_eymd",
+  "semester",
+  "section_break_xoro",
+  "col1",
+  "col3",
+  "col5",
+  "column_break_cgde",
+  "col2",
+  "col4",
+  "col6",
+  "section_break_axdu",
+  "reviewer",
+  "column_break_gcin",
+  "self_appraisal_score",
+  "section_break_rcmj",
+  "link_for_evidence",
+  "view_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "fill_form_tab",
+   "fieldtype": "Tab Break",
+   "label": "Fill Form"
+  },
+  {
+   "fieldname": "html_xdfi",
+   "fieldtype": "HTML",
+   "options": "<p>\n  <br><b>Research Bucket 9</b><br>\n\n  <br>Maximum marks possible are <b>25</b> <br>\n\n  <br>Self appraisal score is <b>SUM(Applicable Weightages)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+  },
+  {
+   "fieldname": "section_break_gfin",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_qdde",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Data",
+   "label": "Professor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ytvd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year"
+  },
+  {
+   "fieldname": "column_break_eymd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven"
+  },
+  {
+   "fieldname": "section_break_xoro",
+   "fieldtype": "Section Break",
+   "label": "Evaluation basis"
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "label": "Technical content",
+   "options": "Yes (5)\nNo (0)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "label": "New or emerging or cutting edge topic",
+   "options": "Yes (4)\nNo (0)"
+  },
+  {
+   "fieldname": "col5",
+   "fieldtype": "Select",
+   "label": "Research Aspects",
+   "options": "Yes (4)\nNo (0)"
+  },
+  {
+   "fieldname": "column_break_cgde",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "label": "Presentation Skills",
+   "options": "Yes (4)\nNo (0)"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Select",
+   "label": "Literature survey",
+   "options": "Yes (4)\nNo (0)"
+  },
+  {
+   "fieldname": "col6",
+   "fieldtype": "Select",
+   "label": "Audience interaction",
+   "options": "Yes (4)\nNo (0)"
+  },
+  {
+   "fieldname": "section_break_axdu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Data",
+   "label": "Reviewer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gcin",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Data",
+   "label": "Self Appraisal Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rcmj",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "view_evidence",
+   "fieldtype": "Button",
+   "label": "View Evidence"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-09 20:24:01.009232",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "Technical Presentation given by faculty within the Institute",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "reviewer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
