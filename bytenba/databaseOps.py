@@ -7,10 +7,10 @@ from datetime import datetime
 
 # Create a datetime object representing "2023-12-08 10:00:00"
 def get_datetime():
-  date_string = "2023-12-08 10:00:00"
-  datetime_object = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+  current_date_time = datetime.now()
+  formatted_string = current_date_time.strftime('%Y-%m-%d %H:%M:%S')
+  return formatted_string
 
-  return str(datetime_object)
 
 
 def generate_random_string():
@@ -21,11 +21,23 @@ def generate_random_string():
       l.append(random_string)
     return l
 
-def insert():
+def insert(doctype):
+
   try:
     time_str = get_datetime()
-    parentval = 'Peer reviewed publications'
+    parentval = doctype
     nameval = generate_random_string()
+
+    namList = []
+    namedata  = frappe.db.sql("""select name from `tabCustom DocPerm` where parent = "{parent}" order by role;""".format(parent = parentval), as_list = 1)
+    for i in namedata:
+      namList.append(i[0])
+
+    if namList:
+      for i in namList:
+        frappe.sb.sql(f"delete from `tabCustom DocPerm` where name = '{i}'")
+    
+    frappe.db.commit()
 
     one = """INSERT INTO `tabCustom DocPerm` (name, creation, modified, modified_by, owner, docstatus, idx, parent, role, if_owner, permlevel, `select`, `read`, `write`, `create`, `delete`, submit, cancel, amend, report, export, import, share, print, email, _user_tags, _comments, _assign, _liked_by) VALUES ('{nameval}', '{time_str}', '{time_str}', 'Administrator', 'Administrator', 0, 0, '{parentval}', 'reviewer', 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 , NULL, NULL, NULL, NULL);""".format(nameval = nameval[0], parentval = parentval, time_str = time_str)
     
@@ -39,7 +51,7 @@ def insert():
 
     six = """INSERT INTO `tabCustom DocPerm` (name, creation, modified, modified_by, owner, docstatus, idx, parent, role, if_owner, permlevel, `select`, `read`, `write`, `create`, `delete`, submit, cancel, amend, report, export, import, share, print, email, _user_tags, _comments, _assign, _liked_by) VALUES ('{nameval}', '{time_str}', '{time_str}', 'Administrator', 'Administrator', 0, 0, '{parentval}', 'vit_emp',0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL);""".format(nameval = nameval[5], parentval = parentval, time_str = time_str)
 
-    print('reference query : \n', one, '\n')
+    # print('reference query : \n', one, '\n')
 
     frappe.db.sql(one)
     frappe.db.sql(two)
