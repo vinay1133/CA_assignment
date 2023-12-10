@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-09 20:41:10.345080",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "col1",
+  "col2",
+  "col3",
+  "col4"
+ ],
+ "fields": [
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Types of interaction",
+   "options": "Pursuing externally funded project/research/consultancy/board member of pvt or public ltd  company or technical Know-how transfer (including Pro-bono) to Industry (1.75)\nMOU (1.5)\nResearch Paper (1.25)\nBook (1.25)\nDevelopment of semester-long course / teaching modules(1)\nTechnical Article (0.8)\nCommunity services(0.8)\nExpert Talk (minimum 3) (0.7)\nTraining to students / VAC (0.4)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of partner",
+   "options": "International (1.25)\nNational Importance (1)\nState Importance (0.9)\nState College (0.8)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of industry",
+   "options": "MNC (1.25)\nNon-MNC (1)\nSME (0.8)"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "options": "MNC (1.25)\nNon-MNC (1)\nSME (0.8)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-09 21:06:52.833714",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "rb10",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

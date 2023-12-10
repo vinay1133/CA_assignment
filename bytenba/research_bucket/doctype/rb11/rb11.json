@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-09 20:52:47.375875",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "col1",
+  "col2",
+  "col3",
+  "col4"
+ ],
+ "fields": [
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quality of other speakers",
+   "options": "Industry Expert (1.5)\nAcademia (International) (1.5)\nAcademia (National)(1.25)\nAcademia (State) (1)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Organizing agency",
+   "options": "Industry (1.75)\nIIT and Top Universities (1.5)\nState Government / AICTE and equivalent sponsored (1.25)\nISTE/University/State College sponsored or equivalent etc. (1)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "International (1.25)\nNational (1.0)\nState Level (0.8)"
+  },
+  {
+   "fieldname": "col4",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "options": "MNC (1.25)\nNon-MNC (1)\nSME (0.8)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-09 20:52:47.375875",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "rb11",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
