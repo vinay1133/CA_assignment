@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-12-08 19:54:24.466952",
+ "creation": "2023-12-11 22:05:30.428284",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -17,10 +17,8 @@
   "academic_year",
   "column_break_eymd",
   "semester",
-  "section_break_xoro",
-  "col1",
-  "col2",
-  "col3",
+  "section_break_miit",
+  "criteria_table",
   "section_break_axdu",
   "reviewer",
   "column_break_gcin",
@@ -38,7 +36,7 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Research Bucket 4</b><br>\n\n  <br>Maximum marks possible are <b>47</b>.<br>\n\n  <br>Self appraisal score is <b>25*(Marks obtained for selected criterion)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+   "options": "<p>\n  <br><b>Product development bucket 1</b><br>\n\n  <br></p><b>People skills include: Soft skills/communication skills, personality development courses</b><p></p><br>\n\n  <br>Maximum marks possible are <b>480</b>.<br>\n\n  <br>Marks Obtained For each row is given by <b>400*(Product of applicable weightages)</b> <br>\n\n  <br>Self appraisal score is <b>SUM(Marks obtained)</b> <br>\n\n<p></p>"
   },
   {
    "fieldname": "section_break_gfin",
@@ -87,28 +85,6 @@
    "options": "Odd\nEven"
   },
   {
-   "fieldname": "section_break_xoro",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "col1",
-   "fieldtype": "Select",
-   "label": "Quality of university",
-   "options": "IITs/ Foreign reputed Universities /MNC(1.5)\nNITS/Non-MNC (1.35)\nAutonomous colleges/SME (1.25)\nState Universities (1.1)\nState Colleges (1.0)\nUnrecognized University/Institute (0)"
-  },
-  {
-   "fieldname": "col2",
-   "fieldtype": "Select",
-   "label": "Level of qualification",
-   "options": "Ph.D.(1)\nValue addition or certificate courses from industry(0.8)\nMOOC Courses e.g., NPTEL (0.6)"
-  },
-  {
-   "fieldname": "col3",
-   "fieldtype": "Select",
-   "label": "Grades",
-   "options": "A+ and above (1.25)\nA(1)\nB+(0.8)\nGrade B and below (0.3)\nFail (0)"
-  },
-  {
    "fieldname": "section_break_axdu",
    "fieldtype": "Section Break"
   },
@@ -144,14 +120,24 @@
    "fieldname": "view_evidence",
    "fieldtype": "Button",
    "label": "View Evidence"
+  },
+  {
+   "fieldname": "section_break_miit",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "pdb1"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 21:50:52.126696",
+ "modified": "2023-12-11 22:20:59.662132",
  "modified_by": "Administrator",
- "module": "Research Bucket",
- "name": "Qualification upgradation",
+ "module": "Product Development Bucket",
+ "name": "Developing and imparting people skills",
  "owner": "Administrator",
  "permissions": [
   {

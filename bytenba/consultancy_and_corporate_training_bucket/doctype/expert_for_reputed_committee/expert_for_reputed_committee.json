@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-12-08 19:54:24.466952",
+ "creation": "2023-12-11 21:39:28.986208",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -19,8 +19,22 @@
   "semester",
   "section_break_xoro",
   "col1",
+  "column_break_mxjc",
+  "num1",
+  "column_break_fnza",
+  "m1",
+  "section_break_rail",
   "col2",
+  "column_break_mynp",
+  "num2",
+  "column_break_onqz",
+  "m2",
+  "section_break_cymj",
   "col3",
+  "column_break_cgcc",
+  "num3",
+  "column_break_wjud",
+  "m3",
   "section_break_axdu",
   "reviewer",
   "column_break_gcin",
@@ -38,7 +52,7 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Research Bucket 4</b><br>\n\n  <br>Maximum marks possible are <b>47</b>.<br>\n\n  <br>Self appraisal score is <b>25*(Marks obtained for selected criterion)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+   "options": "<p>\n  <br><b>Consultancy and Corporate Training Bucket 2</b><br>\n\n  </p><p>Committee can be like: AICTE/NBA/NAAC/UGC/ DTE/ University</p>\n\n  <br>Maximum marks possible are <b>120</b>.<br>\n\n  <br>Self appraisal score is <b>SUM*(Marks obtained)</b> <br>\n\n<p></p>\n"
   },
   {
    "fieldname": "section_break_gfin",
@@ -92,21 +106,93 @@
   },
   {
    "fieldname": "col1",
-   "fieldtype": "Select",
-   "label": "Quality of university",
-   "options": "IITs/ Foreign reputed Universities /MNC(1.5)\nNITS/Non-MNC (1.35)\nAutonomous colleges/SME (1.25)\nState Universities (1.1)\nState Colleges (1.0)\nUnrecognized University/Institute (0)"
+   "fieldtype": "HTML",
+   "options": "<p>Expert for AICTE / NBA/NAAC /UGC</p>"
+  },
+  {
+   "fieldname": "column_break_mxjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "50 points per appointment",
+   "fieldname": "num1",
+   "fieldtype": "Int",
+   "label": "Number of appointments",
+   "non_negative": 1,
+   "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8) d.\nOrganizing Secretary (0.6)\nMember (0.3)"
+  },
+  {
+   "fieldname": "column_break_fnza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m1",
+   "fieldtype": "Read Only",
+   "label": "Marks"
+  },
+  {
+   "fieldname": "section_break_rail",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "col2",
-   "fieldtype": "Select",
-   "label": "Level of qualification",
-   "options": "Ph.D.(1)\nValue addition or certificate courses from industry(0.8)\nMOOC Courses e.g., NPTEL (0.6)"
+   "fieldtype": "HTML",
+   "label": "Expert for DTE/ University",
+   "options": "<p>Expert for DTE/ University</p>"
+  },
+  {
+   "fieldname": "column_break_mynp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "40 points per appointment",
+   "fieldname": "num2",
+   "fieldtype": "Int",
+   "label": "Number of appointments",
+   "non_negative": 1,
+   "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8) d.\nOrganizing Secretary (0.6)\nMember (0.3)"
+  },
+  {
+   "fieldname": "column_break_onqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m2",
+   "fieldtype": "Read Only",
+   "label": "Marks"
+  },
+  {
+   "fieldname": "section_break_cymj",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "col3",
-   "fieldtype": "Select",
-   "label": "Grades",
-   "options": "A+ and above (1.25)\nA(1)\nB+(0.8)\nGrade B and below (0.3)\nFail (0)"
+   "fieldtype": "HTML",
+   "options": "<p>Academic council / BOS of any other Institute/ IQAC committee of other Institute </p>"
+  },
+  {
+   "fieldname": "column_break_cgcc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "30 points per appointment",
+   "fieldname": "num3",
+   "fieldtype": "Int",
+   "label": "Number of appointments",
+   "non_negative": 1,
+   "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8) d.\nOrganizing Secretary (0.6)\nMember (0.3)"
+  },
+  {
+   "fieldname": "column_break_wjud",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m3",
+   "fieldtype": "Read Only",
+   "label": "Marks"
   },
   {
    "fieldname": "section_break_axdu",
@@ -148,10 +234,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 21:50:52.126696",
+ "modified": "2023-12-11 21:51:21.204149",
  "modified_by": "Administrator",
- "module": "Research Bucket",
- "name": "Qualification upgradation",
+ "module": "Consultancy and Corporate Training Bucket",
+ "name": "Expert for reputed committee",
  "owner": "Administrator",
  "permissions": [
   {

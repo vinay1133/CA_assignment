@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-12-08 19:54:24.466952",
+ "creation": "2023-12-09 09:44:18.665220",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -18,7 +18,10 @@
   "column_break_eymd",
   "semester",
   "section_break_xoro",
-  "col1",
+  "column_break_yhgt",
+  "col1_1",
+  "col1_2",
+  "section_break_bktn",
   "col2",
   "col3",
   "section_break_axdu",
@@ -38,7 +41,7 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Research Bucket 4</b><br>\n\n  <br>Maximum marks possible are <b>47</b>.<br>\n\n  <br>Self appraisal score is <b>25*(Marks obtained for selected criterion)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+   "options": "<p>\n  <br><b>Research Bucket 8</b><br>\n\n  </p><p><b>Events include STTPs/FDPs/ Workshops/ Seminars/ Symposiums/ Conferences/ Industrial Training</b></p>\n\n  <br>Maximum marks possible are <b>230</b>.<br>\n\n  <br>Self appraisal score is <b>50*(Product of selcted weightages)</b> <br>\n  \n  <p></p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
   },
   {
    "fieldname": "section_break_gfin",
@@ -91,22 +94,37 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "col1",
+   "description": "Fill any one criteria, maximum of either will be selected for self appraisal calculation",
+   "fieldname": "column_break_yhgt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "col1_1",
    "fieldtype": "Select",
-   "label": "Quality of university",
-   "options": "IITs/ Foreign reputed Universities /MNC(1.5)\nNITS/Non-MNC (1.35)\nAutonomous colleges/SME (1.25)\nState Universities (1.1)\nState Colleges (1.0)\nUnrecognized University/Institute (0)"
+   "label": "Organizing agency",
+   "options": "Industry (1.75)\nIIT and Top Universities (1.5)\nState Government / AICTE and equivalent sponsored (1.25)\nISTE/University/State College sponsored or equivalent (1)"
+  },
+  {
+   "fieldname": "col1_2",
+   "fieldtype": "Select",
+   "label": "Quality of speaker",
+   "options": "Industry Expert: International/National VP and above / Unicorn Startup - CXO (1.5)\nTop University: National or International: Prof. and Above (1.25)"
+  },
+  {
+   "fieldname": "section_break_bktn",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "col2",
    "fieldtype": "Select",
-   "label": "Level of qualification",
-   "options": "Ph.D.(1)\nValue addition or certificate courses from industry(0.8)\nMOOC Courses e.g., NPTEL (0.6)"
+   "label": "Duration",
+   "options": "2 weeks (1.75)\n1 week (1.5)\n3 days (1)\n2 days (0.8)\n1 day (0.6)"
   },
   {
    "fieldname": "col3",
    "fieldtype": "Select",
-   "label": "Grades",
-   "options": "A+ and above (1.25)\nA(1)\nB+(0.8)\nGrade B and below (0.3)\nFail (0)"
+   "label": "Mode of conduct",
+   "options": "Offline (1.5)\nOnline (1)"
   },
   {
    "fieldname": "section_break_axdu",
@@ -148,10 +166,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 21:50:52.126696",
+ "modified": "2023-12-09 09:44:18.665220",
  "modified_by": "Administrator",
  "module": "Research Bucket",
- "name": "Qualification upgradation",
+ "name": "Participation in events",
  "owner": "Administrator",
  "permissions": [
   {

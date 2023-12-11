@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-11 22:10:37.658842",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "col1",
+  "col2",
+  "col3"
+ ],
+ "fields": [
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Course / program available on online platform such as SWAYAM, Course Era, Udemy, EdX or equivalent etc",
+   "length": 200,
+   "options": "Yes (1.2)\nSkip (1)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Course / program developed and imparted for outside and /or our students /faculty",
+   "options": "Yes (1)\nSkip (1)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Marks Obtained"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-11 22:10:37.658842",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "pdb1",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

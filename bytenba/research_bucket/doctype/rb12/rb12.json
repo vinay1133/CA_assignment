@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-11 20:58:51.680119",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "col1",
+  "col2",
+  "col3"
+ ],
+ "fields": [
+  {
+   "fieldname": "col1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quality of the conference",
+   "options": "IITs and top universities (1.25)\nState Government / AICTE / ISTE and equivalent sponsored (0.9)\nUniversity / State College sponsored or equivalent (0.5)"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Level",
+   "options": "International (1.25)\nNational (1)\nState level (0.8)"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "options": "MNC (1.25)\nNon-MNC (1)\nSME (0.8)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-11 20:58:51.680119",
+ "modified_by": "Administrator",
+ "module": "Research Bucket",
+ "name": "rb12",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
