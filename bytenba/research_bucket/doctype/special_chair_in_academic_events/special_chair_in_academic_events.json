@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2023-12-08 19:54:24.466952",
+ "creation": "2023-12-11 21:01:42.918973",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -18,9 +18,7 @@
   "column_break_eymd",
   "semester",
   "section_break_xoro",
-  "col1",
-  "col2",
-  "col3",
+  "criteria_table",
   "section_break_axdu",
   "reviewer",
   "column_break_gcin",
@@ -38,7 +36,7 @@
   {
    "fieldname": "html_xdfi",
    "fieldtype": "HTML",
-   "options": "<p>\n  <br><b>Research Bucket 4</b><br>\n\n  <br>Maximum marks possible are <b>47</b>.<br>\n\n  <br>Self appraisal score is <b>25*(Marks obtained for selected criterion)</b> <br>\n  \n  </p><p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>\n"
+   "options": "<p>\n  <br><b>Research Bucket 12</b><br>\n\n  </p><b>Academic events include: International Conferences / Symposiums or Reviewer for a conference/ journals</b><p></p>\n\n  <br>Maximum marks possible are <b>78</b>.<br>\n\n  <br>Marks Obtained For each row is <b>50*(Product of applicable weightages)</b> <br>\n\n  <br>Self appraisal score is <b>AVG(Marks obtained for each row)</b> <br>\n  \n  <p>Weightage for a option is indicated by the value in the parenthesis of the option selected</p>\n\n<p></p>"
   },
   {
    "fieldname": "section_break_gfin",
@@ -91,22 +89,10 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "col1",
-   "fieldtype": "Select",
-   "label": "Quality of university",
-   "options": "IITs/ Foreign reputed Universities /MNC(1.5)\nNITS/Non-MNC (1.35)\nAutonomous colleges/SME (1.25)\nState Universities (1.1)\nState Colleges (1.0)\nUnrecognized University/Institute (0)"
-  },
-  {
-   "fieldname": "col2",
-   "fieldtype": "Select",
-   "label": "Level of qualification",
-   "options": "Ph.D.(1)\nValue addition or certificate courses from industry(0.8)\nMOOC Courses e.g., NPTEL (0.6)"
-  },
-  {
-   "fieldname": "col3",
-   "fieldtype": "Select",
-   "label": "Grades",
-   "options": "A+ and above (1.25)\nA(1)\nB+(0.8)\nGrade B and below (0.3)\nFail (0)"
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "rb12"
   },
   {
    "fieldname": "section_break_axdu",
@@ -148,10 +134,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 21:50:52.126696",
+ "modified": "2023-12-11 21:05:30.262612",
  "modified_by": "Administrator",
  "module": "Research Bucket",
- "name": "Qualification upgradation",
+ "name": "Special chair in academic events",
  "owner": "Administrator",
  "permissions": [
   {

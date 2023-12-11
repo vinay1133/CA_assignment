@@ -1,5 +1,12 @@
+// Copyright (c) 2023, byte_team and contributors
+// For license information, please see license.txt
 
-const DocType = "Aggregate Contribution Score"
+// frappe.ui.form.on("Internal revenue generation", {
+// 	refresh(frm) {
+
+// 	},
+// });
+const DocType = "Internal revenue generation"
 
 frappe.ui.form.on(DocType, {
 

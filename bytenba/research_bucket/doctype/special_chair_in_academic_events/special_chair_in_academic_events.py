@@ -4,14 +4,14 @@ from frappe.model.document import Document
 import bytenba.custom_utilities as uf
 import re
 
-Doctype = 'Aggregate Contribution Score'
+Doctype = 'Special chair in academic events'
 pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
-class AggregateContributionScore(Document):
+class Specialchairinacademicevents(Document):
 	
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'RB11_{self.professor}_{self.academic_year}_{self.semester}'
+		self.name = f'RB12_{self.professor}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
 		self.self_appraisal_score = compute_marks(self)
@@ -40,22 +40,17 @@ def compute_marks(self):
 				val1 = float(match.group(1).strip())
 			else:
 				frappe.throw('Error Fetching Field Weightages')
+			
 
 			match = re.search(pattern_for_wtg, item.col2)
 			if match:
 				val2 = float(match.group(1).strip())
 			else:
-				frappe.throw('Error Fetching Field Weightages')				
-
-			match = re.search(pattern_for_wtg, item.col3)
-			if match:
-				val3 = float(match.group(1).strip())
-			else:
 				frappe.throw('Error Fetching Field Weightages')
 
-			marks_obtained = round(val1*val2*val3*50 , 2)
-			item.col4 = marks_obtained
+			marks_obtained = round(val1*val2*50 , 2)
+			item.col3 = marks_obtained
 
 			pas.append(marks_obtained)
 	
-	return round(sum(pas))
+	return round(sum(pas) / counter)

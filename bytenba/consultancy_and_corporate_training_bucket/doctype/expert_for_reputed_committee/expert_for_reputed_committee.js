@@ -1,5 +1,4 @@
-
-const DocType = "Aggregate Contribution Score"
+const DocType = "Expert for reputed committee"
 
 frappe.ui.form.on(DocType, {
 

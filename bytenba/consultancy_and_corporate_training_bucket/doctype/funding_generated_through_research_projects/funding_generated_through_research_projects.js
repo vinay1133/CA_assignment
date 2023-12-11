@@ -1,5 +1,4 @@
-
-const DocType = "Aggregate Contribution Score"
+const DocType = "Funding generated through research projects"
 
 frappe.ui.form.on(DocType, {
 
