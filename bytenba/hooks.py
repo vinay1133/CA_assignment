@@ -124,8 +124,12 @@ home_page = "index"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
-
+doc_events = {
+    # "File": {
+    #     "after_insert": "bytenba.controller.file_upload_to_s3",
+    #     "on_trash": "bytenba.controller.delete_from_cloud"
+    # }
+}
 
 
 # doc_events = {

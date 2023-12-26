@@ -1,28 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-12-16 22:03:07.550659",
+ "creation": "2023-12-22 16:30:16.713767",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "dummy"
+  "autocomplete_hfeq",
+  "attach"
  ],
  "fields": [
   {
-   "fieldname": "dummy",
-   "fieldtype": "HTML",
-   "label": "Dummy",
-   "options": "<p>Test Doc</p>"
+   "fieldname": "attach",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "autocomplete_hfeq",
+   "fieldtype": "Autocomplete"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-16 22:03:07.550659",
+ "modified": "2023-12-24 09:34:46.272326",
  "modified_by": "Administrator",
  "module": "bytenba",
- "name": "Mini project as a subject head",
+ "name": "testDoc",
  "owner": "Administrator",
  "permissions": [
   {

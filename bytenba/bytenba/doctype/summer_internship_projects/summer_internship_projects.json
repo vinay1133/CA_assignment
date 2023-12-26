@@ -1,128 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-21 22:27:44.318022",
+ "creation": "2023-12-16 21:59:34.626936",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "h1",
-  "professor",
-  "column_break_af6hc",
-  "academic_year",
-  "section_break_ha3ji",
-  "number_of_projects_guided",
-  "live_or_industry_projects",
-  "number_of_live_projects",
-  "participation_in_competition",
-  "number_of_groups_participated",
-  "column_break_um6hs",
-  "publication",
-  "awards",
-  "number_of_awards",
-  "obtained_marks",
-  "ht2"
+  "dummy"
  ],
  "fields": [
   {
-   "fieldname": "h1",
+   "fieldname": "dummy",
    "fieldtype": "HTML",
-   "label": "H1 ",
-   "options": "<p> Maximum marks : 630. Marks in the bracket represents weightages for the given option </p>"
-  },
-  {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
-  },
-  {
-   "fieldname": "column_break_af6hc",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_ha3ji",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "number_of_projects_guided",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Number of projects guided",
-   "options": "Ten or more(1.0)\nLess than ten (0.8)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "live_or_industry_projects",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Live or industry projects",
-   "options": "Live or Industry projects (1.2)\nNone (0.5)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_live_projects",
-   "fieldtype": "Int",
-   "label": "Number of live projects"
-  },
-  {
-   "fieldname": "participation_in_competition",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Participation in competition",
-   "options": "International (1.5)\nNational (1.3)\nState college (1.2)\nIntercollege (1.1)\nNone (1.0)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "number_of_groups_participated",
-   "fieldtype": "Int",
-   "label": "Number of groups participated"
-  },
-  {
-   "fieldname": "column_break_um6hs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "publication",
-   "fieldtype": "Select",
-   "label": "Publication",
-   "options": "Peer Reviewed Journal (1.75)\nInternational Conference (1.5)\nUCG Approved Journal (1.5)\nNational Conference (1.25)\nNone (0.5)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "awards",
-   "fieldtype": "Select",
-   "label": "Awards",
-   "options": "International (2.0)\nNational (1.8)\nState Level (1.6)\nIntercollege (1.4)\nNone (1.0)"
-  },
-  {
-   "fieldname": "number_of_awards",
-   "fieldtype": "Int",
-   "label": "Number of awards",
-   "reqd": 1
-  },
-  {
-   "fieldname": "obtained_marks",
-   "fieldtype": "Float",
-   "label": "Obtained marks"
-  },
-  {
-   "fieldname": "ht2",
-   "fieldtype": "HTML",
-   "label": "Ht2",
-   "options": "<p> Self-Appraisal Score(100) * product of weightage </p>"
+   "label": "Dummy",
+   "options": "<p>Test Doc</p>"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 16:33:35.703405",
+ "modified": "2023-12-16 21:59:34.626936",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Summer Internship Projects",

@@ -1,11 +1,3 @@
-// Copyright (c) 2023, byte_team and contributors
-// For license information, please see license.txt
-
-// frappe.ui.form.on("Internal revenue generation", {
-// 	refresh(frm) {
-
-// 	},
-// });
 const DocType = "Internal revenue generation"
 
 frappe.ui.form.on(DocType, {
@@ -29,6 +21,36 @@ frappe.ui.form.on(DocType, {
 	// 		frappe.msgprint('No evidence provided')
 	// 	}
 	// },
+	uploadbutton: function(frm){		
+		const fileInput = document.getElementById('fileInput').files[0]; // Fetch the file input element
+
+		const formData = new FormData();
+		formData.append('file', fileInput);
+		
+		// Read file as data URL 
+		const reader = new FileReader();
+		reader.onload = function(event) {
+				const dataURL = event.target.result;
+		
+				frappe.call({
+						method: 'bytenba.custom_utilities.evidenceUpload',
+						args: {
+								fileData: dataURL.split(',')[1], // Send only the base64 encoded data
+						},
+						callback: function(r) {
+								if (r.message === 'file gotten') {
+										frappe.msgprint('Success');
+								} else {
+										frappe.msgprint('Error');
+								}
+						}
+				});
+		};
+		
+		reader.readAsDataURL(fileInput);
+		
+	},
+	
   refresh: function(frm) {
 
     if (frm.doc.__islocal) {
@@ -85,3 +107,29 @@ function getAY(){
 	return academic_year
 }
 
+let d = new frappe.ui.Dialog({
+	title: 'Enter details',
+	fields: [
+			{
+					label: 'First Name',
+					fieldname: 'first_name',
+					fieldtype: 'Data'
+			},
+			{
+					label: 'Last Name',
+					fieldname: 'last_name',
+					fieldtype: 'Data'
+			},
+			{
+					label: 'Age',
+					fieldname: 'age',
+					fieldtype: 'Int'
+			}
+	],
+	size: 'small', // small, large, extra-large 
+	primary_action_label: 'Submit',
+	primary_action(values) {
+			console.log(values);
+			d.hide();
+	}
+});

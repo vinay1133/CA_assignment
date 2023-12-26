@@ -10,6 +10,7 @@
   "html_xdfi",
   "section_break_gfin",
   "approved",
+  "self_appraisal_score",
   "reviewer_score",
   "section_break_qdde",
   "professor",
@@ -20,13 +21,13 @@
   "section_break_xoro",
   "col1",
   "col2",
-  "section_break_axdu",
+  "column_break_fsgt",
+  "html_qjdx",
+  "uploadbutton",
+  "section_break_mdon",
   "reviewer",
-  "column_break_gcin",
-  "self_appraisal_score",
-  "section_break_rcmj",
-  "link_for_evidence",
-  "view_evidence"
+  "column_break_ugpo",
+  "attach_evidence"
  ],
  "fields": [
   {
@@ -102,18 +103,9 @@
    "options": "Individual Consultancy (1.5)\nConvenor/PI(1)\nCo-Convenor /Co-PI(0.8)\nOrganizing Secretary (0.6)\nMember (0.3)"
   },
   {
-   "fieldname": "section_break_axdu",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "reviewer",
    "fieldtype": "Data",
    "label": "Reviewer",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_gcin",
-   "fieldtype": "Column Break",
    "read_only": 1
   },
   {
@@ -123,25 +115,39 @@
    "read_only": 1
   },
   {
-   "fieldname": "section_break_rcmj",
-   "fieldtype": "Section Break",
+   "fieldname": "section_break_mdon",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fsgt",
+   "fieldtype": "Column Break",
    "hidden": 1
   },
   {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
+   "fieldname": "html_qjdx",
+   "fieldtype": "HTML",
    "hidden": 1,
-   "label": "Link for evidence"
+   "options": "<form id=\"uploadForm\" enctype=\"multipart/form-data\">\n  <input type=\"file\" id=\"fileInput\" name=\"files[]\" multiple=\"\" accept=\".pdf,.doc,.docx,.jpg,.png\">\n</form>\n<br><br>\n"
   },
   {
-   "fieldname": "view_evidence",
+   "fieldname": "uploadbutton",
    "fieldtype": "Button",
-   "label": "View Evidence"
+   "hidden": 1,
+   "label": "Upload"
+  },
+  {
+   "fieldname": "column_break_ugpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_evidence",
+   "fieldtype": "Attach",
+   "label": "Attach Evidence"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 21:55:10.934771",
+ "modified": "2023-12-23 13:19:57.055090",
  "modified_by": "Administrator",
  "module": "Consultancy and Corporate Training Bucket",
  "name": "Internal revenue generation",

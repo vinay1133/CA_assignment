@@ -18,6 +18,7 @@
   "last_name",
   "position_info_section",
   "department",
+  "faculty_designation",
   "is_hod"
  ],
  "fields": [
@@ -85,11 +86,18 @@
    "fieldname": "is_hod",
    "fieldtype": "Check",
    "label": "Is HOD"
+  },
+  {
+   "fieldname": "faculty_designation",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Faculty Designation",
+   "options": "Professor\nAssociate Professor\nAssistant Professor"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 12:24:29.401601",
+ "modified": "2023-12-26 22:06:05.640806",
  "modified_by": "Administrator",
  "module": "Meta",
  "name": "Professors",
