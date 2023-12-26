@@ -126,11 +126,13 @@
   {
    "fieldname": "html_qjdx",
    "fieldtype": "HTML",
+   "hidden": 1,
    "options": "<form id=\"uploadForm\" enctype=\"multipart/form-data\">\n  <input type=\"file\" id=\"fileInput\" name=\"files[]\" multiple=\"\" accept=\".pdf,.doc,.docx,.jpg,.png\">\n</form>\n<br><br>\n"
   },
   {
    "fieldname": "uploadbutton",
    "fieldtype": "Button",
+   "hidden": 1,
    "label": "Upload"
   },
   {
@@ -145,7 +147,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-23 10:39:14.133061",
+ "modified": "2023-12-23 13:19:57.055090",
  "modified_by": "Administrator",
  "module": "Consultancy and Corporate Training Bucket",
  "name": "Internal revenue generation",

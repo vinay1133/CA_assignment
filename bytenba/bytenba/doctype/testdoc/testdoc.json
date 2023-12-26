@@ -7,17 +7,22 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "autocomplete_hfeq",
   "attach"
  ],
  "fields": [
   {
    "fieldname": "attach",
    "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "autocomplete_hfeq",
+   "fieldtype": "Autocomplete"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-22 16:59:03.723696",
+ "modified": "2023-12-24 09:34:46.272326",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "testDoc",
