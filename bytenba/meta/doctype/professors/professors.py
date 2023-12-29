@@ -25,5 +25,13 @@ class Professors(Document):
 					"is_hod": 1,
 					"department": self.department
 			}
-			if get_all(Doctype, filters=filters):
-				frappe.throw('Cannot have more than one HOD')
+			hod_docs = get_all(Doctype, filters=filters)
+			if len(hod_docs) > 1:
+				frappe.throw('More than one hod exists for department: ', self.department, ' Invalid situation')
+			elif len(hod_docs) == 1:
+				if hod_docs[0].name != self.name:
+					frappe.throw('Cannot have more than one HOD')
+				else:
+					pass
+			else:
+				pass

@@ -45,7 +45,8 @@
    "fieldname": "full_name",
    "fieldtype": "Data",
    "label": "Full Name",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yxqx",
@@ -92,12 +93,13 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Faculty Designation",
-   "options": "Professor\nAssociate Professor\nAssistant Professor"
+   "options": "Professor\nAssociate Professor\nAssistant Professor\nNot Applicable",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-26 22:06:05.640806",
+ "modified": "2023-12-26 23:32:53.516423",
  "modified_by": "Administrator",
  "module": "Meta",
  "name": "Professors",

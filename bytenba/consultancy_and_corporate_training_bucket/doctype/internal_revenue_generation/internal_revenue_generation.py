@@ -11,7 +11,8 @@ class Internalrevenuegeneration(Document):
 	
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'CB1_{self.professor}_{self.academic_year}_{self.semester}'
+		self.name = f'CB1_{self.CurrOwner}_{self.academic_year}_{self.semester}'
+		# self.name = f'CB1_{self.owner}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
 		self.self_appraisal_score = compute_marks(self)
@@ -20,8 +21,16 @@ class Internalrevenuegeneration(Document):
 		uf.validateAY(self.academic_year)
 		existing_record = frappe.db.exists(Doctype, {'name': self.name})
 		if existing_record and existing_record != self.name:
-			frappe.throw('There already exists such a record in the database')  
+			frappe.throw('There already exists such a record in the database')
 
+		#validation post approval
+		roles = frappe.get_roles()
+		current_user_is_reviewer = True if 'reviewer' in roles else False
+		current_user_is_admin = True if 'Administrator' in roles else False
+		#if user is not admin or not a reviewer then he cannot change the form post form approval
+		if not current_user_is_admin and not current_user_is_reviewer and self.approved == 1:
+			frappe.throw("""Modifcation of document is not permitted since document has been approved""")
+	
 
 def compute_marks(self):
 
