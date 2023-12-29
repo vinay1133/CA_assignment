@@ -1,5 +1,5 @@
 import frappe
-
+import random
 import secrets
 import string
 
@@ -11,7 +11,9 @@ def get_datetime():
   formatted_string = current_date_time.strftime('%Y-%m-%d %H:%M:%S')
   return formatted_string
 
-
+@frappe.whitelist()
+def apiCheck(param =None):
+  return frappe.db.sql(f"select full_name from `tabProfessors` where name = 'disha.singh@email.com'", as_dict= True)
 
 def generate_random_string():
     l = []
@@ -67,7 +69,224 @@ def insert(doctype):
   except Exception as e:
     print(e)
 
+def createUsers():
 
+  json_file = [
+  {
+    "name_email": "madelonWashBrasher@vit.edu.in",
+    "f_name": "Madelon",
+    "m_name": "Wash",
+    "l_name": "Brasher",
+    "u_name": "madelonWashBrasher",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "lorenaEddyTimmens@vit.edu.in",
+    "f_name": "Lorena",
+    "m_name": "Eddy",
+    "l_name": "Timmens",
+    "u_name": "lorenaEddyTimmens",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Associate Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "rickNyeBrosini@vit.edu.in",
+    "f_name": "Rick",
+    "m_name": "Nye",
+    "l_name": "Brosini",
+    "u_name": "rickNyeBrosini",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "gillyAylmerPestricke@vit.edu.in",
+    "f_name": "Gilly",
+    "m_name": "Aylmer",
+    "l_name": "Pestricke",
+    "u_name": "gillyAylmerPestricke",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Associate Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "ashlieOnidaDemko@vit.edu.in",
+    "f_name": "Ashlie",
+    "m_name": "Onida",
+    "l_name": "Demko",
+    "u_name": "ashlieOnidaDemko",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "somersetNettyWillcox@vit.edu.in",
+    "f_name": "Somerset",
+    "m_name": "Netty",
+    "l_name": "Willcox",
+    "u_name": "somersetNettyWillcox",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Assistant Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "shanonSonniMattacks@vit.edu.in",
+    "f_name": "Shanon",
+    "m_name": "Sonni",
+    "l_name": "Mattacks",
+    "u_name": "shanonSonniMattacks",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Assistant Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "natalineTomlinZellner@vit.edu.in",
+    "f_name": "Nataline",
+    "m_name": "Tomlin",
+    "l_name": "Zellner",
+    "u_name": "natalineTomlinZellner",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Associate Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "graemeMorganaMcElroy@vit.edu.in",
+    "f_name": "Graeme",
+    "m_name": "Morgana",
+    "l_name": "McElroy",
+    "u_name": "graemeMorganaMcElroy",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Assistant Professor",
+    "role": "vit_emp"
+  },
+  {
+    "name_email": "dionysusParkerGriffey@vit.edu.in",
+    "f_name": "Dionysus",
+    "m_name": "Parker",
+    "l_name": "Griffey",
+    "u_name": "dionysusParkerGriffey",
+    "department": "EXTC",
+    "is_hod": 1,
+    "faculty_designation": "Assistant Professor",
+    "role": "reviewer"
+  },
+  {
+    "name_email": "ariellaSadyeSterzaker@vit.edu.in",
+    "f_name": "Ariella",
+    "m_name": "Sadye",
+    "l_name": "Sterzaker",
+    "u_name": "ariellaSadyeSterzaker",
+    "department": "EXTC",
+    "is_hod": 0,
+    "faculty_designation": "Not Applicable",
+    "role": "department_executive"
+  }
+]
+
+
+
+
+  frappe.db.begin()
+  frappe.db.savepoint('savepoint')
+
+  try:
+    for obj in json_file:
+
+      name_email = obj['name_email']
+      f_name = obj['f_name']
+      m_name = obj['m_name']
+      l_name = obj['l_name']
+      u_name = obj['u_name']
+      full_name = f_name +" "+ m_name +" "+ l_name
+      department = obj['department']
+      is_hod = obj['is_hod']
+      faculty_designation = obj['faculty_designation']
+      role = obj['role']
+    
+      user_query = f"INSERT INTO `tabUser` (name, modified_by, owner, docstatus, idx, enabled, email, first_name, middle_name, last_name, username, send_welcome_email, unsubscribed, mute_sounds, logout_all_sessions, document_follow_notify, document_follow_frequency, follow_created_documents, follow_commented_documents, follow_liked_documents, follow_assigned_documents, follow_shared_documents, thread_notify, send_me_a_copy, allowed_in_mentions, simultaneous_sessions, login_after, login_before, bypass_restrict_ip_check_if_2fa_enabled, full_name) values ('{name_email}', 'Administrator', 'Administrator', 0, 0, 1, '{name_email}', '{f_name}', '{m_name}', '{l_name}', '{u_name}', 0, 0, 0, 1, 0, 'Daily', 0, 0 , 0, 0 , 0, 1, 0, 1, 1, 0, 0, 0, '{full_name}')"
+
+      professor_query = f"INSERT INTO `tabProfessors` (name, user ,modified_by, owner, docstatus, idx, first_name, last_name, full_name, department, access_level, is_hod, email_id, faculty_designation) values ('{name_email}','{name_email}', 'Administrator', 'Administrator', 0, 0, '{f_name}', '{l_name}', '{full_name}', '{department}', 0, {is_hod}, '{name_email}', '{faculty_designation}')"
+
+      alphabet = string.ascii_lowercase + string.digits
+      name_random_string = ''.join(secrets.choice(alphabet) for _ in range(10))
+
+      has_roles_query = f"INSERT INTO `tabHas Role` (name, modified_by, owner, docstatus, idx, role, parent, parentfield, parenttype) values ('{name_random_string}', 'Administrator','Administrator',0, 1, '{role}' , '{name_email}', 'roles', 'User')"
+
+      frappe.db.sql(user_query)
+      frappe.db.sql(professor_query)
+      frappe.db.sql(has_roles_query)
+
+      for i in ['Contacts','Workflow', 'Desk', 'Integrations', 'Custom', 'Automation','Core', 'Email', 'Social', 'Geo', 'Printing', 'Website']:
+        alphabet = string.ascii_lowercase + string.digits
+        name_random_string2 = ''.join(secrets.choice(alphabet) for _ in range(10))
+        allow_modules_query = f"INSERT INTO `tabBlock Module` (name, modified_by, owner, docstatus, module, parent, parentfield, parenttype) values ('{name_random_string2}', 'Administrator', 'Administrator', 0, '{i}', '{name_email}', 'block_modules', 'User')"
+        frappe.db.sql(allow_modules_query)
+      
+      k = input('Shall we commit?y/n')
+      if k == 'y':
+        frappe.db.commit()
+        print('commited')
+      if k == 'n':
+        frappe.db.rollback()
+  
+  except Exception as e:
+    print(e)
+    frappe.db.rollback()
+
+
+def addToCB1():
+  
+  frappe.db.begin()
+  frappe.db.savepoint('savepoint')
+
+  try:
+    k = frappe.db.get_list('Professors', pluck='name',filters={'department': 'CMPN'},)
+    k.remove('Administrator')
+    k.remove('patrik.jane@vit.edu.in')
+    
+    col1Opts = ['Above 1 lakh (1.5)', 'Up to 1 lakh (1.25)', 'Up to 50 K (1)', 'Up to 25 K (0.8)', '5K to 25 K (0.5)']
+    col2Opts = ['Individual Consultancy (1.5)', 'Convenor/PI(1)', 'Co-Convenor /Co-PI(0.8)', 'Organizing Secretary (0.6)', 'Member (0.3)']
+    
+    for prof in k:
+
+      doc = frappe.new_doc("Internal revenue generation")
+        
+      doc.col1 = random.choice(col1Opts)
+      doc.col2 = random.choice(col2Opts)
+      doc.academic_year =  "2023-2024"
+      doc.semester = "Even"
+      doc.professor = prof
+      doc.modified_by = prof
+      doc.CurrOwner = prof
+      doc.reviewer = "Virat Ajay Kashyap"
+      
+      
+      doc.insert(ignore_permissions=True)
+
+      k = input('Shall we commit?y/n')
+      if k == 'y':
+        frappe.db.commit()
+        print('commited')
+      if k == 'n':
+        frappe.db.rollback()
+
+  except Exception as e:
+    print(e)
+    frappe.db.rollback()
+
+  
 
 
 

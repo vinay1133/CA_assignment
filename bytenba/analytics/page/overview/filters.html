@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid of Buttons</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Style for the grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      grid-template-rows: repeat(2, 1fr); /* 2 rows */
+      gap: 10px; /* Gap between grid items */
+      width: 100%; /* Full horizontal width */
+      padding: 20px; /* Optional padding */
+      border: 2px solid #000; /* Thicker border for the grid */
+      border-radius: 10px; /* Rounded corners for the grid */
+    }
+
+    /* Style for the grid buttons */
+    .grid-button {
+      height: 35px;
+    }
+
+    .grid-dropdown{
+
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container" style="margin-bottom: 15px;">
+    <select class="form-control grid-dropdown grid-dropdown ">
+      <option value="" disabled selected>Department</option>
+      <option value="CMPN">CMPN</option>
+      <option value="INFT">INFT</option>
+      <option value="BIOM">BIOM</option>
+      <option value="ETRX">ETRX</option>
+      <option value="EXTC">EXTC</option>
+      <option value="INSTI">INSTITUTION</option>
+    </select>    
+    
+    <select class="form-control grid-dropdown grid-dropdown ">
+      <option value="" disabled selected>Academic Year</option>
+      <option value="CMPN">2022-2023</option>
+      <option value="INFT">2021-2022</option>
+      <option value="BIOM">2020-2021</option>
+      <option value="ETRX">2019-2020</option>
+      <option value="EXTC">2018-2019</option>
+    </select>
+
+    
+    <select class="form-control grid-dropdown grid-dropdown ">
+      <option value="" disabled selected>Semester</option>
+      <option value="even">Even</option>
+      <option value="odd">Odd</option>
+    </select>
+
+    <select class="form-control grid-dropdown grid-dropdown ">
+      <option value="" disabled selected>Bucket</option>
+      <option value="AI">Academic Involvement</option>
+      <option value="SD">Student Development</option>
+      <option value="AB">Administration</option>
+      <option value="RB">Research</option>
+      <option value="CB">Corporate Training and Consultancy</option>
+      <option value="PD">Product Development</option>
+    </select>
+
+    
+    <select class="form-control grid-dropdown grid-dropdown ">
+      <option value="" disabled selected>Doctype</option>
+      <option value="CB1">Internal revenue generation</option>
+      <option value="CB1">ALL</option>
+    </select>
+        
+    <button class="btn btn-info" id = "fetch">OK</button>
+
+  </div>
+</body>
+</html>

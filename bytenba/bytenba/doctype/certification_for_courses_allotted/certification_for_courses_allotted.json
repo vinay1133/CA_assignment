@@ -1,7 +1,7 @@
 {
  "actions": [
   {
-   "action": "bytenba.custom_utilities.sayHi",
+   "action": "bytenba.custom_utilities.approve",
    "action_type": "Server Action",
    "label": "sayHi"
   }
@@ -153,7 +153,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-17 15:37:00.292095",
+ "modified": "2023-12-28 00:04:07.893482",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

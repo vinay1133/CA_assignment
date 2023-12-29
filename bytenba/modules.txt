@@ -5,3 +5,4 @@ Meta
 Research Bucket
 Consultancy and Corporate Training Bucket
 Product Development Bucket
+analytics

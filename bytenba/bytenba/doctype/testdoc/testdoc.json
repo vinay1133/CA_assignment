@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "autocomplete_hfeq",
+  "read_only_upys",
   "attach"
  ],
  "fields": [
@@ -17,12 +18,18 @@
   },
   {
    "fieldname": "autocomplete_hfeq",
-   "fieldtype": "Autocomplete"
+   "fieldtype": "Read Only",
+   "options": "wnf"
+  },
+  {
+   "default": "helo",
+   "fieldname": "read_only_upys",
+   "fieldtype": "Read Only"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-24 09:34:46.272326",
+ "modified": "2023-12-28 00:26:11.353510",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "testDoc",
