@@ -28,8 +28,13 @@
   }
  ],
  "hide_toolbar": 1,
- "links": [],
- "modified": "2023-11-07 13:00:56.636743",
+ "links": [
+  {
+   "link_doctype": "Internal revenue generation",
+   "link_fieldname": "Professor"
+  }
+ ],
+ "modified": "2024-01-04 11:35:50.964315",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Department",
@@ -59,6 +64,15 @@
    "role": "Administrator",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "vit_emp",
+   "share": 1
   }
  ],
  "sort_field": "modified",

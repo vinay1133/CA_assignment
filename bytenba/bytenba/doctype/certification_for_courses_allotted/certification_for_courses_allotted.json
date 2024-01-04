@@ -1,11 +1,5 @@
 {
- "actions": [
-  {
-   "action": "bytenba.custom_utilities.approve",
-   "action_type": "Server Action",
-   "label": "sayHi"
-  }
- ],
+ "actions": [],
  "allow_rename": 1,
  "creation": "2023-09-02 11:23:16.562814",
  "default_view": "List",
@@ -15,25 +9,29 @@
  "field_order": [
   "dir",
   "section_break_qe0e",
-  "approved",
   "reviewer_score",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
   "column_break_hpsk",
   "professor",
+  "designation",
   "section_break_uihc",
   "academic_year",
+  "department",
   "column_break_vbeg",
   "semester",
+  "reviewer",
   "section_break_uto1",
   "platform",
   "platform_type",
-  "number_of_hours",
-  "assessment_outcome",
   "date_of_cerftification",
   "column_break_psvr",
-  "self_appraisal_score",
-  "reviewer",
-  "link_for_evidence",
-  "view_evidence"
+  "number_of_hours",
+  "assessment_outcome"
  ],
  "fields": [
   {
@@ -44,7 +42,7 @@
    "default": "John Doe",
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "Professor"
+   "label": "Faculty"
   },
   {
    "fieldname": "platform",
@@ -83,6 +81,7 @@
   },
   {
    "columns": 2,
+   "depends_on": "self_appraisal_score",
    "fieldname": "link_for_evidence",
    "fieldtype": "Attach",
    "label": "Link for evidence"
@@ -98,8 +97,9 @@
   {
    "default": "2022-2023",
    "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "label": "Academic Year"
+   "fieldtype": "Select",
+   "label": "Academic Year",
+   "options": "2021-2022\n2022-2023\n2023-2024\n2024-2025\n2025-2026"
   },
   {
    "fieldname": "dir",
@@ -115,10 +115,10 @@
   },
   {
    "default": "0",
+   "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
+   "label": "Approved"
   },
   {
    "fieldname": "column_break_vbeg",
@@ -135,25 +135,44 @@
    "read_only": 1
   },
   {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence",
-   "permlevel": 1
-  },
-  {
    "fieldname": "reviewer_score",
    "fieldtype": "Data",
    "label": "Reviewer Score",
-   "permlevel": 1
+   "read_only": 1
   },
   {
    "fieldname": "section_break_qe0e",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-28 00:04:07.893482",
+ "modified": "2024-01-04 15:27:18.060114",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

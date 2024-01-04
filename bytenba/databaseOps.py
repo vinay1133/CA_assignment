@@ -269,7 +269,7 @@ def addToCB1():
       doc.semester = "Even"
       doc.professor = prof
       doc.modified_by = prof
-      doc.CurrOwner = prof
+      # doc.CurrOwner = prof
       doc.reviewer = "Virat Ajay Kashyap"
       
       
@@ -286,7 +286,53 @@ def addToCB1():
     print(e)
     frappe.db.rollback()
 
-  
+import json 
+
+def insertUser():
+      
+  frappe.db.begin()
+  frappe.db.savepoint('savepoint')
+  try:
+    with open(f'/workspace/development/frappe-bench/apps/credence_hr/credence_hr/credence_hr/report/attrition_report/s12.json', 'r') as f:
+      json_list = json.load(f)
+    
+    for doc in json_list:
+        
+        if doc["status"] == "Left":
+          
+          join_date = doc['date_of_joining']
+          # random_date_str = random_date(join_date)
+          start_date = datetime.strptime(join_date, '%Y-%m-%d').date()
+          end_date = datetime.strptime('2022-12-31', '%Y-%m-%d').date()
+          delta = end_date - start_date
+          random_days = random.randrange(delta.days + 1)
+          random_date = start_date + timedelta(days=random_days)
+          doc["relieving_date"] = random_date.strftime('%Y-%m-%d')
+      
+          query = """
+          INSERT INTO `tabEmployee` (name, employee, modified_by,owner, gender, date_of_joining, first_name, date_of_birth, middle_name, last_name, status, company, department, reports_to ,company_email, user_id, relieving_date) VALUES ('{name}', '{name}','Administrator','Administrator','{gender}', '{date_of_joining}', '{first_name}', '{date_of_birth}', '{middle_name}', '{last_name}', '{status}', '{company}', '{department}', '{reports_to}' ,'{company_email}', '{user_id}', '{relieving_date}')
+          """.format(name = doc['name'], gender = doc['gender'], date_of_joining= doc['date_of_joining'], first_name= doc['first_name'], date_of_birth = doc['date_of_birth'], middle_name = doc['middle_name'], last_name = doc['last_name'], status=doc['status'], company ='personal', department = doc['department'], reports_to = 'HR-EMP-00001' ,company_email = doc['company_email'], user_id = doc['user_id'], relieving_date = doc['relieving_date'])
+          
+          frappe.db.sql(query)
+          
+
+        else:
+            
+            query = """
+            INSERT INTO `tabEmployee` (name, employee, modified_by,owner, gender, date_of_joining, first_name, date_of_birth, middle_name, last_name, status, company, department, reports_to ,company_email, user_id) VALUES ('{name}', '{name}','Administrator','Administrator','{gender}', '{date_of_joining}', '{first_name}', '{date_of_birth}', '{middle_name}', '{last_name}', '{status}', '{company}', '{department}', '{reports_to}' ,'{company_email}', '{user_id}')
+            """.format(name = doc['name'], gender = doc['gender'], date_of_joining= doc['date_of_joining'], first_name= doc['first_name'], date_of_birth = doc['date_of_birth'], middle_name = doc['middle_name'], last_name = doc['last_name'], status=doc['status'], company ='personal', department = doc['department'], reports_to = 'HR-EMP-00001' ,company_email = doc['company_email'], user_id = doc['user_id'])
+            frappe.db.sql(query)
+            
+    
+    k = input('Shall we commit?y/n')
+    if k == 'y':
+      frappe.db.commit()
+      print('commited')
+
+  except Exception as e:
+    print(e)
+    frappe.db.rollback()
+    
 
 
 

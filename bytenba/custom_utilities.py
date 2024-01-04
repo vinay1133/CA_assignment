@@ -1,3 +1,4 @@
+import datetime
 from io import BytesIO
 import frappe
 import re
@@ -7,14 +8,52 @@ from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 
-def validateAY(academic_yr_str):
+# def validateAY(academic_yr_str):
+# 	pattern_for_ay = re.compile(r'^\d{4}-\d{4}$')
+# 	if re.match(pattern_for_ay, academic_yr_str):
+# 		years = academic_yr_str.split("-")
+# 		if int(years[1]) != int(years[0]) + 1:
+# 				frappe.throw("Academic year entered incorrectly")
+# 	else:
+# 		frappe.throw("Academic year must be of the form like 2022-2023")
+
+def standard_validation(self):
+
+	existing_record = frappe.db.exists(self.doctype, {'name': self.name})
+	if existing_record and existing_record != self.name:
+		frappe.throw('There already exists such a record in the database')
+	
+	#validate academic year string
 	pattern_for_ay = re.compile(r'^\d{4}-\d{4}$')
-	if re.match(pattern_for_ay, academic_yr_str):
-		years = academic_yr_str.split("-")
+	if re.match(pattern_for_ay, self.academic_year):
+		years = self.academic_year.split("-")
 		if int(years[1]) != int(years[0]) + 1:
 				frappe.throw("Academic year entered incorrectly")
 	else:
 		frappe.throw("Academic year must be of the form like 2022-2023")
+
+	#get faculty information
+	info = frappe.db.get_list('Professors', fields = ["select_reviewer", "full_name", "department", "faculty_designation"], filters={'name': ['=', self.owner]}, as_list=True, ignore_permissions = True)
+	#validate Faculty
+	if not self.reviewer == info[0][0]:
+		frappe.throw('Error at reviewer')
+	if not self.professor == info[0][1]:
+		frappe.throw('Error at full name')
+	if not self.department == info[0][2]:
+		frappe.throw('Error at department')
+	if not self.designation == info[0][3]:
+		frappe.throw('Error at faculty designation')		
+		
+	roles = frappe.get_roles(self.modified_by)
+	is_reviewer = True if 'reviewer' in roles else False
+	is_admin = True if 'Administrator' in roles else False
+
+	if self.approved == 1 and not is_reviewer and not is_admin:
+		frappe.throw("Cannot modify document post approval")
+
+# def validate_delete(doc, method):
+# 	if doc.approved == 1 and not doc.modified_by == "Administrator":
+# 		frappe.throw('Cannot delete document post approval')
 
 @frappe.whitelist()
 def evidenceUpload(fileData):
@@ -93,4 +132,21 @@ def uploadToBlob(file, filename):
 		except Exception as e:
 			return str(e)
 		
+
+import frappe
+
+@frappe.whitelist()
+def get_user_info(session_user):
+		if session_user == "Administrator":
+			return ["Not Applicable", "Administrator", "Not Applicable", "Not Applicable"]
+		
+		data = frappe.db.get_list('Professors', fields = ["select_reviewer", "full_name", "department", "faculty_designation"], filters={'name': ['=', session_user]}, as_list=True, ignore_permissions = True)
+		
+		return data[0]
+
+
+@frappe.whitelist()
+def get_reviewer_names(doctype, txt, searchfield, start, page_len, filters):
+		data = frappe.db.get_list('Has Role', start=start, page_length= page_len, fields=["parent"], filters = {'role': ['=', 'reviewer']}, as_list=True)
+		return data
 

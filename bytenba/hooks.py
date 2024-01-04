@@ -11,8 +11,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-#app_include_css = "/assets/bytenba/css/bytenba.css"
-# app_include_js = "/assets/bytenba/js/bytenba.js"
+# pp_include_css = "/assets/bytenba/css/bytenba.css"
+app_include_js = "/assets/bytenba/js/bytenba.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/bytenba/css/bytenba.css"
@@ -40,23 +40,34 @@ doctype_list_js = {
   "BSA-Mini Prj":"bytenba/bytenba/doctype/bsa_mini_prj/bsa_mini_prj_list.js",
   "BSA industrial visit":"bytenba/bytenba/doctype/bsa_industrial_visit/bsa_industrial_visit_list.js",
   "Course_Lab outcome attainment" : "bytenba/bytenba/doctype/course_lab_outcome_attainment/course_lab_outcome_attainment_list.js",
+  "Internal revenue generation": "bytenba/consultancy_and_corporate_training_bucket/doctype/internal_revenue_generation/internal_revenue_generation_list.js"
 }
 
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
 doctype_js = {
-    "Certification for courses allotted": "public/js/custom_cert_courses.js",
-    "Courses taught": "public/js/custom_cert_courses.js",
-    "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
-    "BSA industrial visit":"public/js/custom_cert_courses.js",
-    "Innovation in TLP":"public/js/custom_cert_courses.js",
-    "BSA industrial visit":"public/js/custom_cert_courses.js",
-    "BSA guest lecture": "public/js/custom_cert_courses.js",
-    "BSA-Mini Prj":"public/js/custom_cert_courses.js",
-    "BSA-Co-curricular":"public/js/custom_cert_courses.js"
+    # "Certification for courses allotted": "public/js/custom_cert_courses.js",
+    # "Courses taught": "public/js/custom_cert_courses.js",
+    # "Course_Lab outcome attainment":"public/js/custom_cert_courses.js",
+    # "BSA industrial visit":"public/js/custom_cert_courses.js",
+    # "Innovation in TLP":"public/js/custom_cert_courses.js",
+    # "BSA industrial visit":"public/js/custom_cert_courses.js",
+    # "BSA guest lecture": "public/js/custom_cert_courses.js",
+    # "BSA-Mini Prj":"public/js/custom_cert_courses.js",
+    # "BSA-Co-curricular":"public/js/custom_cert_courses.js"
+      "Professors":"public/js/custom_cert_courses.js",
 }
-
+sounds = [
+	{"name": "email", "src": "/assets/frappe/sounds/email.mp3", "volume": 0.1},
+	{"name": "submit", "src": "/assets/frappe/sounds/submit.mp3", "volume": 0.1},
+	{"name": "cancel", "src": "/assets/frappe/sounds/cancel.mp3", "volume": 0.1},
+	{"name": "delete", "src": "/assets/frappe/sounds/delete.mp3", "volume": 0.05},
+	{"name": "click", "src": "/assets/frappe/sounds/click.mp3", "volume": 0.05},
+	{"name": "error", "src": "/assets/frappe/sounds/error.mp3", "volume": 0.1},
+	{"name": "alert", "src": "/assets/frappe/sounds/alert.mp3", "volume": 0.2},
+	# {"name": "chime", "src": "/assets/frappe/sounds/chime.mp3"},
+]
 # Home Pages
 # ----------
 
@@ -128,6 +139,10 @@ doc_events = {
     # "File": {
     #     "after_insert": "bytenba.controller.file_upload_to_s3",
     #     "on_trash": "bytenba.controller.delete_from_cloud"
+    # }
+
+    # "Certification for courses allotted": {
+    #   	"on_trash": "bytenba.send_to_reviewer.validate_delete",
     # }
 }
 
