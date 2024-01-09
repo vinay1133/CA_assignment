@@ -10,6 +10,7 @@
  "field_order": [
   "employee_information_section",
   "user",
+  "user_id",
   "nickname",
   "full_name",
   "column_break_yxqx",
@@ -18,6 +19,7 @@
   "last_name",
   "position_info_section",
   "department",
+  "select_reviewer",
   "faculty_designation",
   "is_hod"
  ],
@@ -39,14 +41,14 @@
   {
    "fieldname": "nickname",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Nickname"
   },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "label": "Full Name",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "column_break_yxqx",
@@ -86,6 +88,7 @@
    "default": "0",
    "fieldname": "is_hod",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Is HOD"
   },
   {
@@ -93,13 +96,25 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Faculty Designation",
-   "options": "Professor\nAssociate Professor\nAssistant Professor\nNot Applicable",
+   "options": "Professor\nAssociate Professor\nAssistant Professor\nPrincipal\nTrustee\nAppraisal team\nExecutive\nNot Applicable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "select_reviewer",
+   "fieldtype": "Link",
+   "label": "Select Reviewer",
+   "options": "Reviewers"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "USER ID",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-26 23:32:53.516423",
+ "modified": "2024-01-04 01:06:26.331555",
  "modified_by": "Administrator",
  "module": "Meta",
  "name": "Professors",

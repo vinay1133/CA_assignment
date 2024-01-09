@@ -26,6 +26,7 @@
   "uploadbutton",
   "section_break_mdon",
   "reviewer",
+  "department",
   "column_break_ugpo",
   "attach_evidence"
  ],
@@ -145,11 +146,22 @@
    "fieldname": "attach_evidence",
    "fieldtype": "Attach",
    "label": "Attach Evidence"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-12-28 12:43:08.011436",
+ "links": [
+  {
+   "link_doctype": "Department",
+   "link_fieldname": "Name"
+  }
+ ],
+ "modified": "2024-01-04 11:35:11.141323",
  "modified_by": "Administrator",
  "module": "Consultancy and Corporate Training Bucket",
  "name": "Internal revenue generation",
@@ -194,5 +206,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }

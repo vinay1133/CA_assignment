@@ -11,7 +11,7 @@ class Internalrevenuegeneration(Document):
 	
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'CB1_{self.CurrOwner}_{self.academic_year}_{self.semester}'
+		self.name = f'CB1_{self.owner}_{self.academic_year}_{self.semester}'
 		# self.name = f'CB1_{self.owner}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
@@ -24,13 +24,16 @@ class Internalrevenuegeneration(Document):
 			frappe.throw('There already exists such a record in the database')
 
 		#validation post approval
-		roles = frappe.get_roles()
-		current_user_is_reviewer = True if 'reviewer' in roles else False
-		current_user_is_admin = True if 'Administrator' in roles else False
-		#if user is not admin or not a reviewer then he cannot change the form post form approval
-		if not current_user_is_admin and not current_user_is_reviewer and self.approved == 1:
-			frappe.throw("""Modifcation of document is not permitted since document has been approved""")
-	
+		# roles = frappe.get_roles()
+		# is_admin = True if 'Administrator' in roles else False
+		#if user is not admin then he cannot change the form post form approval
+		# if not  is_admin and self.approved == 1:
+		# 	frappe.throw("""Modifcation of document is not permitted since document has been approved""")
+		
+		ro = frappe.db.get_list('Professors', fields = ["select_reviewer"], filters={'name': ['=', self.owner]}, as_list=True, ignore_permissions = True)
+
+		if ro[0][0] != self.reviewer:
+			frappe.throw("Reviewers do not match")
 
 def compute_marks(self):
 

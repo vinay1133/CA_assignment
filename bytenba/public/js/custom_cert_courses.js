@@ -78,3 +78,13 @@
 //     frm.refresh_field("reviewer");
 //   },
 // });
+// frappe.ui.form.on("Professors", {
+//   refresh(frm) {
+//     frm.set_query("select_reviewer", function () {
+//       return {
+//         query: "bytenba.get_reviewer.get_reviewer_names",
+//       };
+//     });
+//     frm.refresh_field("select_reviewer");
+//   },
+// });

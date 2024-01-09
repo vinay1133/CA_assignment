@@ -3,24 +3,31 @@ const DocType = "Internal revenue generation"
 frappe.ui.form.on(DocType, {
 
   refresh: function(frm) {
-
-		frappe.call({
-				method: 'bytenba.get_reviewer.get_reviewer',
-				args: {
-						'session_user': frappe.session.user
-				},
-				callback: function(response) {
-						if (response) {
-								frm.set_value('reviewer', response.message[0])
-								if (frm.doc.owner == frappe.session.user){
-									// frm.set_value('professor', response.message[1]);
-									if (frm.doc.__islocal) {
-										frm.set_value('professor', response.message[1]);
+		
+		if (frappe.session.user == "Administrator"){
+			frm.set_value('professor', "Administrator");
+			frm.set_value('reviewer', "Administrator");
+		}
+		else
+		{		
+			frappe.call({
+					method: 'bytenba.get_reviewer.get_reviewer',
+					args: {
+							'session_user': frappe.session.user
+					},
+					callback: function(response) {
+							if (response) {
+									frm.set_value('reviewer', response.message[0])
+									if (frm.doc.owner == frappe.session.user){
+										// frm.set_value('professor', response.message[1]);
+										if (frm.doc.__islocal) {
+											frm.set_value('professor', response.message[1]);
+										}
 									}
-								}
-						}
-				}
-		});
+							}
+					}
+			});
+		}
 		
 		if (frappe.user.has_role('Administrator') || frappe.user.has_role('reviewer'))
 		{
@@ -106,7 +113,8 @@ frappe.ui.form.on(DocType, {
 	    });
 		}
 		frm.set_value('academic_year', getAY());
-  },
+		frm.dashboard.hide()
+  }
 });
 
 function getAY(){

@@ -17,21 +17,21 @@ class Professors(Document):
 		
 		self.full_name = full_name
 	
-	def validate(self):
-		#check for existing HODs if form is marked with is_hod
-		if self.is_hod:
-			Doctype = "Professors"
-			filters = {
-					"is_hod": 1,
-					"department": self.department
-			}
-			hod_docs = get_all(Doctype, filters=filters)
-			if len(hod_docs) > 1:
-				frappe.throw('More than one hod exists for department: ', self.department, ' Invalid situation')
-			elif len(hod_docs) == 1:
-				if hod_docs[0].name != self.name:
-					frappe.throw('Cannot have more than one HOD')
-				else:
-					pass
-			else:
-				pass
+	# def validate(self):
+	# 	#check for existing HODs if form is marked with is_hod
+	# 	if self.is_hod:
+	# 		Doctype = "Professors"
+	# 		filters = {
+	# 				"is_hod": 1,
+	# 				"department": self.department
+	# 		}
+	# 		hod_docs = get_all(Doctype, filters=filters)
+	# 		if len(hod_docs) > 1:
+	# 			frappe.throw('More than one hod exists for department: ', self.department, ' Invalid situation')
+	# 		elif len(hod_docs) == 1:
+	# 			if hod_docs[0].name != self.name:
+	# 				frappe.throw('Cannot have more than one HOD')
+	# 			else:
+	# 				pass
+	# 		else:
+	# 			pass
