@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-import bytenba.custom_utilities as cu
+import bytenba.form_validation as validation
 import re
 
 Doctype = 'Certification for courses allotted'
@@ -19,7 +19,7 @@ class Certificationforcoursesallotted(Document):
 		self.self_appraisal_score = compute_marks(self)
 
 	def validate(self):
-		cu.standard_validation(self)
+		validation.standard_validation(self)
 
 
 def compute_marks(self):

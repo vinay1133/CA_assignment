@@ -8,31 +8,36 @@
  "engine": "InnoDB",
  "field_order": [
   "dir",
-  "approved",
+  "section_break_twjd",
   "reviewer_score",
+  "column_break_wsmp",
+  "approved",
+  "section_break_mwsj",
+  "self_appraisal_score",
+  "column_break_ojtl",
+  "link__for_evidence",
   "section_break_quix2",
   "professor",
+  "designation",
   "column_break_lxjel",
   "academic_year",
+  "department",
   "column_break_ow4f",
   "semester",
+  "reviewer",
   "section_break_hsx1",
   "course__lab_name",
   "section_break_mspkh",
   "average_target_obtained",
   "marks_obtained",
-  "average_syllabus_completed",
-  "self_appraisal_score",
-  "column_break_khhsp",
-  "reviewer",
-  "link__for_evidence",
-  "view_evidence"
+  "average_syllabus_completed"
  ],
  "fields": [
   {
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "Professor"
+   "label": "Professor",
+   "reqd": 1
   },
   {
    "fieldname": "course__lab_name",
@@ -72,9 +77,11 @@
    "fieldtype": "Read Only",
    "in_list_view": 1,
    "label": "Reviewer",
-   "options": "Professors"
+   "options": "Professors",
+   "reqd": 1
   },
   {
+   "depends_on": "self_appraisal_score",
    "fieldname": "link__for_evidence",
    "fieldtype": "Attach",
    "in_list_view": 1,
@@ -83,10 +90,6 @@
   {
    "fieldname": "section_break_mspkh",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_khhsp",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
@@ -116,35 +119,58 @@
    "fieldname": "semester",
    "fieldtype": "Select",
    "label": "Semester",
-   "options": "Odd\nEven"
+   "options": "Odd\nEven",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_hsx1",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence",
-   "permlevel": 1
-  },
-  {
    "default": "0",
+   "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
+   "label": "Approved"
   },
   {
    "fieldname": "reviewer_score",
    "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
+   "label": "Reviewer Score"
+  },
+  {
+   "fieldname": "section_break_twjd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_wsmp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mwsj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ojtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 11:45:58.058688",
+ "modified": "2024-01-09 23:11:34.863694",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",

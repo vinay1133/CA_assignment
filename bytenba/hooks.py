@@ -141,9 +141,9 @@ doc_events = {
     #     "on_trash": "bytenba.controller.delete_from_cloud"
     # }
 
-    # "Certification for courses allotted": {
-    #   	"on_trash": "bytenba.send_to_reviewer.validate_delete",
-    # }
+    "Certification for courses allotted": {
+      "on_trash": "bytenba.form_validation.validate_delete"
+    }
 }
 
 

@@ -16,8 +16,9 @@ def execute(filters=None):
   ON p.name = c.owner
 	WHERE p.department like '{department}'
   AND p.faculty_designation like '{faculty_designation}'
-	AND c.academic_year = '{academic_year}'	
-  """.format(department = department + "%", faculty_designation = faculty_designation + "%", academic_year = academic_year)
+	AND c.academic_year = '{academic_year}'
+	AND c.semester = '{semester}'
+  """.format(department = department + "%", faculty_designation = faculty_designation + "%", academic_year = academic_year, semester = semester)
 
 	data = frappe.db.sql(sql, as_dict=True)
 
