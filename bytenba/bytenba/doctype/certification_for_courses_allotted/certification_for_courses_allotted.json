@@ -42,7 +42,8 @@
    "default": "John Doe",
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "Faculty"
+   "label": "Faculty",
+   "reqd": 1
   },
   {
    "fieldname": "platform",
@@ -71,7 +72,8 @@
    "fieldname": "reviewer",
    "fieldtype": "Read Only",
    "in_list_view": 1,
-   "label": "Reviewer"
+   "label": "Reviewer",
+   "reqd": 1
   },
   {
    "fieldname": "platform_type",
@@ -95,11 +97,12 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "2022-2023",
+   "default": "2024",
    "fieldname": "academic_year",
    "fieldtype": "Select",
    "label": "Academic Year",
-   "options": "2021-2022\n2022-2023\n2023-2024\n2024-2025\n2025-2026"
+   "options": "2024\n2025\n2026\n2027\n2028\n2029\n2030\n2031\n2032\n2034\n2035",
+   "reqd": 1
   },
   {
    "fieldname": "dir",
@@ -111,14 +114,16 @@
    "fieldname": "semester",
    "fieldtype": "Select",
    "label": "Semester",
-   "options": "Odd\nEven"
+   "options": "Odd\nEven",
+   "reqd": 1
   },
   {
    "default": "0",
    "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
-   "label": "Approved"
+   "label": "Approved",
+   "permlevel": 1
   },
   {
    "fieldname": "column_break_vbeg",
@@ -132,12 +137,14 @@
    "fieldname": "self_appraisal_score",
    "fieldtype": "Float",
    "label": "Self Appraisal Score",
+   "permlevel": 1,
    "read_only": 1
   },
   {
    "fieldname": "reviewer_score",
    "fieldtype": "Data",
    "label": "Reviewer Score",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -152,14 +159,16 @@
    "fieldname": "designation",
    "fieldtype": "Data",
    "label": "Designation",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "department",
    "fieldtype": "Link",
    "label": "Department",
    "options": "Department",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "section_break_ifut",
@@ -172,7 +181,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 15:27:18.060114",
+ "modified": "2024-01-09 23:38:21.162462",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Certification for courses allotted",

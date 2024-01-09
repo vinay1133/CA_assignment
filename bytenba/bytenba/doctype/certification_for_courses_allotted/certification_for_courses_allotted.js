@@ -110,8 +110,8 @@ frappe.ui.form.on(DocType, {
 			$.each(frm.fields_dict, function(fieldname, field) {
 	      frm.set_df_property(fieldname, "read_only", 1)	
 	    });
+			frm.dashboard.hide()
 		}
-		frm.dashboard.hide()		
   }
 
 });
