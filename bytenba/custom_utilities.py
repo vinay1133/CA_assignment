@@ -24,13 +24,16 @@ def standard_validation(self):
 		frappe.throw('There already exists such a record in the database')
 	
 	#validate academic year string
-	pattern_for_ay = re.compile(r'^\d{4}-\d{4}$')
-	if re.match(pattern_for_ay, self.academic_year):
-		years = self.academic_year.split("-")
-		if int(years[1]) != int(years[0]) + 1:
-				frappe.throw("Academic year entered incorrectly")
-	else:
-		frappe.throw("Academic year must be of the form like 2022-2023")
+	# pattern_for_ay = re.compile(r'^\d{4}-\d{4}$')
+	# if re.match(pattern_for_ay, self.academic_year):
+	# 	years = self.academic_year.split("-")
+	# 	if int(years[1]) != int(years[0]) + 1:
+	# 			frappe.throw("Academic year entered incorrectly")
+	# else:
+	# 	frappe.throw("Academic year must be of the form like 2022-2023")
+	pattern_for_ay = r'^20(2[4-9]|[3-9][0-9])$'
+	if not re.match(pattern_for_ay, self.academic_year):
+			frappe.throw("Academic year must be of the form like 2024")
 
 	#get faculty information
 	info = frappe.db.get_list('Professors', fields = ["select_reviewer", "full_name", "department", "faculty_designation"], filters={'name': ['=', self.owner]}, as_list=True, ignore_permissions = True)
@@ -150,3 +153,7 @@ def get_reviewer_names(doctype, txt, searchfield, start, page_len, filters):
 		data = frappe.db.get_list('Has Role', start=start, page_length= page_len, fields=["parent"], filters = {'role': ['=', 'reviewer']}, as_list=True)
 		return data
 
+@frappe.whitelist()
+def get_roles(session_user):
+		roles = frappe.get_roles(session_user)
+		return roles

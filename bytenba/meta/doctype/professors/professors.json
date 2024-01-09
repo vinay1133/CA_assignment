@@ -96,14 +96,14 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Faculty Designation",
-   "options": "Professor\nAssociate Professor\nAssistant Professor\nNot Applicable",
+   "options": "Professor\nAssociate Professor\nAssistant Professor\nPrincipal\nTrustee\nAppraisal team\nExecutive\nNot Applicable",
    "reqd": 1
   },
   {
    "fieldname": "select_reviewer",
    "fieldtype": "Link",
    "label": "Select Reviewer",
-   "options": "Professors"
+   "options": "Reviewers"
   },
   {
    "fieldname": "user_id",

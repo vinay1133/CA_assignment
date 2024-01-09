@@ -11,8 +11,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# pp_include_css = "/assets/bytenba/css/bytenba.css"
-app_include_js = "/assets/bytenba/js/bytenba.js"
+# app_include_css = "/assets/bytenba/css/bytenba.css"
+# app_include_js = "/assets/bytenba/js/bytenba.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/bytenba/css/bytenba.css"
@@ -56,7 +56,7 @@ doctype_js = {
     # "BSA guest lecture": "public/js/custom_cert_courses.js",
     # "BSA-Mini Prj":"public/js/custom_cert_courses.js",
     # "BSA-Co-curricular":"public/js/custom_cert_courses.js"
-      "Professors":"public/js/custom_cert_courses.js",
+      # "Professors":"public/js/custom_cert_courses.js",
 }
 sounds = [
 	{"name": "email", "src": "/assets/frappe/sounds/email.mp3", "volume": 0.1},

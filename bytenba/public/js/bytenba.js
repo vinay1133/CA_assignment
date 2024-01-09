@@ -1,4 +1,4 @@
-$(document).ready(function(){
-  $(".dropdown-help").remove();
-});
+// $(document).ready(function(){
+//   $(".dropdown-help").remove();
+// });
 
