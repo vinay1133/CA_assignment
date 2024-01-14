@@ -6,7 +6,7 @@ import os, uuid
 import boto3, requests
 from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
-
+from frappe.utils import today
 
 def validate_delete(doc, method):
 	if doc.approved == 1 and not doc.modified_by == "Administrator":
@@ -98,8 +98,13 @@ def get_user_info(session_user):
 			return ["Not Applicable", "Administrator", "Not Applicable", "Not Applicable"]
 		
 		data = frappe.db.get_list('Professors', fields = ["select_reviewer", "full_name", "department", "faculty_designation"], filters={'name': ['=', session_user]}, as_list=True, ignore_permissions = True)
+
+		current_year = datetime.datetime.now().year
+		previous_years = [current_year - i for i in range(5)]
+
+		data = data[0] + (previous_years,)
 		
-		return data[0]
+		return data
 
 
 @frappe.whitelist()
@@ -111,3 +116,30 @@ def get_reviewer_names(doctype, txt, searchfield, start, page_len, filters):
 def get_roles(session_user):
 		roles = frappe.get_roles(session_user)
 		return roles
+
+# @frappe.whitelist()
+# def get_progress(session_user):
+# 	#get academic year and semester
+# 	session_user = "aarav.patel@appraisepro.awsapps.com"
+# 	year = today()[0:4]
+# 	month = int(today()[5:7])
+# 	if 1 <= month <= 6:
+# 		sem = 'Even'
+# 	else:
+# 		sem = 'Odd'
+# 	partial_name = session_user + '_' + year + '_' + sem
+# 	doc_list = [['Certification for courses allotted','AI1_'], ['Courses taught', 'AI2_']]
+# 	success = {}
+# 	for ele in doc_list:
+# 		doc = ele[0]
+# 		instnace_name = ele[1] + partial_name
+# 		print(instnace_name)
+# 		if frappe.db.exists(doc, instnace_name):
+# 			doc = 'success-'+ doc.replace(' ', '-')
+# 			success[doc] = True
+# 	if not success:
+# 		return None
+# 	else:
+# 		return success
+		
+	

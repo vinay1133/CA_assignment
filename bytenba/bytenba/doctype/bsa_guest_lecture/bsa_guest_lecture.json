@@ -7,31 +7,161 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "directions",
-  "section_break_vif7",
-  "approved",
+  "dir",
+  "section_break_qe0e",
   "reviewer_score",
-  "cbrk1_column",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
-  "column_break_tcn9",
+  "designation",
+  "section_break_uihc",
   "academic_year",
-  "column_break_uxbe",
+  "department",
+  "column_break_vbeg",
   "semester",
-  "sbrk1_section",
+  "reviewer",
+  "section_break_uto1",
   "total_students",
   "number_of_attendees",
   "number_of_feedbacks",
   "quality_of_speaker",
   "mapping",
-  "column_break_f6jr",
-  "link_for_evidence",
-  "view_evidence",
-  "reviewer",
   "quality_relevance",
-  "marks_obtained",
-  "self_appraisal_score"
+  "marks_obtained"
  ],
  "fields": [
+  {
+    "fieldname": "dir",
+    "fieldtype": "HTML",
+    "label": "dir",
+    "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
+  },
+  {
+    "fieldname": "section_break_qe0e",
+    "fieldtype": "Section Break"
+  },
+  {
+    "fieldname": "reviewer_score",
+    "fieldtype": "Data",
+    "label": "Reviewer Score",
+    "permlevel": 1,
+    "read_only": 1
+  },
+  {
+    "fieldname": "column_break_hvfs",
+    "fieldtype": "Column Break"
+  },
+  {
+    "default": "0",
+    "depends_on": "approved",
+    "fieldname": "approved",
+    "fieldtype": "Check",
+    "label": "Approved",
+    "permlevel": 1
+  },
+  {
+    "fieldname": "section_break_ifut",
+    "fieldtype": "Section Break"
+  },
+  {
+    "fieldname": "self_appraisal_score",
+    "fieldtype": "Float",
+    "label": "Self Appraisal Score",
+    "permlevel": 1,
+    "read_only": 1
+  },
+  {
+    "fieldname": "column_break_sbus",
+    "fieldtype": "Column Break"
+  },
+  {
+    "columns": 2,
+    "depends_on": "self_appraisal_score",
+    "fieldname": "link_for_evidence",
+    "fieldtype": "Attach",
+    "label": "Link for evidence"
+  },
+  {
+    "fieldname": "column_break_hpsk",
+    "fieldtype": "Section Break"
+  },
+  {
+    "fieldname": "professor",
+    "fieldtype": "Read Only",
+    "label": "Faculty",
+    "reqd": 1
+  },
+  {
+    "fieldname": "designation",
+    "fieldtype": "Data",
+    "label": "Designation",
+    "read_only": 1,
+    "reqd": 1
+  },
+  {
+    "fieldname": "section_break_uihc",
+    "fieldtype": "Column Break"
+  },
+  {
+    "fieldname": "academic_year",
+    "fieldtype": "Data",
+    "label": "Academic Year",
+    "reqd": 1
+  },
+  {
+    "fieldname": "department",
+    "fieldtype": "Link",
+    "label": "Department",
+    "options": "Department",
+    "read_only": 1,
+    "reqd": 1
+  },
+  {
+    "fieldname": "column_break_vbeg",
+    "fieldtype": "Column Break"
+  },
+  {
+    "fieldname": "semester",
+    "fieldtype": "Select",
+    "label": "Semester",
+    "options": "Odd\nEven",
+    "reqd": 1
+  },
+  {
+    "fieldname": "reviewer",
+    "fieldtype": "Read Only",
+    "in_list_view": 1,
+    "label": "Reviewer",
+    "reqd": 1
+  },
+  {
+    "fieldname": "section_break_uto1",
+    "fieldtype": "Section Break"
+  },  
+  {
+    "columns": 2,
+    "fieldname": "total_students",
+    "fieldtype": "Int",
+    "label": "Total number of enrolled students",
+    "reqd": 1
+  },
+  {
+    "fieldname": "number_of_attendees",
+    "fieldtype": "Int",
+    "label": "Number of attendees",
+    "reqd": 1
+   },
+   {
+    "fieldname": "number_of_feedbacks",
+    "fieldtype": "Int",
+    "label": "Number of feedbacks",
+    "reqd": 1
+   },
   {
    "fieldname": "quality_of_speaker",
    "fieldtype": "Select",
@@ -39,54 +169,12 @@
    "options": "International / National VP and above / Unicorn Startup - CXO (1)\nSME (0.5)\nInternational / National Prof & Above (1)\nState (0.5)",
    "reqd": 1
   },
-  {
-   "fieldname": "number_of_feedbacks",
-   "fieldtype": "Int",
-   "label": "Number of feedbacks",
-   "reqd": 1
-  },
+
   {
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
    "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to CO or PO (0)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "label": "Link for evidence"
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reviewer"
-  },
-  {
-   "fieldname": "directions",
-   "fieldtype": "HTML",
-   "label": "Directions",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic Year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "cbrk1_column",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "sbrk1_section",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "number_of_attendees",
-   "fieldtype": "Int",
-   "label": "Number of attendees",
    "reqd": 1
   },
   {
@@ -97,69 +185,10 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_uxbe",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
-  },
-  {
-   "columns": 2,
-   "fieldname": "total_students",
-   "fieldtype": "Int",
-   "label": "Total number of enrolled students",
-   "reqd": 1
-  },
-  {
    "fieldname": "quality_relevance",
    "fieldtype": "Float",
    "label": "Students feedback about quality and relevance",
    "read_only": 1
-  },
-  {
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Read Only",
-   "label": "Self Appraisal Score"
-  },
-  {
-   "default": "0",
-   "fieldname": "approved",
-   "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
-  },
-  {
-   "default": "Even",
-   "fieldname": "semester",
-   "fieldtype": "Select",
-   "label": "Semester",
-   "options": "Even\nOdd"
-  },
-  {
-   "fieldname": "column_break_tcn9",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_f6jr",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_vif7",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View evidence",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,

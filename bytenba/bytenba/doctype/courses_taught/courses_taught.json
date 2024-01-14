@@ -36,7 +36,7 @@
   {
    "fieldname": "professor",
    "fieldtype": "Read Only",
-   "label": "Professor",
+   "label": "Faculty",
    "reqd": 1
   },
   {
@@ -66,10 +66,10 @@
    "read_only": 1
   },
   {
-   "default": "0",
    "fieldname": "self_appraisal_score",
    "fieldtype": "Float",
    "label": "Self Appraisal Score",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -78,6 +78,7 @@
    "in_list_view": 1,
    "label": "Reviewer",
    "options": "Professors",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -92,6 +93,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "frappe.datetime.year(frappe.datetime.get_today());\n\n\n\n\n\n\n",
    "fieldname": "academic_year",
    "fieldtype": "Data",
    "label": "Academic year",
@@ -131,12 +133,15 @@
    "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
-   "label": "Approved"
+   "label": "Approved",
+   "permlevel": 1
   },
   {
    "fieldname": "reviewer_score",
    "fieldtype": "Data",
-   "label": "Reviewer Score"
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
   },
   {
    "fieldname": "section_break_twjd",
@@ -158,6 +163,7 @@
    "fieldname": "designation",
    "fieldtype": "Data",
    "label": "Designation",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -165,12 +171,13 @@
    "fieldtype": "Link",
    "label": "Department",
    "options": "Department",
+   "read_only": 1,
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-09 23:11:34.863694",
+ "modified": "2024-01-14 19:12:05.056689",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Courses taught",

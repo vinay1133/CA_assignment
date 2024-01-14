@@ -3,8 +3,8 @@
 
 import frappe
 from frappe.model.document import Document
-import bytenba.custom_utilities as uf
 import re
+import bytenba.form_validation as validation
 
 Doctype = 'BSA guest lecture'
 pattern = re.compile(r'^\d{4}-\d{4}$')
@@ -14,7 +14,7 @@ class BSAguestlecture(Document):
 
 	"""method to autoname your document"""
 	def autoname(self):
-		self.name = f'AI3a_{self.professor}_{self.academic_year}_{self.semester}'
+		self.name = f'AI3a_{self.owner}_{self.academic_year}_{self.semester}'
 	
 	def before_save(self):
 
@@ -25,7 +25,7 @@ class BSAguestlecture(Document):
 
 	def validate(self):
 		"""Academic year validations"""
-		uf.validateAY(self.academic_year)
+		validation.standard_validation(self)
 		existing_record = frappe.db.exists(Doctype, {'name': self.name})
 		if existing_record and existing_record != self.name:
 			frappe.throw('There already exists such a record in the database') 
