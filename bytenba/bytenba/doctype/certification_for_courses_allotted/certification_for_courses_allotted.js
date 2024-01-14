@@ -17,6 +17,8 @@ frappe.ui.form.on(DocType, {
 							frm.set_value('professor', response.message[1]);
 							frm.set_value('department', response.message[2]);
 							frm.set_value('designation', response.message[3]);
+							// frm.set_df_property('academic_year', 'options', response.message[4]);
+							frm.set_value('academic_year',frappe.datetime.nowdate().split("-")[0]);
 							}
 					}
 				});

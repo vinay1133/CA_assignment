@@ -5,11 +5,15 @@ import frappe
 from frappe.model.document import Document
 import bytenba.custom_utilities as uf
 import re
+import bytenba.form_validation as validation
+
+Doctype = 'Courses taught'
+pattern_for_wtg = r'\((\s*(?:\d+\.\d+|\d+)\s*)\)'
 
 class Coursestaught(Document):
 	
 	def autoname(self):
-		self.name = f'AI2_{self.professor}_{self.academic_year}_{self.semester}'
+		self.name = f'AI2_{self.owner}_{self.academic_year}_{self.semester}'
 
 	def before_save(self):
 		# no. of rows
@@ -46,5 +50,5 @@ class Coursestaught(Document):
 	
 	def validate(self):
 		"""Validation for academic year"""
-		uf.validateAY(self.academic_year)
+		validation.standard_validation(self)
 

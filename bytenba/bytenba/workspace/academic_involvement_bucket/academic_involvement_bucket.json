@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"SCxumYWT75\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Academic Involvement Bucket</span>\",\"col\":12}},{\"id\":\"sul4etEwzb\",\"type\":\"card\",\"data\":{\"card_name\":\"Certification for courses allotted\",\"col\":4}},{\"id\":\"NLDDMzohU9\",\"type\":\"card\",\"data\":{\"card_name\":\"Courses Taught\",\"col\":4}},{\"id\":\"s-rH3rFC9B\",\"type\":\"card\",\"data\":{\"card_name\":\"Beyond Syllabus Activites\",\"col\":4}},{\"id\":\"D7b6edHKac\",\"type\":\"card\",\"data\":{\"card_name\":\"Course / Lab outcome attainment\",\"col\":4}},{\"id\":\"GCAj5czbqA\",\"type\":\"card\",\"data\":{\"card_name\":\"Innovations in TLP\",\"col\":4}},{\"id\":\"GqehxzKknT\",\"type\":\"card\",\"data\":{\"card_name\":\"Contribution towards the resource development\",\"col\":4}},{\"id\":\"F8Abk67hd7\",\"type\":\"card\",\"data\":{\"card_name\":\"Mini Project as a subject head\",\"col\":4}},{\"id\":\"IWxxFCQXOt\",\"type\":\"card\",\"data\":{\"card_name\":\"BE Projects\",\"col\":4}},{\"id\":\"Rw0V1G1SwN\",\"type\":\"card\",\"data\":{\"card_name\":\"Projects\",\"col\":4}},{\"id\":\"BXKMJEpy_5\",\"type\":\"card\",\"data\":{\"card_name\":\"PHD\",\"col\":4}},{\"id\":\"yGnqNitnaH\",\"type\":\"card\",\"data\":{\"card_name\":\"Exam Related Work\",\"col\":4}},{\"id\":\"taYZDjuTfU\",\"type\":\"card\",\"data\":{\"card_name\":\"Grades in preceding semester Review / Preview\",\"col\":4}}]",
+ "content": "[{\"id\":\"SCxumYWT75\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Academic Involvement Bucket</span>\",\"col\":12}},{\"id\":\"sul4etEwzb\",\"type\":\"card\",\"data\":{\"card_name\":\"Certification for courses allotted\",\"col\":4}},{\"id\":\"NLDDMzohU9\",\"type\":\"card\",\"data\":{\"card_name\":\"Courses Taught\",\"col\":4}},{\"id\":\"s-rH3rFC9B\",\"type\":\"card\",\"data\":{\"card_name\":\"Beyond Syllabus Activites\",\"col\":4}},{\"id\":\"D7b6edHKac\",\"type\":\"card\",\"data\":{\"card_name\":\"Course / Lab outcome attainment\",\"col\":4}},{\"id\":\"GCAj5czbqA\",\"type\":\"card\",\"data\":{\"card_name\":\"Innovations in TLP\",\"col\":4}},{\"id\":\"GqehxzKknT\",\"type\":\"card\",\"data\":{\"card_name\":\"Contribution towards the resource development\",\"col\":4}},{\"id\":\"F8Abk67hd7\",\"type\":\"card\",\"data\":{\"card_name\":\"Mini Project as a subject head\",\"col\":4}},{\"id\":\"IWxxFCQXOt\",\"type\":\"card\",\"data\":{\"card_name\":\"BE Projects\",\"col\":4}},{\"id\":\"Rw0V1G1SwN\",\"type\":\"card\",\"data\":{\"card_name\":\"Projects\",\"col\":4}},{\"id\":\"yGnqNitnaH\",\"type\":\"card\",\"data\":{\"card_name\":\"Exam Related Work\",\"col\":4}},{\"id\":\"taYZDjuTfU\",\"type\":\"card\",\"data\":{\"card_name\":\"Grades in preceding semester Review / Preview\",\"col\":4}}]",
  "creation": "2023-10-18 19:40:36.212312",
  "custom_blocks": [],
  "docstatus": 0,
@@ -171,24 +171,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "PHD",
-   "link_count": 1,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Academic Involvement 11",
-   "link_count": 0,
-   "link_to": "User",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Exam Related Work",
    "link_count": 1,
    "onboard": 0,
@@ -299,7 +281,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-01-04 17:43:49.768725",
+ "modified": "2024-01-10 10:07:20.171599",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Academic Involvement Bucket",
@@ -309,7 +291,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 3.0,
+ "sequence_id": 2.0,
  "shortcuts": [],
  "title": "Academic Involvement Bucket"
 }

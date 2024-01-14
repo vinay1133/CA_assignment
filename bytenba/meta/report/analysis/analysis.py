@@ -10,14 +10,18 @@ def execute(filters=None):
 	faculty_designation = filters.get('designation', '')
 	# bucket = filters.get('bucket', '')
 
-	sql = """SELECT p.full_name as Faculty, p.user_id as 'Employee Code', p.department as Department, p.faculty_designation as Designation, COALESCE(c.reviewer_score, "Pending") as "AI 1"
+	sql = """SELECT p.full_name as Faculty, p.user_id as 'Employee Code', p.department as Department, p.faculty_designation as Designation, COALESCE(c.reviewer_score, "Pending") as "AI 1", COALESCE(co.reviewer_score, "Pending") as "AI 2"
   FROM `tabProfessors` as p
   JOIN `tabCertification for courses allotted` as c
   ON p.name = c.owner
+	JOIN `tabCourses taught` as co
+	ON p.name = co.owner
 	WHERE p.department like '{department}'
   AND p.faculty_designation like '{faculty_designation}'
 	AND c.academic_year = '{academic_year}'
 	AND c.semester = '{semester}'
+	AND co.academic_year = '{academic_year}'
+	AND co.semester = '{semester}'
   """.format(department = department + "%", faculty_designation = faculty_designation + "%", academic_year = academic_year, semester = semester)
 
 	data = frappe.db.sql(sql, as_dict=True)
