@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-16 10:43:35.941195",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_uto1",
+  "quality_of_speaker",
+  "mapping",
+  "feedback_received",
+  "number_of_attendees",
+  "total_students",
+  "quality_relevance",
+  "marks_obtained"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_uto1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total number of enrolled students",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_attendees",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of attendees",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_of_speaker",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quality of speaker",
+   "options": "International / National VP and above / Unicorn Startup - CXO (1)\nSME (0.5)\nInternational / National Prof & Above (1)\nState (0.5)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mapping",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mapping",
+   "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to CO or PO (0)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality_relevance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Students feedback about quality and relevance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "marks_obtained",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Marks Obtained",
+   "read_only": 1
+  },
+  {
+   "fieldname": "feedback_received",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Feedback received",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-16 11:37:21.256991",
+ "modified_by": "Administrator",
+ "module": "bytenba",
+ "name": "ai3a",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

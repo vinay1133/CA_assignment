@@ -7,18 +7,25 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "directions",
-  "column_break_a1br",
-  "approved",
+  "dir",
+  "section_break_qe0e",
   "reviewer_score",
-  "section_break_gxve",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
-  "column_break_rxvu",
+  "designation",
+  "section_break_uihc",
   "academic_year",
-  "column_break_xbkp",
+  "department",
+  "column_break_vbeg",
   "semester",
-  "section_break_dnfd",
-  "section_break_ilf9",
+  "reviewer",
+  "section_break_uto1",
   "mou_for_placement",
   "mou_for_internship",
   "faculty_presence",
@@ -33,15 +40,117 @@
   "number_of_feedbacks",
   "quality_relevance",
   "mapping",
-  "marks_obtained",
-  "self_appraisal_score",
-  "section_section",
-  "reviewer",
-  "column_break_izxn",
-  "link_for_evidence",
-  "view_evidence"
+  "marks_obtained"
  ],
  "fields": [
+  {
+   "fieldname": "dir",
+   "fieldtype": "HTML",
+   "label": "dir",
+   "options": "<style>p{margin-top: 10px;}</style>Quantities in bracket represent marks for the respective option. Total maximum marks possible is 278<p></p>"
+  },
+  {
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_ifut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Data",
+   "label": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Select",
+   "label": "Semester",
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uto1",
+   "fieldtype": "Section Break"
+  },
   {
    "fieldname": "mou_for_placement",
    "fieldtype": "Select",
@@ -59,47 +168,12 @@
    "reqd": 1
   },
   {
-   "fieldname": "section_section",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
    "options": "Strongly to PO (1.5)\nStrongly to CO (1)\nModerately to PO (1)\nModerately to CO (0.8)\nNeither mapping to CO or PO (0)",
    "read_only": 1,
    "reqd": 1
-  },
-  {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reviewer"
-  },
-  {
-   "fieldname": "directions",
-   "fieldtype": "HTML",
-   "label": "Directions",
-   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 278\n<p></p>"
-  },
-  {
-   "fieldname": "column_break_a1br",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic Year",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_dnfd",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "faculty_presence",
@@ -167,71 +241,22 @@
    "label": "Quality Relevance"
   },
   {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "label": "Link for evidence"
-  },
-  {
    "fieldname": "marks_obtained",
    "fieldtype": "Float",
    "label": "Marks Obtained",
    "read_only": 1
   },
   {
-   "default": "0",
-   "fieldname": "approved",
-   "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "section_break_ilf9",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence",
-   "permlevel": 1
-  },
-  {
    "fieldname": "self_appraisal_score",
    "fieldtype": "Float",
    "label": "Self Appraisal Score",
+   "permlevel": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "column_break_rxvu",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_xbkp",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "semester",
-   "fieldtype": "Select",
-   "label": "Semester",
-   "options": "Odd\nEven"
-  },
-  {
-   "fieldname": "section_break_gxve",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_izxn",
-   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 00:34:42.373365",
+ "modified": "2024-01-15 16:28:38.819842",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA industrial visit",
@@ -264,6 +289,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "professor"
+ "states": []
 }

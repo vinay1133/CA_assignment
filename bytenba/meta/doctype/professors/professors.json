@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "employee_information_section",
+  "active",
   "user",
   "user_id",
   "nickname",
@@ -110,11 +111,17 @@
    "fieldtype": "Data",
    "label": "USER ID",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-04 01:06:26.331555",
+ "modified": "2024-01-15 21:46:22.864237",
  "modified_by": "Administrator",
  "module": "Meta",
  "name": "Professors",

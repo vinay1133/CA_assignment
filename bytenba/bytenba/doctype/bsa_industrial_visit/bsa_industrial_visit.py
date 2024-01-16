@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-import bytenba.custom_utilities as uf
+import bytenba.form_validation as validation
 import re
 
 Doctype = 'BSA industrial visit'
@@ -21,7 +21,7 @@ class BSAindustrialvisit(Document):
 		self.self_appraisal_score = marks_dict['total_marks']
 
 	def validate(self):
-		uf.validateAY(self.academic_year)
+		validation.standard_validation(self)
 
 		if self.number_of_attendees > self.total_students:
 			frappe.throw('Number of attendees cannot be greater than the number of students enrolled')		
@@ -47,12 +47,6 @@ class BSAindustrialvisit(Document):
 		if (self.internships_status == 'None (1)'):
 			if (self.number_of_internships and self.number_of_internships > 0):
 				frappe.throw('If internships are not done then number of internships cannot be greater than 0')
-		
-		"""validate if same record exists in database"""
-		existing_record = frappe.db.exists(Doctype, {'name': self.name})
-		"""check if it is not the document currently begin worked upon"""
-		if existing_record and existing_record != self.name:
-			frappe.throw('Maximum number of forms for criterion Industrial visit have been created for the academic year {self.academic_year}')
 
 def compute_marks(self):
 	
