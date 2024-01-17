@@ -53,9 +53,9 @@ def compute_marks(self):
 			else:
 				frappe.throw('Error Fetching Field Weightages')			
 
-			sub_val1 = item.feedback_received
-			if sub_val1 >= 2.5:
-				val3 = item.number_of_attendees // item.total_students
+
+			if item.feedback_received >= 2.5:
+				val3 = item.number_of_attendees / item.total_students
 			else:
 				val3 = 0
 			

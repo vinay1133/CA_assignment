@@ -53,9 +53,8 @@ def execute(filters=None):
 	# doctypes = frappe.db.get_list("DocType", pluck= "name", filters = {'module': ['=', 'bytenba'], 'istable': ['!=', 1]})
 
 	doctypes = ['Certification for courses allotted', 'Courses taught', 'BSA guest lecture',
-	 'BSA industrial visit']
+	 'BSA industrial visit', 'BSA-Co-curricular']
 	#  'Course_Lab outcome attainment',
-	#  'BSA-Co-curricular',
 	#  'BSA-Mini Prj',
 	#  'Laboratory Work Or Case Studies',
 	#  'BE Projects',
