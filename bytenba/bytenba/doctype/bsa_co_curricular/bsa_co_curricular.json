@@ -7,242 +7,146 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "dir1",
-  "section_break_upi1",
-  "approved",
+  "dir",
+  "section_break_qe0e",
   "reviewer_score",
-  "section_break_xawo",
-  "professor",
-  "column_break_tdsm",
-  "academic_year",
-  "column_break_2jyy",
-  "semester",
-  "section_break_q3o9",
-  "students_feedback_about_the",
-  "feedback_received",
-  "no_of_attendees",
-  "total_no_of_students_on_roll",
-  "type_of_event",
-  "international",
-  "national",
-  "state_level",
-  "intercollegiate_city_level",
-  "inter_departmental",
-  "within_class",
-  "column_break_emxxj",
-  "awards_received",
-  "international_a",
-  "national_a",
-  "state_level_a",
-  "intercollegiate",
-  "mapping",
-  "obtained_marks",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
   "self_appraisal_score",
-  "reviewer",
+  "column_break_sbus",
   "link_for_evidence",
-  "view_evidence"
+  "column_break_hpsk",
+  "professor",
+  "designation",
+  "section_break_uihc",
+  "academic_year",
+  "department",
+  "column_break_vbeg",
+  "semester",
+  "reviewer",
+  "section_break_uto1",
+  "criteria_table"
  ],
  "fields": [
   {
-   "default": "If Feedback received",
-   "fieldname": "students_feedback_about_the",
-   "fieldtype": "HTML",
-   "label": "Sdir",
-   "options": "<p><b>Students feedback about quality and relevance</b></p>"
+    "fieldname": "dir",
+    "fieldtype": "HTML",
+    "label": "dir",
+    "options": "<p>\n  <br><b>Academic Involvement 3.3</b><br>\n  <br>Maximum marks possible are <b>675</b>.<br>\n  <br>Marks Obtained is product of applicable weightages \n  <br>Self appraisal score is the <b>sum</b> of the marks obtained<br>\n</p>"
   },
   {
-   "fieldname": "feedback_received",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Feedback received",
-   "reqd": 1
+    "fieldname": "section_break_qe0e",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "no_of_attendees",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "No. of attendees",
-   "reqd": 1
+    "fieldname": "reviewer_score",
+    "fieldtype": "Data",
+    "label": "Reviewer Score",
+    "permlevel": 1,
+    "read_only": 1
   },
   {
-   "fieldname": "total_no_of_students_on_roll",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Total no. of students on roll",
-   "reqd": 1
+    "fieldname": "column_break_hvfs",
+    "fieldtype": "Column Break"
   },
   {
-   "default": "Type of event",
-   "fieldname": "type_of_event",
-   "fieldtype": "HTML",
-   "label": "Tdir",
-   "options": "<p><b>Type of event (Enter the number of event. If not any then enter 0)</b></p>"
+    "default": "0",
+    "depends_on": "approved",
+    "fieldname": "approved",
+    "fieldtype": "Check",
+    "label": "Approved",
+    "permlevel": 1
   },
   {
-   "fieldname": "international",
-   "fieldtype": "Int",
-   "label": "International_e",
-   "reqd": 1
+    "fieldname": "section_break_ifut",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "national",
-   "fieldtype": "Int",
-   "label": "National_e",
-   "reqd": 1
+    "fieldname": "self_appraisal_score",
+    "fieldtype": "Float",
+    "label": "Self Appraisal Score",
+    "permlevel": 1,
+    "read_only": 1
   },
   {
-   "fieldname": "state_level",
-   "fieldtype": "Int",
-   "label": "State level_e",
-   "reqd": 1
+    "fieldname": "column_break_sbus",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "intercollegiate_city_level",
-   "fieldtype": "Int",
-   "label": "Intercollegiate (City level)",
-   "reqd": 1
+    "columns": 2,
+    "depends_on": "self_appraisal_score",
+    "fieldname": "link_for_evidence",
+    "fieldtype": "Attach",
+    "label": "Link for evidence"
   },
   {
-   "fieldname": "inter_departmental",
-   "fieldtype": "Int",
-   "label": "Inter Departmental",
-   "reqd": 1
+    "fieldname": "column_break_hpsk",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "within_class",
-   "fieldtype": "Int",
-   "label": "Within Class",
-   "reqd": 1
+    "fieldname": "professor",
+    "fieldtype": "Read Only",
+    "label": "Faculty",
+    "reqd": 1
   },
   {
-   "default": "Awards received",
-   "fieldname": "awards_received",
-   "fieldtype": "HTML",
-   "label": "Adir",
-   "options": "<p> <b>Awards received (Enter the number of awards. If not any then enter 0)</b></p>"
+    "fieldname": "designation",
+    "fieldtype": "Data",
+    "label": "Designation",
+    "read_only": 1,
+    "reqd": 1
   },
   {
-   "fieldname": "international_a",
-   "fieldtype": "Int",
-   "label": "International_a",
-   "reqd": 1
+    "fieldname": "section_break_uihc",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "national_a",
-   "fieldtype": "Int",
-   "label": "National_a",
-   "reqd": 1
+    "fieldname": "academic_year",
+    "fieldtype": "Data",
+    "label": "Academic Year",
+    "reqd": 1
   },
   {
-   "fieldname": "state_level_a",
-   "fieldtype": "Int",
-   "label": "State level_a",
-   "reqd": 1
+    "fieldname": "department",
+    "fieldtype": "Link",
+    "label": "Department",
+    "options": "Department",
+    "read_only": 1,
+    "reqd": 1
   },
   {
-   "fieldname": "intercollegiate",
-   "fieldtype": "Int",
-   "label": "Intercollegiate (city level)",
-   "reqd": 1
+    "fieldname": "column_break_vbeg",
+    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "mapping",
-   "fieldtype": "Select",
-   "label": "Mapping",
-   "options": "Strongly to PO(1.5)\nStrongly to CO(1)\nModerately to PO(1)\nModerately to CO(0.8)\nNeither PO nor CO(0)",
-   "reqd": 1
+    "fieldname": "semester",
+    "fieldtype": "Select",
+    "label": "Semester",
+    "options": "Odd\nEven",
+    "reqd": 1
   },
   {
-   "fieldname": "dir1",
-   "fieldtype": "HTML",
-   "label": "dir1",
-   "options": "<p> Faculty has to identify competitions and guide the students' group to participate in the competitions during the semester. (eg. technical paper, project, etc. )</p>"
+    "fieldname": "reviewer",
+    "fieldtype": "Read Only",
+    "in_list_view": 1,
+    "label": "Reviewer",
+    "reqd": 1
   },
   {
-   "fieldname": "academic_year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Academic year",
-   "reqd": 1
+    "fieldname": "section_break_uto1",
+    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professors"
-  },
-  {
-   "fieldname": "column_break_emxxj",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "label": "Link for evidence"
-  },
-  {
-   "fieldname": "obtained_marks",
-   "fieldtype": "Float",
-   "hidden": 1,
-   "label": "Obtained marks"
-  },
-  {
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Read Only",
-   "label": "Self appraisal score"
-  },
-  {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence"
-  },
-  {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "semester",
-   "fieldtype": "Select",
-   "label": "Semester",
-   "options": "Odd\nEven"
-  },
-  {
-   "default": "0",
-   "fieldname": "approved",
-   "fieldtype": "Check",
-   "label": "Approved",
-   "permlevel": 1
-  },
-  {
-   "fieldname": "section_break_q3o9",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_tdsm",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_2jyy",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_upi1",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reveiwer"
-  },
-  {
-   "fieldname": "section_break_xawo",
-   "fieldtype": "Section Break"
+   "fieldname": "criteria_table",
+   "fieldtype": "Table",
+   "label": "Criteria Table",
+   "options": "ai3c"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 00:49:03.847585",
+ "modified": "2024-01-17 10:10:18.604687",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "BSA-Co-curricular",
@@ -275,6 +179,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "professor"
+ "states": []
 }

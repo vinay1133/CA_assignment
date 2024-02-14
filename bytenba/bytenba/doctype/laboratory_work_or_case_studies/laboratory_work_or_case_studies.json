@@ -7,70 +7,135 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "dirs",
-  "section_break_gnpe",
-  "approved",
+  "dir",
+  "section_break_qe0e",
   "reviewer_score",
-  "section_break_zhto",
+  "column_break_hvfs",
+  "approved",
+  "section_break_ifut",
+  "self_appraisal_score",
+  "column_break_sbus",
+  "link_for_evidence",
+  "column_break_hpsk",
   "professor",
-  "column_break_nptz",
+  "designation",
+  "section_break_uihc",
   "academic_year",
-  "column_break_skh9",
+  "department",
+  "column_break_vbeg",
   "semester",
+  "reviewer",
   "section_break_hcgo",
   "engg_table",
   "section_break_vqji",
   "mms_table",
   "section_break_avsf",
-  "mapping",
-  "section_break_azbq",
-  "self_appraisal_score",
-  "section_break_pjix",
-  "reviewer",
-  "link_for_evidence",
-  "view_evidence"
+  "mapping"
  ],
  "fields": [
   {
-   "fieldname": "professor",
-   "fieldtype": "Read Only",
-   "label": "Professor"
+   "fieldname": "dir",
+   "fieldtype": "HTML",
+   "label": "dir",
+   "options": "<style>\np{\n    margin-top: 10px;\n  }\n</style>\n<p>\nAcademic Involvement bracket, evaluation criteria is guest lectures, a beyond syllabus activity.\nQuantities in bracket represent marks for the respective option. Total maximum marks possible is 113\n</p>"
   },
   {
-   "fieldname": "dirs",
-   "fieldtype": "HTML",
-   "label": "Dirs",
-   "options": "<p>For MMS and Engg categories enter applicable weightages in the range mentioned.</p>\n<p>Average Will be taken for multiple courses</p>"
+   "fieldname": "section_break_qe0e",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reviewer_score",
+   "fieldtype": "Data",
+   "label": "Reviewer Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hvfs",
+   "fieldtype": "Column Break"
   },
   {
    "default": "0",
+   "depends_on": "approved",
    "fieldname": "approved",
    "fieldtype": "Check",
    "label": "Approved",
    "permlevel": 1
   },
   {
-   "fieldname": "section_break_zhto",
+   "fieldname": "section_break_ifut",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_nptz",
+   "fieldname": "self_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Self Appraisal Score",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sbus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "depends_on": "self_appraisal_score",
+   "fieldname": "link_for_evidence",
+   "fieldtype": "Attach",
+   "label": "Link for evidence"
+  },
+  {
+   "fieldname": "column_break_hpsk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "professor",
+   "fieldtype": "Read Only",
+   "label": "Faculty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_uihc",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Data",
-   "label": "Academic Year"
+   "label": "Academic Year",
+   "reqd": 1
   },
   {
-   "fieldname": "column_break_skh9",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vbeg",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "semester",
    "fieldtype": "Select",
    "label": "Semester",
-   "options": "Odd\nEven"
+   "options": "Odd\nEven",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Reviewer",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_hcgo",
@@ -78,43 +143,19 @@
   },
   {
    "fieldname": "section_break_vqji",
-   "fieldtype": "Section Break"
-  },
-  {
-   "description": "Represents Average of marks obtained of both courses",
-   "fieldname": "self_appraisal_score",
-   "fieldtype": "Read Only",
-   "label": "Self Appraisal Score"
-  },
-  {
-   "fieldname": "reviewer",
-   "fieldtype": "Read Only",
-   "label": "Reviewer"
-  },
-  {
-   "fieldname": "section_break_pjix",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "link_for_evidence",
-   "fieldtype": "Attach",
-   "label": "Link For Evidence"
-  },
-  {
-   "fieldname": "view_evidence",
-   "fieldtype": "Button",
-   "label": "View Evidence"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "engg_table",
    "fieldtype": "Table",
-   "label": "Enter Quality Benchmarks for Engineering Category",
+   "label": "Criteria Table Engg",
    "options": "engg_labWork"
   },
   {
    "fieldname": "mms_table",
    "fieldtype": "Table",
-   "label": "Enter Quality Benchmarks for MMS Category",
+   "label": "Criteria Table MMS",
    "options": "mms_labWork"
   },
   {
@@ -122,29 +163,15 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_gnpe",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "reviewer_score",
-   "fieldtype": "Data",
-   "label": "Reviewer Score",
-   "permlevel": 1
-  },
-  {
    "fieldname": "mapping",
    "fieldtype": "Select",
    "label": "Mapping",
    "options": "Strongly to CO (1)\nModerately to CO (0.8)\nNot mapped to CO (0)"
-  },
-  {
-   "fieldname": "section_break_azbq",
-   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-23 13:12:59.971188",
+ "modified": "2024-02-14 11:23:43.838890",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Laboratory Work Or Case Studies",
@@ -165,5 +192,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }
