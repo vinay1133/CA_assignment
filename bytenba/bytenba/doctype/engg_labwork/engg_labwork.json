@@ -16,33 +16,37 @@
   {
    "description": "Weightage: 1.5",
    "fieldname": "engg_a",
-   "fieldtype": "Float",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Uploading Videos of new experiments  / PBL prepared during  the PA evaluation period",
+   "options": "Performed (1.5)\nNot Performed (0)",
    "reqd": 1
   },
   {
    "description": "Weightage 0 to 1",
    "fieldname": "engg_c",
-   "fieldtype": "Float",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Quality of PB statements ",
+   "options": "Satisfactory(1)\nNot Satisfactory(0)",
    "reqd": 1
   },
   {
    "description": "Weightage 0 to 1.25",
    "fieldname": "engg_b",
-   "fieldtype": "Float",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Use of new tools / simulators / virtual labs",
+   "options": "Performed (1.25)\nNot Performed (0)",
    "reqd": 1
   },
   {
    "description": "Weightage 0 to 1",
    "fieldname": "engg_d",
-   "fieldtype": "Float",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Continuous Assessment",
+   "options": "Yes (1)\nNo(0)",
    "reqd": 1
   },
   {
@@ -55,7 +59,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-23 11:42:52.022029",
+ "modified": "2024-02-14 11:14:14.860335",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "engg_labWork",

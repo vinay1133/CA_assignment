@@ -27,6 +27,7 @@
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "No. of lectures engaged",
+   "non_negative": 1,
    "reqd": 1
   },
   {
@@ -34,19 +35,21 @@
    "fieldtype": "Int",
    "in_list_view": 1,
    "label": "No. lectures per Syllabus",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "completion_of_syllabus",
    "fieldtype": "Percent",
    "in_list_view": 1,
-   "label": "Completion of syllabus"
+   "label": "Completion of syllabus",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-22 15:26:41.287369",
+ "modified": "2024-02-12 16:01:01.409775",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "ai2",

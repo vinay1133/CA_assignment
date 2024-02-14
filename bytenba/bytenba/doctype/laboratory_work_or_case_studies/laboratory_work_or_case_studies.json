@@ -143,7 +143,8 @@
   },
   {
    "fieldname": "section_break_vqji",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "engg_table",
@@ -170,7 +171,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-17 11:38:25.691005",
+ "modified": "2024-02-14 11:23:43.838890",
  "modified_by": "Administrator",
  "module": "bytenba",
  "name": "Laboratory Work Or Case Studies",
@@ -191,5 +192,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "professor"
 }
